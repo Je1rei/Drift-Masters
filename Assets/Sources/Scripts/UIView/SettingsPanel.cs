@@ -7,13 +7,12 @@ public class SettingsPanel : UIPanel
 {
     [SerializeField] private MainMenuPanel _mainMenu;
     [SerializeField] private AuthorizationPanel _authorizationPanel;
-    [SerializeField] private LeaderboardPanel _leaderboardPanel;
 
     [SerializeField] private Button _languageButton;
     [SerializeField] private Button _authButton;
-    [SerializeField] private Button _leaderboardButton;
     [SerializeField] private Button _backButton;
     [SerializeField] private Slider _musicVolumeSlider;
+    [SerializeField] private Slider _soundFXVolumeSlider;
 
     //private SettingsService _settingsService;
 
@@ -26,13 +25,13 @@ public class SettingsPanel : UIPanel
         AddButtonListener(_languageButton, OnClickLanguage);
         AddButtonListener(_backButton, OnClickBack);
         AddButtonListener(_authButton, OnClickAuth);
-        AddButtonListener(_leaderboardButton, OnClickLeaderboard);
-        //_musicVolumeSlider.onValueChanged.AddListener(_settingsService.SetVolume);
+        //_musicVolumeSlider.onValueChanged.AddListener(_settingsService.SetVolume); // music
+        //_soundFXVolumeSlider.onValueChanged.AddListener(_settingsService.SetVolume); // fxslider
 
-        // if (YG2.Auth())
-        // {
-        //     _authButton.gameObject.SetActive(false);
-        // }
+        if (YG2.player.auth)
+        {
+            _authButton.gameObject.SetActive(false);
+        }
     }
 
     private void OnDisable()
@@ -40,7 +39,6 @@ public class SettingsPanel : UIPanel
         _languageButton.onClick.RemoveAllListeners();
         _backButton.onClick.RemoveAllListeners();
         _authButton.onClick.RemoveAllListeners();
-        _leaderboardButton.onClick.RemoveAllListeners();
         _musicVolumeSlider.onValueChanged.RemoveAllListeners();
     }
 
@@ -65,12 +63,6 @@ public class SettingsPanel : UIPanel
     private void OnClickAuth()
     {
         _authorizationPanel.Show();
-        Hide();
-    }
-
-    private void OnClickLeaderboard()
-    {
-        _leaderboardPanel.Show();
         Hide();
     }
 }

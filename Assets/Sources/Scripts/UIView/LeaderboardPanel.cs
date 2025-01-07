@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class LeaderboardPanel : UIPanel
 {
-    [SerializeField] private SettingsPanel _settingsPanel;
     [SerializeField] private Button _backButton;
 
     private void OnEnable()
@@ -19,7 +18,6 @@ public class LeaderboardPanel : UIPanel
 
     private void OnClickBack()
     {
-        _settingsPanel.Show();
         Hide();
     }
 }

@@ -237,6 +237,12 @@ MonoBehaviour:
         photo: demo image
         uniqueID: 330
         extraData: 
+      - rank: 10
+        name: Player 10
+        score: 10
+        photo: demo image
+        uniqueID: 330
+        extraData: 
       currentPlayer:
         rank: 5
         score: 60
