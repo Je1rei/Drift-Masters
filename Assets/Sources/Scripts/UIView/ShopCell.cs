@@ -1,3 +1,4 @@
+using Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,7 @@ namespace UIView
 {
     public class ShopCell : MonoBehaviour
     {
-        [SerializeField] private ShopItem _item;
+        [SerializeField] private ShopItemData itemData;
         [SerializeField] private Image _imageModel; // -> model
         [SerializeField] private TMP_Text _nameText;
         [SerializeField] private TMP_Text _priceText;
@@ -20,9 +21,9 @@ namespace UIView
         [Inject]
         private void Construct()
         {
-            _name = _item.Name;
-            _price = _item.Price;
-            _model = _item.Model;
+            _name = itemData.Name;
+            _price = itemData.Price;
+            _model = itemData.Model;
             
             SetTexts();
         }

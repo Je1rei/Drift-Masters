@@ -1,38 +1,42 @@
+using Data;
 using UnityEngine;
 
-public class LevelService : MonoBehaviour
+namespace Services
 {
-    [SerializeField] private LevelData[] _levels;
-
-    private LevelData _current;
-    private int _id;
-
-    public int ID => _id;
-    public LevelData Current => _current;
-
-    public LevelData Load(int index)
+    public class LevelService : MonoBehaviour
     {
-        if (index < 0 || index >= _levels.Length)
+        [SerializeField] private LevelData[] _levels;
+
+        private LevelData _current;
+        private int _id;
+
+        public int ID => _id;
+        public LevelData Current => _current;
+
+        public LevelData Load(int index)
         {
-            return null;
+            if (index < 0 || index >= _levels.Length)
+            {
+                return null;
+            }
+
+            _current = _levels[index];
+            _id = index;
+
+            return _current;
         }
 
-        _current = _levels[index];
-        _id = index;
-
-        return _current;
-    }
-
-    public void Complete()
-    {
-        if (_id < _levels.GetLength(0) - 1)
+        public void Complete()
         {
-            _id++;
-
-            if (_id <= _levels.GetLength(0))
+            if (_id < _levels.GetLength(0) - 1)
             {
-                // YG2.saves.OpenedLevels.Add(_levels[_id].ID); // сохранения пройденного уровня
-                // YG2.SaveProgress(); 
+                _id++;
+
+                if (_id <= _levels.GetLength(0))
+                {
+                    // YG2.saves.OpenedLevels.Add(_levels[_id].ID); // сохранения пройденного уровня
+                    // YG2.SaveProgress(); 
+                }
             }
         }
     }

@@ -1,11 +1,15 @@
+using Data;
 using UnityEngine;
 
-public class LevelFactory : MonoBehaviour
+namespace Services
 {
-    public void Create(LevelData data, Transform parent) // Call in Level Init script from start the gameplayScene
+    public class LevelFactory : MonoBehaviour
     {
-        // Instantiate Map(MapFactory)
-        // Instantiate Environment prefabs
-        // Set RequiredItemToWin
+        public void Create(LevelData data, Transform parent) // Call in Level Init script from start the gameplayScene
+        {
+            // Instantiate Map(MapFactory)
+            // Instantiate Environment prefabs
+            // Set RequiredItemToWin
+        }
     }
 }
