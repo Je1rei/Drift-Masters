@@ -1,10 +1,13 @@
 using UnityEngine;
 using Zenject;
 
-public class BootInstaller : MonoInstaller
+namespace Installers
 {
-    public override void InstallBindings()
+    public class BootInstaller : MonoInstaller
     {
-        Debug.Log("Boot Scene is Loaded");
+        public override void InstallBindings()
+        {
+            Debug.Log("Boot Scene is Loaded");
+        }
     }
 }

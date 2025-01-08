@@ -1,9 +1,12 @@
 ﻿using Zenject;
 
-public class GamePlayInstaller : MonoInstaller
+namespace Installers
 {
-    public override void InstallBindings()
+    public class GamePlayInstaller : MonoInstaller
     {
-        // Bindings GamePlay Scene
+        public override void InstallBindings()
+        {
+            // Bindings GamePlay Scene
+        }
     }
 }

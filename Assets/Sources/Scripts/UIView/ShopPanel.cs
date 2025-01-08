@@ -1,4 +1,7 @@
-public class ShopPanel : UIPanel
+namespace UIView
 {
+    public class ShopPanel : UIPanel
+    {
     
+    }
 }

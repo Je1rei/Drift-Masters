@@ -1,1 +1,4 @@
-public class LevelPage : UIPanel { }
+namespace UIView
+{
+    public class LevelPage : UIPanel { }
+}

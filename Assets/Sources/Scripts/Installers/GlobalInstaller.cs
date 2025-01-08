@@ -1,26 +1,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zenject;
 using YG;
+using Zenject;
 
-public class GlobalInstaller : MonoInstaller
+namespace Installers
 {
-    public override void InstallBindings()
+    public class GlobalInstaller : MonoInstaller
     {
-        BindInputService();
-
-        SceneManager.LoadScene(1);
-    }
-
-    private void BindInputService()
-    {
-        if (YG2.envir.isMobile)
+        public override void InstallBindings()
         {
-            Debug.Log("isMobile");
+            BindInputService();
+
+            SceneManager.LoadScene(1);
         }
-        else
+
+        private void BindInputService()
         {
-            Debug.Log("isDesktop");
+            if (YG2.envir.isMobile)
+            {
+                Debug.Log("isMobile");
+            }
+            else
+            {
+                Debug.Log("isDesktop");
+            }
         }
     }
 }

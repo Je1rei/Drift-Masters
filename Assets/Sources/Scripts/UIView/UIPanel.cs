@@ -1,37 +1,39 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
-public abstract class UIPanel : MonoBehaviour
+namespace UIView
 {
-    // private AudioService _audioService;
-
-    // [Inject]
-    // protected void Construct(AudioService audioService)
-    // {
-    //     _audioService = audioService;
-    // }
-
-    public void Show()
+    public abstract class UIPanel : MonoBehaviour
     {
-        if (this != null)
+        // private AudioService _audioService;
+
+        // [Inject]
+        // protected void Construct(AudioService audioService)
+        // {
+        //     _audioService = audioService;
+        // }
+
+        public void Show()
         {
-            gameObject.SetActive(true);
+            if (this != null)
+            {
+                gameObject.SetActive(true);
+            }
         }
-    }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    protected void AddButtonListener(Button button, Action onClickAction)
-    {
-        button.onClick.AddListener(() =>
+        public void Hide()
         {
-            // _audioService.PlaySound();
-            // onClickAction?.Invoke();
-        });
+            gameObject.SetActive(false);
+        }
+
+        protected void AddButtonListener(Button button, Action onClickAction)
+        {
+            button.onClick.AddListener(() =>
+            {
+                // _audioService.PlaySound();
+                // onClickAction?.Invoke();
+            });
+        }
     }
 }

@@ -1,9 +1,12 @@
 using Zenject;
 
-public class MainMenuInstaller : MonoInstaller    
+namespace Installers
 {
-    public override void InstallBindings()
+    public class MainMenuInstaller : MonoInstaller    
     {
-        // Bindings MainMenu Scene
+        public override void InstallBindings()
+        {
+            // Bindings MainMenu Scene
+        }
     }
 }

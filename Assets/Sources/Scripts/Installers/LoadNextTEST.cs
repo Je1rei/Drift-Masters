@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadNextTEST : MonoBehaviour
+namespace Installers
 {
-    public void LoadNextScene()
+    public class LoadNextTEST : MonoBehaviour
     {
-        SceneManager.LoadScene(2);
+        public void LoadNextScene()
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
