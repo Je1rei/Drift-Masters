@@ -291,7 +291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 5403045985096349429}
   m_LocalEulerAnglesHint: {x: 45, y: 15, z: 0}
 --- !u!1001 &147957928
 PrefabInstance:
@@ -900,6 +900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 120053255}
   - {fileID: 1122656823}
   - {fileID: 5403045985096365645}
   - {fileID: 5403045985096386647}
@@ -1446,7 +1447,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 452703743}
-  - {fileID: 120053255}
   - {fileID: 1779272632}
   - {fileID: 5403045985096349429}
   - {fileID: 3944729}
