@@ -10,7 +10,7 @@ namespace UIView
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _shopButton;
         [SerializeField] private Button _leaderboardButton;
-    
+
         [SerializeField] private TMP_Text _scoreText;
         [SerializeField] private LevelsPanel _levels;
         [SerializeField] private SettingsPanel _settings;
@@ -44,18 +44,17 @@ namespace UIView
         {
             _settings.Show();
             Hide();
-        }   
-    
+        }
+
         private void OnClickShop()
         {
             _shop.Show();
             Hide();
-        }  
-    
+        }
+
         private void OnClickLeaderboard()
         {
             _leaderboard.Show();
-            Hide();
         }
     }
 }

@@ -1,3 +1,6 @@
+using Infrastructure;
+using Installers.CompositionRoot;
+using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
@@ -7,11 +10,14 @@ namespace Installers
 {
     public class GlobalInstaller : MonoInstaller
     {
+        [SerializeField] private SceneLoaderService _sceneLoaderPrefab;
+        
         public override void InstallBindings()
         {
             BindInputService();
-
-            SceneManager.LoadScene(1);
+            Container.Bind<SceneLoaderService>().FromComponentInNewPrefab(_sceneLoaderPrefab).AsSingle().NonLazy();
+            // Container.Bind<AudioService>().FromInstance(_audioService).AsSingle().NonLazy();
+            Container.Bind<Wallet>().AsSingle().NonLazy();
         }
 
         private void BindInputService()

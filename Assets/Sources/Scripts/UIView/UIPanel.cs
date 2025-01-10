@@ -32,7 +32,7 @@ namespace UIView
             button.onClick.AddListener(() =>
             {
                 // _audioService.PlaySound();
-                // onClickAction?.Invoke();
+                onClickAction?.Invoke();
             });
         }
     }

@@ -4,29 +4,43 @@ using Zenject;
 
 namespace Infrastructure
 {
-    public class Wallet : MonoBehaviour
+    public class Wallet // переделать чтоб дубляжа впоследствии не было
     {
-        private int _score;
+        private int _value;
 
         public event Action<int> Changed;
 
-        public int Score => _score;
-    
-        [Inject]
+        public int Value => _value;
+        
         public void Construct()
         {
             // _score = YG2.saves.Score; // подгрузка очков из YG2 сейвов
-            Changed?.Invoke(_score);
+            Debug.Log("0");
+            Changed?.Invoke(_value);
         }
 
         public void Increase(int value)
         {
-            _score += value;
-            Changed?.Invoke(_score);
+            _value += value;
+            Changed?.Invoke(_value);
             // YG2.saves.Score = _score; // сохранение
 
             // YG2.SetLeaderboard(nameLB: "Score", score : YG2.saves.Score); // добавление в ЛБ
             // YG2.SaveProgress();  // сохранение
+        }
+
+        public bool TrySpend(int value)
+        {
+            if (_value >= value)
+            {
+                _value -= value;
+                Changed?.Invoke(_value);
+                // YG2.SaveProgress();  // сохранение
+
+                return true;
+            }
+
+            return false;
         }
     }
 }

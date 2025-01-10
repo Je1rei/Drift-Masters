@@ -53,7 +53,7 @@ namespace UIView
             _nextPageButton.onClick.RemoveAllListeners();
             _backButton.onClick.RemoveAllListeners();
         }
-
+        
         private void OnClickLevel(int index)
         {
             // LevelData levelData = _levelService.Load(index);
