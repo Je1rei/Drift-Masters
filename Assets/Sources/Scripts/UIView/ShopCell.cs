@@ -1,20 +1,19 @@
 using System;
 using Data;
-using Infrastructure;
 using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace UIView
 {
     public class ShopCell : UIPanel
     {
-        [SerializeField] private ShopItemData itemData;
+        [SerializeField] private ShopItemData _itemData;
         [SerializeField] private Image _imageModel; // -> model
         [SerializeField] private TMP_Text _nameText;
         [SerializeField] private TMP_Text _priceText;
+        [SerializeField] private TMP_Text _soldOutText; 
         [SerializeField] private Button _buyButton;
 
         private string _name;
@@ -22,16 +21,18 @@ namespace UIView
         private Sprite _model; // -> model
 
         private AudioService _audioService;
+
+        public ShopItemData ItemData => _itemData;
         
-        public event Action<int> Purchasing;
+        public event Action<int, ShopCell> Purchasing;
         
         public void Construct(AudioService audioService)
         {
             _audioService = audioService;
             
-            _name = itemData.Name;
-            _price = itemData.Price;
-            _model = itemData.Model;
+            _name = _itemData.Name;
+            _price = _itemData.Price;
+            _model = _itemData.Model;
 
             SetTexts();
             AddButtonListener(_audioService, _buyButton, OnBuyButtonClick);
@@ -46,7 +47,15 @@ namespace UIView
 
         private void OnBuyButtonClick()
         {
-            Purchasing?.Invoke(_price);
+            Purchasing?.Invoke(_price, this);
+        }
+
+        public void SetPurchasedState()
+        {
+            _buyButton.interactable = false;
+            _priceText.gameObject.SetActive(false);
+            _buyButton.gameObject.SetActive(false);
+            _soldOutText.gameObject.SetActive(true);
         }
     }
 }

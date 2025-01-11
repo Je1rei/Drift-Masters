@@ -13,7 +13,6 @@ namespace Installers.CompositionRoot
 
         [SerializeField] private WalletView _walletView;
         [SerializeField] private MainMenuPanel _mainMenuPanel;
-        [SerializeField] private AudioSource _uiAudioSource;
         [SerializeField] private ShopCell[] _shopCells;
 
         private DiContainer _sceneContainer;

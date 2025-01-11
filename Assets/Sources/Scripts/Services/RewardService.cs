@@ -20,10 +20,10 @@ namespace Services
             _levelService = levelService;
         }
     
-        public void Reward()
+        public void Reward(int value = 1)
         {
             _levelService.Complete();
-            _wallet.Increase(1); // Value 
+            _wallet.Increase(value);
             Rewarded?.Invoke();
         }
 

@@ -15,8 +15,8 @@ namespace UIView
         [SerializeField] private Button _backButton;
 
         [SerializeField] private LevelPage[] _levelPages;
-        [SerializeField] private Button _previousPageButton;
-        [SerializeField] private Button _nextPageButton;
+        // [SerializeField] private Button _previousPageButton;
+        // [SerializeField] private Button _nextPageButton;
 
         private AudioService _audioService;
         private LevelService _levelService;
@@ -56,10 +56,10 @@ namespace UIView
                 }
             }
 
-            AddButtonListener(_audioService, _previousPageButton, OnClickPreviousPage);
-            AddButtonListener(_audioService, _nextPageButton, OnClickNextPage);
+            // AddButtonListener(_audioService, _previousPageButton, OnClickPreviousPage);
+            // AddButtonListener(_audioService, _nextPageButton, OnClickNextPage);
             AddButtonListener(_audioService, _backButton, OnClickBack);
-            SwitchPage(0);
+            // SwitchPage(0);
         }
 
         private void OnDisable()
@@ -67,8 +67,8 @@ namespace UIView
             foreach (Level level in _levels)
                 level.Button.onClick.RemoveAllListeners();
 
-            _previousPageButton.onClick.RemoveAllListeners();
-            _nextPageButton.onClick.RemoveAllListeners();
+            // _previousPageButton.onClick.RemoveAllListeners();
+            // _nextPageButton.onClick.RemoveAllListeners();
             _backButton.onClick.RemoveAllListeners();
         }
 
@@ -97,34 +97,34 @@ namespace UIView
             Hide();
         }
 
-        private void OnClickPreviousPage()
-        {
-            if (_currentPageIndex > 0)
-            {
-                SwitchPage(_currentPageIndex - 1);
-            }
-        }
+        // private void OnClickPreviousPage()
+        // {
+        //     if (_currentPageIndex > 0)
+        //     {
+        //         SwitchPage(_currentPageIndex - 1);
+        //     }
+        // }
 
-        private void OnClickNextPage()
-        {
-            if (_currentPageIndex < _levelPages.Length - 1)
-            {
-                SwitchPage(_currentPageIndex + 1);
-            }
-        }
+        // private void OnClickNextPage()
+        // {
+        //     if (_currentPageIndex < _levelPages.Length - 1)
+        //     {
+        //         SwitchPage(_currentPageIndex + 1);
+        //     }
+        // }
 
-        private void SwitchPage(int index)
-        {
-            if (index < 0 || index >= _levelPages.Length) return;
-
-            foreach (LevelPage page in _levelPages)
-                page.Hide();
-
-            _levelPages[index].Show();
-            _currentPageIndex = index;
-
-            _previousPageButton.interactable = _currentPageIndex > 0;
-            _nextPageButton.interactable = _currentPageIndex < _levelPages.Length - 1;
-        }
+        // private void SwitchPage(int index)
+        // {
+        //     if (index < 0 || index >= _levelPages.Length) return;
+        //
+        //     foreach (LevelPage page in _levelPages)
+        //         page.Hide();
+        //
+        //     _levelPages[index].Show();
+        //     _currentPageIndex = index;
+        //
+        //     _previousPageButton.interactable = _currentPageIndex > 0;
+        //     _nextPageButton.interactable = _currentPageIndex < _levelPages.Length - 1;
+        // }
     }
 }

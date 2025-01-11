@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4643afde677a40c792fe10bd16181cc0, type: 3}
-  m_Name: ItemTest
+  m_Name: ItemTest 1
   m_EditorClassIdentifier: 
-  ID: 0
-  Name: Lamborghini
-  Price: 3000
-  Model: {fileID: 21300000, guid: 7135d585f82ae408d8713917af908381, type: 3}
+  ID: 1
+  Name: Lada
+  Price: 500
+  Model: {fileID: 21300000, guid: 96ff8090ed400444ca45e8ef17e76f0c, type: 3}

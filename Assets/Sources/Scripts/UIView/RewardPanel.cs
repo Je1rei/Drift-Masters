@@ -10,6 +10,8 @@ namespace UIView
 {
     public class RewardPanel : UIPanel
     {
+        private const string RewardID = "1";
+        
         [SerializeField] private GameplayPanel _gameplayPanel;
         [SerializeField] private Button _backToMenuButton;
         [SerializeField] private Button _claimButton;
@@ -59,6 +61,7 @@ namespace UIView
         private void OnClickAdClaim()
         {
             //сделать окно с добычей и кнопкой на следующий уровень
+            RewardAd();
             Hide();
         }
 
@@ -88,6 +91,14 @@ namespace UIView
             {
                 // _nextLevelButton.gameObject.SetActive(false); // сделать окно с добычей и кнопкой на следующий уровень
             }
+        }
+        
+        public void RewardAd()
+        {
+            YG2.RewardedAdvShow(RewardID, () =>
+            {
+                //reward
+            });
         }
     }
 }

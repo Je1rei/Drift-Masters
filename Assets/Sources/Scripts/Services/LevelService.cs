@@ -1,5 +1,6 @@
 using Data;
 using UnityEngine;
+using YG;
 
 namespace Services
 {
@@ -12,7 +13,7 @@ namespace Services
 
         public int ID => _id;
         public LevelData Current => _current;
-        
+
         public LevelData Load(int index)
         {
             if (index < 0 || index >= _levels.Length)
@@ -34,8 +35,8 @@ namespace Services
 
                 if (_id <= _levels.GetLength(0))
                 {
-                    // YG2.saves.OpenedLevels.Add(_levels[_id].ID); // сохранения пройденного уровня
-                    // YG2.SaveProgress(); 
+                    YG2.saves.OpenedLevels.Add(_levels[_id].ID); // сохранения пройденного уровня
+                    YG2.SaveProgress();
                 }
             }
         }

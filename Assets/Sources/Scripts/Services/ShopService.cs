@@ -2,6 +2,7 @@ using System;
 using Infrastructure;
 using UIView;
 using UnityEngine;
+using YG;
 using Zenject;
 
 namespace Services
@@ -9,7 +10,6 @@ namespace Services
     public class ShopService : MonoBehaviour
     {
         private ShopCell[] _shopCells;
-
         private Wallet _wallet;
 
         public void Construct(AudioService audioService, Wallet wallet, ShopCell[] shopCells)
@@ -20,22 +20,31 @@ namespace Services
             foreach (ShopCell cell in _shopCells)
             {
                 cell.Construct(audioService);
-                cell.Purchasing += Spend;
+                
+                if (YG2.saves.OpenedCars.Contains(cell.ItemData.ID))
+                {
+                    cell.SetPurchasedState();
+                }
+                else
+                {
+                    cell.Purchasing += Spend;
+                }
             }
         }
 
-        private void Spend(int price)
+        private void Spend(int price, ShopCell cell)
         {
             bool isPurchased = _wallet.TrySpend(price);
 
             if (isPurchased)
             {
                 Debug.Log("Purchased");
-                //добавить что то как про сохранение уровней, чтобы по айди проверялось куплен предмет или нет
-                //YG2.SaveProgress();
+                
+                YG2.saves.OpenedCars.Add(cell.ItemData.ID);
+                YG2.SaveProgress();
+
+                cell.SetPurchasedState();
             }
         }
-
-        // сюда добавить взаимодействие с ShopCell
     }
 }
