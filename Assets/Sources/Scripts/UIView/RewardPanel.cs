@@ -15,17 +15,16 @@ namespace UIView
         [SerializeField] private Button _claimButton;
         [SerializeField] private Button _claimADButton;
 
+        private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;
         private LevelService _levelService;
 
         private void OnEnable()
         {
-            //SetAudioService();
-
-            AddButtonListener(_backToMenuButton, OnClickBackToMenu);
-            AddButtonListener(_claimButton, OnClickClaim);
-            AddButtonListener(_claimADButton, OnClickAdClaim);
+            AddButtonListener(_audioService, _backToMenuButton, OnClickBackToMenu);
+            AddButtonListener(_audioService, _claimButton, OnClickClaim);
+            AddButtonListener(_audioService, _claimADButton, OnClickAdClaim);
         }
 
         private void OnDisable()
@@ -37,12 +36,14 @@ namespace UIView
             _rewardService.Rewarded -= Reward;
         }
 
-        [Inject]
-        public void Construct(RewardService rewardService, LevelService levelService, SceneLoaderService sceneLoader)
+        public void Construct(AudioService audioService, RewardService rewardService, LevelService levelService,
+            SceneLoaderService sceneLoader)
         {
+            _audioService = audioService;
             _sceneLoader = sceneLoader;
             _rewardService = rewardService;
             _levelService = levelService;
+
             _rewardService.Rewarded += Reward;
         }
 
@@ -59,8 +60,8 @@ namespace UIView
         {
             //сделать окно с добычей и кнопкой на следующий уровень
             Hide();
-        }        
-        
+        }
+
         private void OnClickClaim()
         {
             //сделать окно с добычей и кнопкой на следующий уровень
@@ -69,7 +70,7 @@ namespace UIView
 
         private void OnClickBackToMenu()
         {
-            SceneManager.LoadScene(_sceneLoader.MainMenuScene); 
+            SceneManager.LoadScene(_sceneLoader.MainMenuScene);
         }
 
         private void OnClickNextLevel() //сделать окно с добычей и кнопкой на следующий уровень

@@ -13,15 +13,15 @@ namespace UIView
         [SerializeField] private Button _continueAdButton;
         [SerializeField] private Button _restartButton;
 
+        private AudioService _audioService;
         private RewardService _rewardService;
         private SceneLoaderService _sceneLoader;
-        
+
         private void OnEnable()
         {
-            //SetAudioService();
-            AddButtonListener(_restartButton, OnClickReset);
-            AddButtonListener(_backToMenuButton, OnClickBackToMenu);
-            AddButtonListener(_continueAdButton, OnClickContinueAD);
+            AddButtonListener(_audioService, _restartButton, OnClickReset);
+            AddButtonListener(_audioService, _backToMenuButton, OnClickBackToMenu);
+            AddButtonListener(_audioService, _continueAdButton, OnClickContinueAD);
         }
 
         private void OnDisable()
@@ -33,11 +33,12 @@ namespace UIView
             _rewardService.Losed -= Lose;
         }
 
-        [Inject]
-        public void Construct(RewardService rewardService, SceneLoaderService sceneLoader)
+        public void Construct(AudioService audioService, RewardService rewardService, SceneLoaderService sceneLoader)
         {
+            _audioService = audioService;
             _sceneLoader = sceneLoader;
             _rewardService = rewardService;
+
             _rewardService.Losed += Lose;
         }
 

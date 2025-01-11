@@ -75,3 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLoaderPrefab: {fileID: 4373308120458233517, guid: c4184d29e92e0644392f5c8a11d9596e, type: 3}
+  _shopServicePrefab: {fileID: 2749688475570856473, guid: 8a250819b0ec45b4bbbcd5e6291cf804, type: 3}
+  _levelServicePrefab: {fileID: 7050539338356210854, guid: 81c1dee5a07dae64eb69f64ec947799a, type: 3}
+  _audioServicePrefab: {fileID: -3621955959386374334, guid: 40037b2c1fc929b48a136789d204f76a, type: 3}
+  _settingsService: {fileID: 6435121141339438719, guid: 69d7ae67031cd44459c738cdb583a7e0, type: 3}

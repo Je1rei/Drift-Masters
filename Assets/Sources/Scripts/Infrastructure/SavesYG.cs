@@ -12,7 +12,8 @@ namespace YG
 
         public void Init()
         {
-            //OpenedLevels.Add(1);
+            OpenedLevels.Add(0);
+            OpenedCars.Add(0);
         }
     }
 }

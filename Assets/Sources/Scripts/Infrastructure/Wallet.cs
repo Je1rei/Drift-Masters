@@ -1,54 +1,18 @@
 ﻿using System;
-using UnityEngine;
+using YG;
 using Zenject;
 
 namespace Infrastructure
 {
-    public class Wallet // переделать чтоб дубляжа впоследствии не было
+    public class Wallet : BaseWallet
     {
-        private int _value;
-
-        public event Action<int> Changed;
-
-        public int Value => _value;
-        
-        public void Construct()
+        public override void Increase(int amount)
         {
-            // _score = YG2.saves.Score; // подгрузка очков из YG2 сейвов
-            Debug.Log("0");
-            Changed?.Invoke(_value);
-        }
+            base.Increase(amount);
+            YG2.saves.Coins = Value;
 
-        public void Increase(int value)
-        {
-            _value += value;
-            Changed?.Invoke(_value);
-            // YG2.saves.Score = _score; // сохранение
-
-            // YG2.SetLeaderboard(nameLB: "Score", score : YG2.saves.Score); // добавление в ЛБ
-            // YG2.SaveProgress();  // сохранение
-        }
-
-        public bool TrySpend(int value)
-        {
-            if (_value >= value)
-            {
-                _value -= value;
-                Changed?.Invoke(_value);
-                // YG2.SaveProgress();  // сохранение
-
-                return true;
-            }
-
-            return false;
+            //YG2.SetLeaderboard(nameLB: "Score", score: YG2.saves.Coins);
+            YG2.SaveProgress();
         }
     }
 }
-
-// namespace YG // сохранения собранных очков
-// {
-//     public partial class SavesYG
-//     {
-//         public int Score = 0;
-//     }
-// }

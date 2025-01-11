@@ -1,4 +1,6 @@
+using Services;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace UIView
@@ -7,13 +9,18 @@ namespace UIView
     {
         [SerializeField] private TutorialPanel _tutorialPanel;
         [SerializeField] private PausePanel _pausePanel;
+        [SerializeField] private LosePanel _losePanel;
+        [SerializeField] private RewardPanel _rewardPanel;
+        
         [SerializeField] private Button _backButton;
 
+        private AudioService _audioService;
+        
         private void OnEnable()
         {
             Time.timeScale = 1f;
 
-            AddButtonListener(_backButton, Pause);
+            AddButtonListener(_audioService, _backButton, Pause);
         }
 
         private void OnDisable()
@@ -21,16 +28,19 @@ namespace UIView
             _backButton.onClick.RemoveAllListeners();
         }
 
-        public void Init()
+        public void Construct(AudioService audioService, RewardService rewardService, LevelService levelService, SceneLoaderService sceneLoaderService)
         {
-            //SetAudioService();
+            _audioService = audioService;
+            _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
+            _losePanel.Construct(audioService, rewardService, sceneLoaderService);
+            _pausePanel.Construct(audioService, sceneLoaderService);
+            
             Show();
             //_tutorialPanel.Init();
         }
 
         public void Pause()
         {
-            Hide();
             _pausePanel.Pause();
         }
 

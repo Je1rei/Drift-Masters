@@ -9,7 +9,7 @@ using Zenject;
 
 namespace UIView
 {
-    public class ShopCell : MonoBehaviour
+    public class ShopCell : UIPanel
     {
         [SerializeField] private ShopItemData itemData;
         [SerializeField] private Image _imageModel; // -> model
@@ -21,17 +21,20 @@ namespace UIView
         private int _price;
         private Sprite _model; // -> model
 
+        private AudioService _audioService;
+        
         public event Action<int> Purchasing;
-            
-        [Inject]
-        private void Construct()
+        
+        public void Construct(AudioService audioService)
         {
+            _audioService = audioService;
+            
             _name = itemData.Name;
             _price = itemData.Price;
             _model = itemData.Model;
 
             SetTexts();
-            _buyButton.onClick.AddListener(OnBuyButtonClick);
+            AddButtonListener(_audioService, _buyButton, OnBuyButtonClick);
         }
 
         private void SetTexts()

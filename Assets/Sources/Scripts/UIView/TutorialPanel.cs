@@ -1,3 +1,4 @@
+using Services;
 using UnityEngine;
 
 namespace UIView
@@ -6,10 +7,21 @@ namespace UIView
     {
         [SerializeField] private TutorialStepPanel[] _tutorialPanels;
 
-        //private TutorialService _service;
+        private TutorialService _tutorialService;
 
         private int _currentIndex;
 
+        public void Construct()
+        {
+            if (_tutorialService.IsActive)
+            {
+                Show();
+                SetupSequenceTutorials();
+                
+                //inputHandler.Clicked += ShowNextTutorial;
+            }
+        }
+        
         private void SetupSequenceTutorials()
         {
             foreach (var panel in _tutorialPanels)

@@ -8,17 +8,18 @@ namespace Services
 {
     public class ShopService : MonoBehaviour
     {
-        [SerializeField] private ShopCell[] _shopCells;
+        private ShopCell[] _shopCells;
 
         private Wallet _wallet;
 
-        [Inject]
-        private void Construct(Wallet wallet)
+        public void Construct(AudioService audioService, Wallet wallet, ShopCell[] shopCells)
         {
             _wallet = wallet;
-            
-            foreach(ShopCell cell in _shopCells)
+            _shopCells = shopCells;
+
+            foreach (ShopCell cell in _shopCells)
             {
+                cell.Construct(audioService);
                 cell.Purchasing += Spend;
             }
         }

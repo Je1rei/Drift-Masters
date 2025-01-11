@@ -1,3 +1,4 @@
+using Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,10 +8,12 @@ namespace UIView
     {
         [SerializeField] private Button _backButton;
 
+        private AudioService _audioService;
+        
         private void OnEnable()
         {
             //SetAudioService();
-            AddButtonListener(_backButton, OnClickBack);
+            AddButtonListener(_audioService, _backButton, OnClickBack);
         }
 
         private void OnDisable()
@@ -18,6 +21,11 @@ namespace UIView
             _backButton.onClick.RemoveAllListeners();
         }
 
+        public void Construct(AudioService audioService)
+        {
+            _audioService = audioService;
+        }
+        
         private void OnClickBack()
         {
             Hide();

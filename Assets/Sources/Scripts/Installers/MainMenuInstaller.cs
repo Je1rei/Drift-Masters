@@ -1,3 +1,4 @@
+using Services;
 using Zenject;
 
 namespace Installers
@@ -6,7 +7,6 @@ namespace Installers
     {
         public override void InstallBindings()
         {
-            
         }
     }
 }

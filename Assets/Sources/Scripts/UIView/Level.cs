@@ -5,6 +5,7 @@ namespace UIView
 {
     public class Level : MonoBehaviour
     {
+        [SerializeField] private Image _activeImage;
         [SerializeField] private Image _lockedImage;
         [SerializeField] private Button _button;
 
@@ -20,6 +21,11 @@ namespace UIView
         {
             _lockedImage.gameObject.SetActive(false);
             _button.interactable = true;
+        }
+
+        public void Activate()
+        {
+            _activeImage.gameObject.SetActive(true);
         }
     }
 }

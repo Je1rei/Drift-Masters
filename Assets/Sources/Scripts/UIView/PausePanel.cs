@@ -13,17 +13,17 @@ namespace UIView
         [SerializeField] private Button _continueButton;
         [SerializeField] private Button _restartButton;
 
+        private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
-        
+
         private void OnEnable()
         {
             Time.timeScale = 1f;
             AudioListener.pause = false;
-            
-            // SetAudioService();
-            AddButtonListener(_continueButton, OnClickUnPause);
-            AddButtonListener(_backToMenuButton, OnClickBackToMenu);
-            AddButtonListener(_restartButton, OnClickReset);
+
+            AddButtonListener(_audioService, _continueButton, OnClickUnPause);
+            AddButtonListener(_audioService, _backToMenuButton, OnClickBackToMenu);
+            AddButtonListener(_audioService, _restartButton, OnClickReset);
         }
 
         private void OnDisable()
@@ -32,13 +32,13 @@ namespace UIView
             _backToMenuButton.onClick.RemoveAllListeners();
             _restartButton.onClick.RemoveAllListeners();
         }
-        
-        [Inject]
-        private void Construct(SceneLoaderService sceneLoader)
+
+        public void Construct(AudioService audioService, SceneLoaderService sceneLoader)
         {
+            _audioService = audioService;
             _sceneLoader = sceneLoader;
         }
-        
+
         public void Pause()
         {
             Show();
@@ -60,7 +60,7 @@ namespace UIView
             AudioListener.pause = false;
             SceneManager.LoadScene(_sceneLoader.MainMenuScene);
         }
-        
+
         private void OnClickReset()
         {
             SceneManager.LoadScene(_sceneLoader.GamePlayScene);

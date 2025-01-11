@@ -1,101 +1,95 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Zenject;
 
 namespace Input
 {
     public class InputHandler : MonoBehaviour
     {
+        private readonly float _minValue = -1f;
+        private readonly float _maxValue = 1f;
+
         [SerializeField] private Button _leftButton;
         [SerializeField] private Button _rightButton;
 
-        private PlayerInput _input;
-        private bool _isHoldingLeft;
-        private bool _isHoldingRight;
-    
-        public event Action OnHoldLeft;
-        public event Action OnHoldRight;
+        [SerializeField] private float _deadZone = 0.01f;
+        [SerializeField] private float _smoothTime = 0.1f;
 
+        private bool _isLeftPressed;
+        private bool _isRightPressed;
+
+        private float _steeringValue = 0f;
+        private float _steeringVelocity = 0f;
+
+        public event Action<float> Moving;
+        
         private void OnEnable()
         {
-            _input.Enable();
+            SetupButtonTriggers(_leftButton,
+                onPointerDown: () => _isLeftPressed = true,
+                onPointerUp: () => _isLeftPressed = false);
 
-            _input.Player.MoveLeft.performed += OnMoveLeftPerformed;
-            _input.Player.MoveLeft.canceled += OnMoveLeftCanceled;
-
-            _input.Player.MoveRight.performed += OnMoveRightPerformed;
-            _input.Player.MoveRight.canceled += OnMoveRightCanceled;
-
-            _leftButton.onClick.AddListener(() => StartHoldingLeft());
-            _rightButton.onClick.AddListener(() => StartHoldingRight());
+            SetupButtonTriggers(_rightButton,
+                onPointerDown: () => _isRightPressed = true,
+                onPointerUp: () => _isRightPressed = false);
         }
 
-        private void OnDisable()
-        {
-            _input.Disable();
-            _input.Player.MoveLeft.performed -= OnMoveLeftPerformed;
-            _input.Player.MoveLeft.canceled -= OnMoveLeftCanceled;
-
-            _input.Player.MoveRight.performed -= OnMoveRightPerformed;
-            _input.Player.MoveRight.canceled -= OnMoveRightCanceled;
-        
-            _leftButton.onClick.RemoveAllListeners();
-            _rightButton.onClick.RemoveAllListeners();
-        }
-    
         private void Update()
         {
-            if (_isHoldingLeft)
+            UpdateSteeringValue();
+            ClampSteeringValue();
+
+            if (Mathf.Abs(_steeringValue) > _deadZone)
             {
-                OnHoldLeft?.Invoke();
+                Moving?.Invoke(_steeringValue);
+                Debug.Log($"Steering Value: {_steeringValue}");
             }
+        }
 
-            if (_isHoldingRight)
+        private void SetupButtonTriggers(Button button, Action onPointerDown, Action onPointerUp)
+        {
+            var trigger = button.gameObject.AddComponent<EventTrigger>();
+
+            AddEventTrigger(trigger, EventTriggerType.PointerDown, eventData => onPointerDown());
+            AddEventTrigger(trigger, EventTriggerType.PointerUp, eventData => onPointerUp());
+        }
+
+        private void AddEventTrigger(EventTrigger trigger, EventTriggerType eventType, Action<BaseEventData> callback)
+        {
+            var entry = new EventTrigger.Entry { eventID = eventType };
+            entry.callback.AddListener(new UnityEngine.Events.UnityAction<BaseEventData>(callback));
+            trigger.triggers.Add(entry);
+        }
+
+        private void UpdateSteeringValue()
+        {
+            float horizontalInput = UnityEngine.Input.GetAxis("Horizontal");
+
+            if (horizontalInput != 0f)
             {
-                OnHoldRight?.Invoke();
+                _steeringValue = horizontalInput;
+            }
+            else if (_isLeftPressed == _isRightPressed)
+            {
+                _steeringValue = Mathf.SmoothDamp(_steeringValue, 0f, ref _steeringVelocity, _smoothTime);
+            }
+            else
+            {
+                float target = _isLeftPressed  ? _minValue : _maxValue;
+                _steeringValue = Mathf.SmoothDamp(_steeringValue, target, ref _steeringVelocity, _smoothTime);
             }
         }
-    
-        [Inject]
-        private void Construct()
-        {
-            _input = new PlayerInput();
-        }
 
-        private void OnMoveLeftPerformed(InputAction.CallbackContext context)
+        private void ClampSteeringValue()
         {
-            _isHoldingLeft = true;
-            Debug.Log("Move Left Started Holding");
-        }
+            _steeringValue = Mathf.Clamp(_steeringValue, _minValue, _maxValue);
 
-        private void OnMoveLeftCanceled(InputAction.CallbackContext context)
-        {
-            _isHoldingLeft = false;
-            Debug.Log("Move Left Stopped Holding");
-        }
-
-        private void OnMoveRightPerformed(InputAction.CallbackContext context)
-        {
-            _isHoldingRight = true;
-            Debug.Log("Move Right Started Holding");
-        }
-
-        private void OnMoveRightCanceled(InputAction.CallbackContext context)
-        {
-            _isHoldingRight = false;
-            Debug.Log("Move Right Stopped Holding");
-        }
-    
-        private void StartHoldingLeft()
-        {
-            _isHoldingLeft = true;
-        }
-
-        private void StartHoldingRight()
-        {
-            _isHoldingRight = true;
+            if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)
+            {
+                _steeringValue = 0f;
+                _steeringVelocity = 0f;
+            }
         }
     }
 }

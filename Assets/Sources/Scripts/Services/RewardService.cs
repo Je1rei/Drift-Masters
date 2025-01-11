@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Services
 {
-    public class RewardService : MonoBehaviour
+    public class RewardService
     {
         private Wallet _wallet;
     
@@ -13,9 +13,8 @@ namespace Services
     
         public event Action Rewarded;
         public event Action Losed;
-
-        [Inject]
-        private void Construct(Wallet wallet, LevelService levelService)
+        
+        public RewardService(Wallet wallet, LevelService levelService)
         {
             _wallet = wallet;
             _levelService = levelService;

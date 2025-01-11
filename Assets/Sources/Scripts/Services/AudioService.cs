@@ -1,17 +1,19 @@
 using UnityEngine;
+using UnityEngine.Audio;
+using YG;
 
 namespace Services
 {
     public class AudioService : MonoBehaviour
     {
         [SerializeField] private AudioSource _mainAudioSource;
-
-        private AudioSource _uiAudioSource;
-
-        public void Init(AudioSource uiAudioSource)
+        [SerializeField] private AudioSource _uiAudioSource;
+        
+        public void Construct()
         {
-            _uiAudioSource = uiAudioSource;
-            //SetVolume(YG2.saves.Volume);
+            _mainAudioSource.Play();
+            SetMusicVolume(YG2.saves.MusicVolume);
+            SetSFXVolume(YG2.saves.SoundFxVolume);
         }
 
         public void PlaySound()
@@ -19,10 +21,16 @@ namespace Services
             _uiAudioSource.Play();
         }
 
-        public void SetVolume(float value)
+        public void SetMusicVolume(float value) // дубляж
         {
-            AudioListener.volume = value;
-            //YG2.saves.Volume = value;
+            _mainAudioSource.volume = value;
+            YG2.saves.MusicVolume = value;
+        }        
+        
+        public void SetSFXVolume(float value) // дубляж
+        {
+            _uiAudioSource.volume = value;
+            YG2.saves.SoundFxVolume = value;
         }
     }
 }

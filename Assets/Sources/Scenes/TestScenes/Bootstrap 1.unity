@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneContext: {fileID: 1094606152}
-  _sceneLoader: {fileID: 0}
 --- !u!4 &1652142954
 Transform:
   m_ObjectHideFlags: 0

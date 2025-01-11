@@ -1,3 +1,4 @@
+using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,13 +18,14 @@ namespace UIView
         [SerializeField] private ShopPanel _shop;
         [SerializeField] private LeaderboardPanel _leaderboard;
 
+        private AudioService _audioService;
+
         private void OnEnable()
         {
-            //SetAudioService();
-            AddButtonListener(_playButton, OnClickPlay);
-            AddButtonListener(_settingsButton, OnClickSettings);
-            AddButtonListener(_shopButton, OnClickShop);
-            AddButtonListener(_leaderboardButton, OnClickLeaderboard);
+            AddButtonListener(_audioService, _playButton, OnClickPlay);
+            AddButtonListener(_audioService, _settingsButton, OnClickSettings);
+            AddButtonListener(_audioService, _shopButton, OnClickShop);
+            AddButtonListener(_audioService, _leaderboardButton, OnClickLeaderboard);
         }
 
         private void OnDisable()
@@ -34,22 +36,30 @@ namespace UIView
             _leaderboardButton.onClick.RemoveAllListeners();
         }
 
+        public void Construct(AudioService audioService, LevelService levelService, SettingsService settingsService,
+            SceneLoaderService sceneLoaderService)
+        {
+            _audioService = audioService;
+
+            _leaderboard.Construct(_audioService);
+            _levels.Construct(_audioService, levelService, sceneLoaderService);
+            _settings.Construct(_audioService, settingsService);
+            _shop.Construct(_audioService);
+        }
+
         private void OnClickPlay()
         {
             _levels.Show();
-            Hide();
         }
 
         private void OnClickSettings()
         {
             _settings.Show();
-            Hide();
         }
 
         private void OnClickShop()
         {
             _shop.Show();
-            Hide();
         }
 
         private void OnClickLeaderboard()

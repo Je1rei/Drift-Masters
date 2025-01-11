@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   MapData: {fileID: 11400000, guid: 6e89479ba7d9ece4b9eaed4bd83dbb62, type: 2}
-  RequiredItemsToWin: 0
+  RequiredItemToWin: 0

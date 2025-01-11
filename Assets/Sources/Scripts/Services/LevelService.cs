@@ -12,7 +12,7 @@ namespace Services
 
         public int ID => _id;
         public LevelData Current => _current;
-
+        
         public LevelData Load(int index)
         {
             if (index < 0 || index >= _levels.Length)
@@ -41,16 +41,3 @@ namespace Services
         }
     }
 }
-
-// namespace YG // сохранения пройденных уровней
-// {
-//     public partial class SavesYG
-//     {
-//         public List<int> OpenedLevels = new List<int>();
-//
-//         public void Init()
-//         {
-//             OpenedLevels.Add(1);
-//         }
-//     }
-// }

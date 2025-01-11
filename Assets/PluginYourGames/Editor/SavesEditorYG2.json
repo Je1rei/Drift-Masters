@@ -1,0 +1,24 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 46,
+    "MusicVolume": 0.12543021142482758,
+    "SoundFxVolume": 0.13302013278007508,
+    "Coins": 0,
+    "OpenedLevels": [
+        0,
+        0,
+        0
+    ],
+    "OpenedCars": [
+        0,
+        0,
+        0
+    ]
+}
