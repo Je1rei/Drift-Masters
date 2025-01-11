@@ -22,15 +22,15 @@ public class Mover : MonoBehaviour
     private readonly Vector3 _moveDirection = Vector3.forward; 
     private float _horizontalInput;
     private Transform _transform;
+    private Vector3 _moveForce;
     
     private void Awake()
     {
-      
         _transform = transform;
         
         if (_axisRotationDrift == null)
         {
-            Debug.LogError("Не указана точка вращения!");
+            Debug.LogError("The rotation point is not specified!");
         }
     }
     
@@ -46,6 +46,7 @@ public class Mover : MonoBehaviour
 
     private void Update()
     {
+        
         HandleInput();
     }
     
@@ -57,8 +58,6 @@ public class Mover : MonoBehaviour
 
     private void HandleInput()
     {
-        //_horizontalInput = Input.GetAxis("Horizontal");
-
         MoveForward();
         
         if (Mathf.Abs(_horizontalInput) != 0.1f)
@@ -80,6 +79,8 @@ public class Mover : MonoBehaviour
         if (Mathf.Abs(angle) > 0.1f)
         {
             _transform.RotateAround(axis, Vector3.up, angle * _rotationSpeed *  Time.deltaTime);
+            
+            _transform.Rotate(Vector3.up, angle * _rotationSpeed *  Time.deltaTime);
             
             _rlwTireSkid.emitting = true;
             _rrwTireSkid.emitting = true;

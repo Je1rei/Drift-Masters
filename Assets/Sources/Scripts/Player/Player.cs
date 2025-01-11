@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     
     private Vector3 _startPosition;
     private Transform _transform;
+    
+    public event Action PlayerDestroyed;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     public void ResetPosition()
     {
         transform.position = _startPosition;
+        PlayerDestroyed?.Invoke();
     }
 
     public void SetScore(int score)

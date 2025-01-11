@@ -6,8 +6,6 @@ using Zenject;
 public class PlayerInputController : MonoBehaviour
 {
     private PlayerInput _input;
-    private float _pozititiv = 1;
-    private float _negativ = -1;
     public event Action<float> Moved;
 
     private void OnEnable()
@@ -45,17 +43,17 @@ public class PlayerInputController : MonoBehaviour
     private void OnMoveLeftPressed(InputAction.CallbackContext context)
     {
         Debug.Log("Move Left Pressed");
-        Moved?.Invoke(_negativ);
+        
     }
 
     private void OnMoveRightPressed(InputAction.CallbackContext context)
     {
         Debug.Log("Move Right Pressed");
-        Moved?.Invoke(_pozititiv);
+      
     }
 
     private void OnMoveAxis(InputAction.CallbackContext context)
     {
-        Debug.Log(context.ReadValue<float>());
+        Moved?.Invoke(context.ReadValue<float>());
     }
 }
