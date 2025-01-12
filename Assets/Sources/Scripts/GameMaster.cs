@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using LayerLab;
 using Spawn;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour

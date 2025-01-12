@@ -6,7 +6,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     [Space(10)]
-    [SerializeField] private PlayerInputController _playerInputController;
+    //[SerializeField] private PlayerInputController _playerInputController;
     
     [Space(20)]
     [SerializeField] private Transform _axisRotationDrift; 
@@ -36,12 +36,12 @@ public class Mover : MonoBehaviour
     
     private void OnEnable()
     {
-        _playerInputController.Moved += OnMoved;
+      //  _playerInputController.Moved += OnMoved;
     }
 
     private void OnDisable()
     {
-        _playerInputController.Moved -= OnMoved;
+      // _playerInputController.Moved -= OnMoved;
     }
 
     private void Update()

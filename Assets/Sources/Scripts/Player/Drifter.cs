@@ -7,7 +7,7 @@ using UnityEngine;
 public class Drifter : MonoBehaviour
 {
     [Space(10)]
-    [SerializeField] private PlayerInputController _playerInputController;
+    //[SerializeField] private PlayerInputController _playerInputController;
     
     [Space(20)]
     [SerializeField] private float _moveSpeed;
@@ -27,12 +27,12 @@ public class Drifter : MonoBehaviour
     
     private void OnEnable()
     {
-        _playerInputController.Moved += OnMoved;
+       // _playerInputController.Moved += OnMoved;
     }
 
     private void OnDisable()
     {
-        _playerInputController.Moved -= OnMoved;
+      //  _playerInputController.Moved -= OnMoved;
     }
 
     private void Update()
