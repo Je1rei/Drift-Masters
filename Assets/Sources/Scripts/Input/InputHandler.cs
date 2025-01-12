@@ -7,6 +7,7 @@ namespace Input
 {
     public class InputHandler : MonoBehaviour
     {
+        private const string Horizontal = "Horizontal";
         private readonly float _minValue = -1f;
         private readonly float _maxValue = 1f;
 
@@ -23,7 +24,7 @@ namespace Input
         private float _steeringVelocity = 0f;
 
         public event Action<float> Moving;
-        
+
         private void OnEnable()
         {
             SetupButtonTriggers(_leftButton,
@@ -38,7 +39,7 @@ namespace Input
         private void Update()
         {
             UpdateSteeringValue();
-            ClampSteeringValue();
+            ResetValue();
 
             if (Mathf.Abs(_steeringValue) > _deadZone)
             {
@@ -64,7 +65,7 @@ namespace Input
 
         private void UpdateSteeringValue()
         {
-            float horizontalInput = UnityEngine.Input.GetAxis("Horizontal");
+            float horizontalInput = UnityEngine.Input.GetAxis(Horizontal);
 
             if (horizontalInput != 0f)
             {
@@ -76,15 +77,19 @@ namespace Input
             }
             else
             {
-                float target = _isLeftPressed  ? _minValue : _maxValue;
+                float target = _isLeftPressed ? _minValue : _maxValue;
                 _steeringValue = Mathf.SmoothDamp(_steeringValue, target, ref _steeringVelocity, _smoothTime);
+
+                if (Mathf.Abs(_steeringValue - target) < _deadZone)
+                {
+                    _steeringValue = target;
+                    _steeringVelocity = 0f;
+                }
             }
         }
 
-        private void ClampSteeringValue()
+        private void ResetValue()
         {
-            _steeringValue = Mathf.Clamp(_steeringValue, _minValue, _maxValue);
-
             if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)
             {
                 _steeringValue = 0f;
