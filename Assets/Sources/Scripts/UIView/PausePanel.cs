@@ -63,6 +63,7 @@ namespace UIView
 
         private void OnClickReset()
         {
+            AudioListener.pause = false;
             SceneManager.LoadScene(_sceneLoader.GamePlayScene);
         }
     }

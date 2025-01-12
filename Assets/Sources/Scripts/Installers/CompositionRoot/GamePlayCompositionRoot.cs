@@ -1,5 +1,5 @@
 using Infrastructure;
-using Input;
+using Inputs;
 using Services;
 using UIView;
 using UnityEngine;

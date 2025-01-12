@@ -19,7 +19,6 @@ namespace UIView
         private void OnEnable()
         {
             Time.timeScale = 1f;
-
             AddButtonListener(_audioService, _backButton, Pause);
         }
 

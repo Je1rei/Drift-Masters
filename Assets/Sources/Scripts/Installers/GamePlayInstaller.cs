@@ -1,4 +1,4 @@
-﻿using Input;
+﻿using Inputs;
 using Services;
 using Zenject;
 

@@ -16,7 +16,7 @@ namespace Services
             SetSFXVolume(YG2.saves.SoundFxVolume);
         }
 
-        public void PlaySound()
+        public void PlayUISound()
         {
             _uiAudioSource.Play();
         }

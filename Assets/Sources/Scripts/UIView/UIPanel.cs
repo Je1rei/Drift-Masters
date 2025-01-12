@@ -24,7 +24,7 @@ namespace UIView
         {
             button.onClick.AddListener(() =>
             {
-                audioService.PlaySound();
+                audioService.PlayUISound();
                 onClickAction?.Invoke();
             });
         }
