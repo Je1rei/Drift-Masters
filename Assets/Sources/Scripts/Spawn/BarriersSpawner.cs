@@ -8,7 +8,7 @@ namespace Spawn
     {
         [Space(20)] [SerializeField] private Vector3 _offset;
 
-        [Space(10)] [SerializeField] private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
+        [Space(10)] [SerializeField] private List<SpawnPoint> _spawnPoints = new();
 
         private int _countBarrierSpawn = 4;
 

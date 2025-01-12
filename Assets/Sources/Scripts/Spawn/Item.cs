@@ -9,6 +9,7 @@ namespace Spawn
     {
         [SerializeField] private int _score;
         [SerializeField] private bool _isRequiredCompleteLevel;
+        
         public int Score => _score;
         public bool IsRequiredCompleteLevel => _isRequiredCompleteLevel;
 

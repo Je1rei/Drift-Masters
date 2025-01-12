@@ -65,7 +65,7 @@ namespace Inputs
 
         private void UpdateSteeringValue()
         {
-            float horizontalInput = UnityEngine.Input.GetAxis(Horizontal);
+            float horizontalInput = Input.GetAxis(Horizontal);
 
             if (horizontalInput != 0f)
             {
