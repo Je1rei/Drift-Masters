@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3039058186068951870}
   - component: {fileID: 327078182426192420}
   - component: {fileID: 8075029669359637116}
-  - component: {fileID: 2606373921533306862}
   - component: {fileID: 3644070274846165639}
+  - component: {fileID: 4515384461203845140}
   m_Layer: 0
   m_Name: Cone_01
   m_TagString: Untagged
@@ -85,18 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2606373921533306862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6325435982547093819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7258a91104c616e4393cb07fb666bcd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &3644070274846165639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118,3 +106,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.52510643, y: 0.9558916, z: 0.5251131}
   m_Center: {x: -0.000011444092, y: 0.4779458, z: 0.0000009536743}
+--- !u!114 &4515384461203845140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6325435982547093819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3a0167a21550940aa02ebedd774f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

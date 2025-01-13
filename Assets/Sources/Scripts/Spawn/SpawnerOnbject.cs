@@ -10,7 +10,7 @@ namespace Spawn
         [Space(10)]
         [SerializeField] protected int _initialPoolSize = 24;
 
-        private List<T> _pool = new List<T>();
+        private List<T> _pool = new ();
     
         protected void CreatePool()
         { 
