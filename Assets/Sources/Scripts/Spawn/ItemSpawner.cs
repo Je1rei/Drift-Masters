@@ -1,23 +1,23 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Spawn
 {
     public class ItemSpawner : SpawnerObjects<Item>
     {
+        [FormerlySerializedAs("_offset")]
         [Space(20)]
-        [SerializeField] private Vector3 _offset;
+        [SerializeField] private Vector3 offset;
 
+        [FormerlySerializedAs("_spawnPoints")]
         [Space(10)] 
-        [SerializeField] private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
+        [SerializeField] private List<SpawnPoint> spawnPoints = new ();
 
         private int _countItemSpawn = 4;
-        private List<Item> _itemsToCompleteLevel = new List<Item>();
+        private List<Item> _itemsToCompleteLevel = new ();
 
         public event Action ItemsEnded; 
 
@@ -25,10 +25,10 @@ namespace Spawn
         {
             CreatePool();
 
-            if (_countItemSpawn > _spawnPoints.Count)
+            if (_countItemSpawn > spawnPoints.Count)
             {
-                Debug.LogWarning("Item spawn count is " + _spawnPoints.Count);
-                _countItemSpawn = _spawnPoints.Count;
+                Debug.LogWarning("Item spawn count is " + spawnPoints.Count);
+                _countItemSpawn = spawnPoints.Count;
             }
             
             StartCreation();
@@ -58,11 +58,12 @@ namespace Spawn
 
         private void StartCreation()
         {
-            for (int i = 0; i < _countItemSpawn; i++)
-            {
-                Vector3 position = GetSpawnPoint() + _offset;
-                var item = Spawn(position, Quaternion.identity);
+            var points = GetSpawnPoints();
 
+            foreach (var point in points)
+            {
+                var item = Spawn(point, Quaternion.identity);
+                
                 if (item.IsRequiredCompleteLevel)
                 {
                     _itemsToCompleteLevel.Add(item);
@@ -70,12 +71,19 @@ namespace Spawn
             }
         }
 
-        private Vector3 GetSpawnPoint()
+        private List<Vector3> GetSpawnPoints()
         {
-            int index = Random.Range(0, _spawnPoints.Count);
-            Vector3 position = _spawnPoints[index].transform.localPosition;
+            List<Vector3> spawnPoints = new();
             
-            return position;
+            foreach (var point in this.spawnPoints)
+            {
+                if (point.Spawned)
+                {
+                  spawnPoints.Add(point.transform.position + offset);   
+                }
+            }
+            
+            return spawnPoints;
         }
 
         private void OnTrasfered(int count)

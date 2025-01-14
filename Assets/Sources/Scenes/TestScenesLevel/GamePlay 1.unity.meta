@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Sources/Scenes/TestScenesLevel/GamePlay 1.unity.meta
 guid: a16f951eb9ea0a745a189a2490ae81ee
 DefaultImporter:
+========
+guid: 31074c918a72e534cbe7156438198719
+PrefabImporter:
+>>>>>>>> Stashed changes:Assets/Sources/Prefabs/Spawn/Gem_01.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Inputs;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Drifter : MonoBehaviour
 {
     [Space(10)]
-    //[SerializeField] private PlayerInputController _playerInputController;
+    [SerializeField] private InputHandler _InputHandler;
     
     [Space(20)]
     [SerializeField] private float _moveSpeed;
@@ -27,30 +28,40 @@ public class Drifter : MonoBehaviour
     
     private void OnEnable()
     {
-       // _playerInputController.Moved += OnMoved;
+       _InputHandler.Moving += OnMoving;
     }
 
     private void OnDisable()
     {
-      //  _playerInputController.Moved -= OnMoved;
+       _InputHandler.Moving -= OnMoving;
     }
 
     private void Update()
     {
-        _moveForce += _transform.forward * _moveSpeed;
-        transform.position += _moveForce * Time.deltaTime;
+        Move();
         
-        _transform.Rotate(Vector3.up * _horizontalInput * _moveForce.magnitude * _steerAngle * Time.deltaTime);
-
-        _moveForce *= _drag;
+        _transform.Rotate(Vector3.up * (_horizontalInput * _moveForce.magnitude * _steerAngle * Time.deltaTime));
+        
+        //_moveForce *= _drag;
         _moveForce = Vector3.ClampMagnitude(_moveForce, _speedMax);
         
-        _moveForce = Vector3.Lerp(_moveForce.normalized, _transform.forward, Time.deltaTime * _traction)
+        Debug.DrawRay(_transform.position, _moveForce.normalized * 3, Color.red);
+        Debug.DrawRay(_transform.position, _transform.forward * 3, Color.blue);
+        
+       _moveForce = Vector3.Lerp(_moveForce.normalized, _transform.forward, _traction * Time.deltaTime)
                      * _moveForce.magnitude;
+       /*_moveForce = Vector3.Lerp(_moveForce.normalized, new Vector3(0f,transform.eulerAngles.y+_traction,0f), _traction * Time.deltaTime)
+                    * _moveForce.magnitude;*/
     }
     
-    private void OnMoved(float obj)
+    private void OnMoving(float obj)
     {
         _horizontalInput = obj;
+    }
+
+    private void Move()
+    {
+        _moveForce += _transform.forward * _moveSpeed;
+        _transform.position += _moveForce * Time.deltaTime;
     }
 }

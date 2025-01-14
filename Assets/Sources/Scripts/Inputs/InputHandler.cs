@@ -44,7 +44,7 @@ namespace Inputs
             if (Mathf.Abs(_steeringValue) > _deadZone)
             {
                 Moving?.Invoke(_steeringValue);
-                Debug.Log($"Steering Value: {_steeringValue}");
+                //Debug.Log($"Steering Value: {_steeringValue}");
             }
         }
 

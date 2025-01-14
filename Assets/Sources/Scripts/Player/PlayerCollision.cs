@@ -13,20 +13,17 @@ public class PlayerCollision : MonoBehaviour
         _player = GetComponent<Player>();
     }
 
-    private void OnCollisionEnter(Collision collider)
-    {
-        if (collider.gameObject.TryGetComponent(out Barrier barrier))
-        {
-            _player.ResetPosition();
-        }
-    }
-
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.TryGetComponent(out Item item))
         {
             _player.SetScore(item.Score);
             item.ResetPool();
+        }
+        
+        if (collider.TryGetComponent(out Barrier barrier))
+        {
+            _player.ResetPosition();
         }
     }
 }
