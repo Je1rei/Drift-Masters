@@ -78,4 +78,5 @@ MonoBehaviour:
   _shopServicePrefab: {fileID: 2749688475570856473, guid: 8a250819b0ec45b4bbbcd5e6291cf804, type: 3}
   _levelServicePrefab: {fileID: 7050539338356210854, guid: 81c1dee5a07dae64eb69f64ec947799a, type: 3}
   _audioServicePrefab: {fileID: -3621955959386374334, guid: 40037b2c1fc929b48a136789d204f76a, type: 3}
-  _settingsService: {fileID: 6435121141339438719, guid: 69d7ae67031cd44459c738cdb583a7e0, type: 3}
+  _settingsServicePrefab: {fileID: 6435121141339438719, guid: 69d7ae67031cd44459c738cdb583a7e0, type: 3}
+  _carServicePrefab: {fileID: 6518017537844340468, guid: 46cc15c29b1bb5f44824848deef4bacd, type: 3}

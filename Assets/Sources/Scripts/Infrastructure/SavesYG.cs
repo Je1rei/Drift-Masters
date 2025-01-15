@@ -7,9 +7,10 @@ namespace YG
         public float MusicVolume = 0.3f;
         public float SoundFxVolume = 0.3f;
         public int Coins = 0;
+        public int ChoisedCarID = 0;
         public List<int> OpenedLevels = new();
         public List<int> OpenedCars = new();
-
+        
         public void Init()
         {
             OpenedLevels.Add(0);

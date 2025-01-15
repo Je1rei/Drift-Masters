@@ -5,11 +5,13 @@ namespace Services
 {
     public class LevelFactory : MonoBehaviour
     {
-        public void Create(LevelData data, Transform parent) // Call in Level Init script from start the gameplayScene
+        [SerializeField] private MapFactory _mapFactory;
+        [SerializeField] private PlayerFactory _playerFactory;
+
+        public void Create(LevelData levelData, CarData carData)
         {
-            // Instantiate Map(MapFactory)
-            // Instantiate Environment prefabs
-            // Set RequiredItemToWin
+            _mapFactory.Create(levelData.Map);
+            _playerFactory.Create(carData, levelData.Map.StartPoint.transform.position);
         }
     }
 }

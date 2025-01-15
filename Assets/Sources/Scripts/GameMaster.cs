@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour
             _itemSpawn.ItemsEnded += OnEnded;
         }
 
-        _player.PlayerDestroyed += OnEnded;
+        _player.Destroyed += OnEnded;
     }
 
     private void OnDisable()

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8269f9aa392607c49ae4d3d646555cd4, type: 3}
-  m_Name: LevelTest
+  m_Name: LevelTEST
   m_EditorClassIdentifier: 
   ID: 0
-  MapData: {fileID: 11400000, guid: 6e89479ba7d9ece4b9eaed4bd83dbb62, type: 2}
-  RequiredItemToWin: 0
+  Map: {fileID: 11400000, guid: 6e89479ba7d9ece4b9eaed4bd83dbb62, type: 2}

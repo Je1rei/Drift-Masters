@@ -43,7 +43,6 @@ namespace UIView
                 }
                 else
                 {
-                    Debug.Log(levelData.ID + "lock");
                     _levels[i].SetLock();
                 }
                 
@@ -55,20 +54,15 @@ namespace UIView
                     _levels[i].Activate();
                 }
             }
-
-            // AddButtonListener(_audioService, _previousPageButton, OnClickPreviousPage);
-            // AddButtonListener(_audioService, _nextPageButton, OnClickNextPage);
+            
             AddButtonListener(_audioService, _backButton, OnClickBack);
-            // SwitchPage(0);
         }
 
         private void OnDisable()
         {
             foreach (Level level in _levels)
                 level.Button.onClick.RemoveAllListeners();
-
-            // _previousPageButton.onClick.RemoveAllListeners();
-            // _nextPageButton.onClick.RemoveAllListeners();
+            
             _backButton.onClick.RemoveAllListeners();
         }
 
@@ -96,35 +90,5 @@ namespace UIView
             _mainMenu.Show();
             Hide();
         }
-
-        // private void OnClickPreviousPage()
-        // {
-        //     if (_currentPageIndex > 0)
-        //     {
-        //         SwitchPage(_currentPageIndex - 1);
-        //     }
-        // }
-
-        // private void OnClickNextPage()
-        // {
-        //     if (_currentPageIndex < _levelPages.Length - 1)
-        //     {
-        //         SwitchPage(_currentPageIndex + 1);
-        //     }
-        // }
-
-        // private void SwitchPage(int index)
-        // {
-        //     if (index < 0 || index >= _levelPages.Length) return;
-        //
-        //     foreach (LevelPage page in _levelPages)
-        //         page.Hide();
-        //
-        //     _levelPages[index].Show();
-        //     _currentPageIndex = index;
-        //
-        //     _previousPageButton.interactable = _currentPageIndex > 0;
-        //     _nextPageButton.interactable = _currentPageIndex < _levelPages.Length - 1;
-        // }
     }
 }

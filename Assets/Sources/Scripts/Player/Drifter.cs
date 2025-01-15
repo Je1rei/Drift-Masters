@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using Inputs;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Drifter : MonoBehaviour
 {
+    [FormerlySerializedAs("_InputHandler")]
     [Space(10)]
-    [SerializeField] private InputHandler _InputHandler;
+    [SerializeField] private InputHandler _inputHandler;
     
     [Space(20)]
     [SerializeField] private float _moveSpeed;
@@ -28,12 +30,12 @@ public class Drifter : MonoBehaviour
     
     private void OnEnable()
     {
-       _InputHandler.Moving += OnMoving;
+       _inputHandler.Moving += OnMoving;
     }
 
     private void OnDisable()
     {
-       _InputHandler.Moving -= OnMoving;
+       _inputHandler.Moving -= OnMoving;
     }
 
     private void Update()

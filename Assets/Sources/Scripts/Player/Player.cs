@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,18 +8,23 @@ public class Player : MonoBehaviour
     private Vector3 _startPosition;
     private Transform _transform;
     
-    public event Action PlayerDestroyed;
-
-    private void Awake()
+    public event Action Destroyed;
+    
+    public void Construct(Vector3 startPosition)
     {
+        //mover.Construct();
+        //внести данные для дрифта(переменные) из конфигов при констракте
+        
         _transform = transform;
-        _startPosition = transform.position;
+        _startPosition = startPosition;
+        
+        transform.position = _startPosition;
     }
 
     public void ResetPosition()
     {
         transform.position = _startPosition;
-        PlayerDestroyed?.Invoke();
+        Destroyed?.Invoke();
     }
 
     public void SetScore(int score)

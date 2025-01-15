@@ -29,6 +29,7 @@ namespace Installers.CompositionRoot
                 _sceneContainer.Resolve<SettingsService>(), _sceneContainer.Resolve<SceneLoaderService>());
 
             _walletView.Construct(_sceneContainer.Resolve<Wallet>());
+            _sceneContainer.Resolve<CarService>().Load();
         }
     }
 }
