@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7064f134024654eb4a8fd341154c8f, type: 3}
   m_Name: OstapLevelTest_1
   m_EditorClassIdentifier: 
-  ID: 0
-  MapData: {fileID: 0}
-  RequiredItemToWin: 0
-  _transformsItemFinishLevel: []
-  _transformsItem3Points: []
-  _transformsItem5Points: []
-  _transformsBarriers: []
+  ID: 1
+  StartPoint: {fileID: 8532334994346117013, guid: 2c2fc9bfe61ee23429a1ae037ce55a7d, type: 3}
+  LevelBase: {fileID: 5279334168349520847, guid: 51a62dd340a332b4db27ce2984d1fd82, type: 3}
+  LevelSidewalk: {fileID: 5125240268042192568, guid: a47d6a300c5122642a5ab0bf56ef04fb, type: 3}
+  LevelFence: {fileID: 1744007955393662008, guid: ed12921297a3516448c148b7270cfd0d, type: 3}
+  LevelItemMapRequiredToWin: {fileID: 1558959339006388176, guid: 1568a6e955af2dc4497f2a70e279b461, type: 3}
+  LevelItem3PointsMap: {fileID: 2915693631081452075, guid: 72a0a29272a6d704ca010b2cebc31b71, type: 3}
+  LevelItem5PointsMap: {fileID: 5995034331405785444, guid: facff96a30c2d5148b1fbee8c5585047, type: 3}
+  LevelBarriersMap: {fileID: 8107866685916610999, guid: 150eb54827f58a340973d673e0a9a483, type: 3}

@@ -46,6 +46,8 @@ namespace Inputs
                 Moving?.Invoke(_steeringValue);
                 //Debug.Log($"Steering Value: {_steeringValue}");
             }
+            
+            
         }
 
         private void SetupButtonTriggers(Button button, Action onPointerDown, Action onPointerUp)
