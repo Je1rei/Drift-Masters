@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Data;
 using UnityEngine;
 using YG;
@@ -14,19 +15,33 @@ namespace Services
         public int ID => _id;
         public CarData Current => _current;
 
-        public Car Load() // сделать сохранение и лоад при загрузке уровня
+        public void Load(int index)
         {
-            int index = YG2.saves.ChoisedCarID;
-            
             if (index < 0 || index >= _cars.Length)
             {
-                return null;
+                return;
             }
-            
+
             _current = _cars[index];
             _id = index;
+        }
 
-            return _current.CarViewPrefab;
+        public List<Car> LoadOpenedCars()
+        {
+            List<Car> openedCars = new List<Car>();
+
+            if (YG2.saves.OpenedCars != null)
+            {
+                foreach (int carId in YG2.saves.OpenedCars)
+                {
+                    if (carId >= 0 && carId < _cars.Length)
+                    {
+                        openedCars.Add(_cars[carId].CarViewPrefab);
+                    }
+                }
+            }
+
+            return openedCars;
         }
     }
 }

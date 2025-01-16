@@ -15,15 +15,11 @@ namespace UIView
         [SerializeField] private Button _backButton;
 
         [SerializeField] private LevelPage[] _levelPages;
-        // [SerializeField] private Button _previousPageButton;
-        // [SerializeField] private Button _nextPageButton;
 
         private AudioService _audioService;
         private LevelService _levelService;
         private SceneLoaderService _sceneLoaderService;
-
-        private int _currentPageIndex;
-
+        
         private void OnEnable()
         {
             int lastOpenedLevelID = -1;
@@ -80,13 +76,13 @@ namespace UIView
 
             if (levelData != null)
             {
-                Hide();
                 SceneManager.LoadScene(_sceneLoaderService.GamePlayScene);
             }
         }
 
         private void OnClickBack()
         {
+            _mainMenu.CarPanel.ToggleView();
             _mainMenu.Show();
             Hide();
         }

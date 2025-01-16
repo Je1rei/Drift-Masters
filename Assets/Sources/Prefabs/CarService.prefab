@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cars:
   - {fileID: 11400000, guid: 76d4a10c479624c4882d2070ce0a0d90, type: 2}
+  - {fileID: 11400000, guid: b608849d7fc11a04cb5e001f55f063c2, type: 2}
+  - {fileID: 11400000, guid: d4f6c0b785be56248b504f2fc876e52d, type: 2}
+  - {fileID: 11400000, guid: 0b2a79da5abb89c429b46403f48181a4, type: 2}

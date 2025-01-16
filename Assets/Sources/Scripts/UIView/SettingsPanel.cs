@@ -67,7 +67,7 @@ namespace UIView
         private void OnClickBack()
         {
             YG2.SaveProgress();
-            _mainMenu.Show();
+            _mainMenu.CarPanel.ToggleView();
             Hide();
         }
 

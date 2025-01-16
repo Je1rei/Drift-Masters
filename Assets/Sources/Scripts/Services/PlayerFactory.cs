@@ -12,7 +12,9 @@ namespace Services
         public void Create(WalletGamePlay wallet, InputPause inputPause, CarData data, Vector3 startPosition)
         {
             _player.Construct(wallet, inputPause, startPosition);
-            Car car = Instantiate(data.CarViewPrefab, _player.transform);
+            CarFactory factory = new CarFactory();
+            factory.Create(data.CarViewPrefab, _player.transform);
+            data.CarViewPrefab.gameObject.SetActive(true);
         }
     }
 }

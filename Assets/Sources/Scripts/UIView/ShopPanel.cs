@@ -6,6 +6,7 @@ namespace UIView
 {
     public class ShopPanel : UIPanel
     {
+        [SerializeField] private MainMenuPanel _mainMenu;
         [SerializeField] private Button _backButton;
 
         private AudioService _audioService;
@@ -27,6 +28,7 @@ namespace UIView
 
         private void OnClickBack()
         {
+            _mainMenu.CarPanel.ToggleView();
             Hide();
         }
     }
