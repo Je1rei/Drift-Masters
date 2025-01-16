@@ -14,7 +14,7 @@ namespace Services
         public int ID => _id;
         public CarData Current => _current;
 
-        public Car Load()
+        public Car Load() // сделать сохранение и лоад при загрузке уровня
         {
             int index = YG2.saves.ChoisedCarID;
             

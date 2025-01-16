@@ -17,13 +17,13 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collider.TryGetComponent(out Item item))
         {
-            _player.SetScore(item.Score);
+            _player.Increase(item.Score);
             item.ResetPool();
         }
         
         if (collider.TryGetComponent(out Barrier barrier))
         {
-            _player.ResetPosition();
+            _player.Lose();
         }
     }
 }

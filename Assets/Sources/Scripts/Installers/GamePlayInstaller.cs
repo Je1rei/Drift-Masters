@@ -1,4 +1,5 @@
-﻿using Inputs;
+﻿using Infrastructure;
+using Inputs;
 using Services;
 using Zenject;
 
@@ -10,6 +11,7 @@ namespace Installers
         {
             Container.Bind<TutorialService>().AsSingle().NonLazy();
             Container.Bind<RewardService>().AsSingle().NonLazy();
+            Container.Bind<WalletGamePlay>().AsSingle().NonLazy();
         }
     }
 }

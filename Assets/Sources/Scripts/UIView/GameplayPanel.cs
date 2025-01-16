@@ -1,3 +1,4 @@
+using Inputs;
 using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,11 +28,11 @@ namespace UIView
             _backButton.onClick.RemoveAllListeners();
         }
 
-        public void Construct(AudioService audioService, RewardService rewardService, LevelService levelService, SceneLoaderService sceneLoaderService)
+        public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService, LevelService levelService, SceneLoaderService sceneLoaderService)
         {
             _audioService = audioService;
             _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
-            _losePanel.Construct(audioService, rewardService, sceneLoaderService);
+            _losePanel.Construct(inputPause, audioService, rewardService, sceneLoaderService);
             _pausePanel.Construct(audioService, sceneLoaderService);
             
             Show();

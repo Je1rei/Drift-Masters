@@ -1,18 +1,23 @@
+using Inputs;
 using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 using Zenject;
 
 namespace UIView
 {
     public class LosePanel : UIPanel
     {
+        private const string RewardID = "2";
+
         [SerializeField] private GameplayPanel _gameplayPanel;
         [SerializeField] private Button _backToMenuButton;
         [SerializeField] private Button _continueAdButton;
         [SerializeField] private Button _restartButton;
 
+        private InputPause _inputPause;
         private AudioService _audioService;
         private RewardService _rewardService;
         private SceneLoaderService _sceneLoader;
@@ -33,8 +38,10 @@ namespace UIView
             _rewardService.Losed -= Lose;
         }
 
-        public void Construct(AudioService audioService, RewardService rewardService, SceneLoaderService sceneLoader)
+        public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService,
+            SceneLoaderService sceneLoader)
         {
+            _inputPause = inputPause;
             _audioService = audioService;
             _sceneLoader = sceneLoader;
             _rewardService = rewardService;
@@ -46,8 +53,8 @@ namespace UIView
         {
             if (this != null)
             {
+                _inputPause.DeactivateInput();
                 Show();
-                _gameplayPanel.Hide();
             }
         }
 
@@ -63,7 +70,14 @@ namespace UIView
 
         private void OnClickContinueAD()
         {
-            //логика продолжения
+            YG2.RewardedAdvShow(RewardID, () =>
+            {
+                Hide();
+                
+                _rewardService.Continue();
+                _inputPause.ActivateInput();
+                _rewardService.Losed += Lose;
+            });
         }
     }
 }

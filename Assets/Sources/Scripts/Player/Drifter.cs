@@ -18,18 +18,17 @@ public class Drifter : MonoBehaviour
     [SerializeField] private float _drag;
     [SerializeField] private float _steerAngle;
     [SerializeField] private float _traction;
+
+    private bool _isStarted;
+    private InputPause _inputPause;
     
     private Vector3 _moveForce;
     private Transform _transform;
     private float _horizontalInput;
-
-    private void Awake()
-    {
-        _transform = transform;
-    }
     
     private void OnEnable()
     {
+        _isStarted = false;
        _inputHandler.Moving += OnMoving;
     }
 
@@ -37,23 +36,44 @@ public class Drifter : MonoBehaviour
     {
        _inputHandler.Moving -= OnMoving;
     }
-
+    
     private void Update()
     {
-        Move();
+        if (Mathf.Abs(_horizontalInput) > 0 && _isStarted == false)
+        {
+            _inputPause.ActivateInput();
+            _isStarted = true;
+        }
         
-        _transform.Rotate(Vector3.up * (_horizontalInput * _moveForce.magnitude * _steerAngle * Time.deltaTime));
-        
-        //_moveForce *= _drag;
-        _moveForce = Vector3.ClampMagnitude(_moveForce, _speedMax);
-        
-        Debug.DrawRay(_transform.position, _moveForce.normalized * 3, Color.red);
-        Debug.DrawRay(_transform.position, _transform.forward * 3, Color.blue);
-        
-       _moveForce = Vector3.Lerp(_moveForce.normalized, _transform.forward, _traction * Time.deltaTime)
-                     * _moveForce.magnitude;
-       /*_moveForce = Vector3.Lerp(_moveForce.normalized, new Vector3(0f,transform.eulerAngles.y+_traction,0f), _traction * Time.deltaTime)
-                    * _moveForce.magnitude;*/
+        if (_inputPause.CanInput && _isStarted == true)
+        {
+            Move();
+
+            _transform.Rotate(Vector3.up * (_horizontalInput * _moveForce.magnitude * _steerAngle * Time.deltaTime));
+
+            //_moveForce *= _drag;
+            _moveForce = Vector3.ClampMagnitude(_moveForce, _speedMax);
+
+            Debug.DrawRay(_transform.position, _moveForce.normalized * 3, Color.red);
+            Debug.DrawRay(_transform.position, _transform.forward * 3, Color.blue);
+
+            _moveForce = Vector3.Lerp(_moveForce.normalized, _transform.forward, _traction * Time.deltaTime)
+                         * _moveForce.magnitude;
+            /*_moveForce = Vector3.Lerp(_moveForce.normalized, new Vector3(0f,transform.eulerAngles.y+_traction,0f), _traction * Time.deltaTime)
+             * _moveForce.magnitude;*/
+        }
+    }
+    
+    public void Construct(InputPause inputPause)
+    {
+        _inputPause = inputPause;
+        _transform = transform;
+    }
+
+    public void SetupContinue()
+    {
+        _horizontalInput = 0;
+        _isStarted = false;
     }
     
     private void OnMoving(float obj)

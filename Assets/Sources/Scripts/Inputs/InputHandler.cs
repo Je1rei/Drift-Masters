@@ -44,12 +44,18 @@ namespace Inputs
             if (Mathf.Abs(_steeringValue) > _deadZone)
             {
                 Moving?.Invoke(_steeringValue);
-                //Debug.Log($"Steering Value: {_steeringValue}");
             }
-            
-            
         }
 
+        private void ResetValue()
+        {
+            if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)
+            {
+                _steeringValue = 0f;
+                _steeringVelocity = 0f;
+            }
+        }
+        
         private void SetupButtonTriggers(Button button, Action onPointerDown, Action onPointerUp)
         {
             var trigger = button.gameObject.AddComponent<EventTrigger>();
@@ -87,15 +93,6 @@ namespace Inputs
                     _steeringValue = target;
                     _steeringVelocity = 0f;
                 }
-            }
-        }
-
-        private void ResetValue()
-        {
-            if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)
-            {
-                _steeringValue = 0f;
-                _steeringVelocity = 0f;
             }
         }
     }

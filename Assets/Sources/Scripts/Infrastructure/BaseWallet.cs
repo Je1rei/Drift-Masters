@@ -30,7 +30,7 @@ namespace Infrastructure
             {
                 _value -= value;
                 Changed?.Invoke(_value);
-                YG2.SaveProgress();  // сохранение
+                YG2.SaveProgress();
 
                 return true;
             }

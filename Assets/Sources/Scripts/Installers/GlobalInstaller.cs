@@ -1,4 +1,5 @@
 using Infrastructure;
+using Inputs;
 using Installers.CompositionRoot;
 using Services;
 using UnityEngine;
@@ -27,7 +28,8 @@ namespace Installers
             Container.Bind<CarService>().FromComponentInNewPrefab(_carServicePrefab).AsSingle().NonLazy();
             
             Container.Bind<Wallet>().AsSingle().NonLazy();
-
+            Container.Bind<InputPause>().AsSingle().NonLazy();
+            
             YG2.saves.Init();
         }
     }

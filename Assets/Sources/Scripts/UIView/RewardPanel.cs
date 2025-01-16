@@ -10,8 +10,6 @@ namespace UIView
 {
     public class RewardPanel : UIPanel
     {
-        private const string RewardID = "1";
-        
         [SerializeField] private GameplayPanel _gameplayPanel;
         [SerializeField] private Button _backToMenuButton;
         [SerializeField] private Button _claimButton;
@@ -21,7 +19,7 @@ namespace UIView
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;
         private LevelService _levelService;
-
+        
         private void OnEnable()
         {
             AddButtonListener(_audioService, _backToMenuButton, OnClickBackToMenu);
@@ -54,30 +52,19 @@ namespace UIView
             if (this != null)
             {
                 Show();
-                _gameplayPanel.Hide();
             }
         }
 
         private void OnClickAdClaim()
         {
-            //сделать окно с добычей и кнопкой на следующий уровень
-            RewardAd();
+            _rewardService.RewardAd();
             Hide();
         }
 
         private void OnClickClaim()
         {
-            //сделать окно с добычей и кнопкой на следующий уровень
             Hide();
-        }
-
-        private void OnClickBackToMenu()
-        {
-            SceneManager.LoadScene(_sceneLoader.MainMenuScene);
-        }
-
-        private void OnClickNextLevel() //сделать окно с добычей и кнопкой на следующий уровень
-        {
+            
             int tempIndex = _levelService.ID;
             LevelData leveldata = _levelService.Load(tempIndex);
 
@@ -89,16 +76,13 @@ namespace UIView
             }
             else
             {
-                // _nextLevelButton.gameObject.SetActive(false); // сделать окно с добычей и кнопкой на следующий уровень
+                SceneManager.LoadScene(_sceneLoader.MainMenuScene);
             }
         }
-        
-        public void RewardAd()
+
+        private void OnClickBackToMenu()
         {
-            YG2.RewardedAdvShow(RewardID, () =>
-            {
-                //reward
-            });
+            SceneManager.LoadScene(_sceneLoader.MainMenuScene);
         }
     }
 }

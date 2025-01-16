@@ -1,4 +1,6 @@
 using Data;
+using Infrastructure;
+using Inputs;
 using UnityEngine;
 
 namespace Services
@@ -8,10 +10,10 @@ namespace Services
         [SerializeField] private MapFactory _mapFactory;
         [SerializeField] private PlayerFactory _playerFactory;
 
-        public void Create(LevelData levelData, CarData carData)
+        public void Create(WalletGamePlay wallet, InputPause inputPause, LevelData levelData, CarData carData)
         {
             _mapFactory.Create(levelData.Map);
-            _playerFactory.Create(carData, levelData.Map.StartPoint.transform.position);
+            _playerFactory.Create(wallet, inputPause, carData, levelData.Map.StartPoint.transform.position);
         }
     }
 }

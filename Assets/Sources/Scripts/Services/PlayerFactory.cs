@@ -1,4 +1,6 @@
 using Data;
+using Infrastructure;
+using Inputs;
 using UnityEngine;
 
 namespace Services
@@ -7,9 +9,9 @@ namespace Services
     {
         [SerializeField] private Player _player;
 
-        public void Create(CarData data, Vector3 startPoint)
+        public void Create(WalletGamePlay wallet, InputPause inputPause, CarData data, Vector3 startPosition)
         {
-            _player.Construct(startPoint);
+            _player.Construct(wallet, inputPause, startPosition);
             Car car = Instantiate(data.CarViewPrefab, _player.transform);
         }
     }

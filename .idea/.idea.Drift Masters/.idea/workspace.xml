@@ -5,33 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonCity/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonPrototype/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenesLevel/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenesLevel/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/EnvironmentTest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/EnvironmentTest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/LevelTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/LevelTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/MapTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/MapTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/EnvironmentData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/EnvironmentData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/LevelData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/LevelData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/LevelDataTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/LevelDataTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/GameMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/GameMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/BaseWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/BaseWallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Inputs/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Inputs/InputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/MainMenuCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/MainMenuCompositionRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/StartPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/StartPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/CameraControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/CameraControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/Drifter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/Drifter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/PlayerCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Player/PlayerCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/LevelsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/LevelsPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/PlayerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/PlayerFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/GameplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/GameplayPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/LosePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/LosePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/RewardPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/RewardPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,27 +51,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/levelFactory",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/levelFactory&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\jeire\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\jeire\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
@@ -131,6 +123,7 @@
       <workItem from="1736575771193" duration="11769000" />
       <workItem from="1736594898658" duration="1466000" />
       <workItem from="1736665138782" duration="5251000" />
+      <workItem from="1737015641973" duration="10188000" />
     </task>
     <servers />
   </component>
