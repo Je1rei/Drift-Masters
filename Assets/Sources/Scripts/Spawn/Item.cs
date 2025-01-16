@@ -13,12 +13,9 @@ namespace Spawn
         public int Score => _score;
         public bool IsRequiredCompleteLevel => _isRequiredCompleteLevel;
 
-        public void ResetPool()
+        public void Collect()
         {
-            if (transform.parent.TryGetComponent(out ItemSpawner itemSpawner))
-            {
-                itemSpawner.Collect(this);
-            }
+           gameObject.SetActive(false);
         }
     }
 }

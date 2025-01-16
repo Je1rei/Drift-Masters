@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6421166992954412992}
   - component: {fileID: 6486695591830766844}
+  - component: {fileID: -5416918695707365840}
   m_Layer: 0
   m_Name: Three_3
   m_TagString: Untagged
@@ -52,7 +53,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -60,6 +61,18 @@ CapsuleCollider:
   m_Height: 3.5
   m_Direction: 1
   m_Center: {x: 3.14, y: -2, z: -3.64}
+--- !u!114 &-5416918695707365840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154319195409152073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1258fc2b08b6c48418c39a2774ef7ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &408650675563952435
 GameObject:
   m_ObjectHideFlags: 0

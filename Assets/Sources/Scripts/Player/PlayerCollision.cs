@@ -14,11 +14,11 @@ public class PlayerCollision : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collider)
-    {
+    {   
         if (collider.TryGetComponent(out Item item))
         {
             _player.SetScore(item.Score);
-            item.ResetPool();
+            item.Collect();
         }
         
         if (collider.TryGetComponent(out Barrier barrier))
