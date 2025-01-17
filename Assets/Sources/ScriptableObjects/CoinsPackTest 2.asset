@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8269f9aa392607c49ae4d3d646555cd4, type: 3}
-  m_Name: LevelTest
+  m_Script: {fileID: 11500000, guid: 4643afde677a40c792fe10bd16181cc0, type: 3}
+  m_Name: CoinsPackTest 2
   m_EditorClassIdentifier: 
-  ID: 0
-  Map: {fileID: 11400000, guid: 6e89479ba7d9ece4b9eaed4bd83dbb62, type: 2}
+  ID: 3
+  Name: 
+  Price: 90
+  Model: {fileID: 21300000, guid: 8222ee04859dd4fe5b07c16b5439f249, type: 3}

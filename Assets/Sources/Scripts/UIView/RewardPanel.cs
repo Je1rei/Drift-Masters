@@ -14,7 +14,7 @@ namespace UIView
         [SerializeField] private Button _backToMenuButton;
         [SerializeField] private Button _claimButton;
         [SerializeField] private Button _claimADButton;
-
+    
         private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;

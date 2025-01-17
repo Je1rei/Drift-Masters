@@ -1,4 +1,5 @@
 ﻿using System;
+using UIView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -47,6 +48,19 @@ namespace Inputs
             }
         }
 
+        public void ToggleButtonsView()
+        {
+            if (_leftButton.TryGetComponent(out ToggleViewer targetLeftButtonView))
+            {
+                targetLeftButtonView.Deactivate();
+            }            
+            
+            if (_rightButton.TryGetComponent(out ToggleViewer targetRightButtonView))
+            {
+                targetRightButtonView.Deactivate();
+            }
+        }
+        
         private void ResetValue()
         {
             if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)

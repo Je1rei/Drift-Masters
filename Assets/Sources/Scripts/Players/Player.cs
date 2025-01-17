@@ -1,4 +1,6 @@
 using System;
+using Data;
+using DG.Tweening;
 using Infrastructure;
 using Inputs;
 using Services;
@@ -7,6 +9,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Drifter _mover;
+
+    private int _countAllItems;
+    private int _countRequiredItems;
+    private int _countCollected;
+    private int _countAllCollected;
+    
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
     
@@ -15,15 +23,19 @@ public class Player : MonoBehaviour
     
     public event Action Destroyed;
     public event Action<int> Wins;
+    public event Action<int> BetweenWins;
     
-    public void Construct(WalletGamePlay wallet, InputPause inputPause, Vector3 startPosition)
+    public void Construct(int countRequiredItems, int countAllItems, WalletGamePlay wallet, InputPause inputPause, Vector3 startPosition)
     {
-        //внести данные для дрифта(переменные) из конфигов при констракте
         _wallet = wallet;
         _inputPause = inputPause;
         _transform = transform;
         _startPosition = startPosition;
 
+        _countAllItems = countAllItems;
+        _countRequiredItems = countRequiredItems;
+        _countCollected = 0;
+        
         _mover.Construct(_inputPause);
         transform.position = _startPosition;
     }
@@ -31,13 +43,29 @@ public class Player : MonoBehaviour
     public void Lose()
     {
         _inputPause.DeactivateInput();
-        Destroyed?.Invoke();
+        
+        if (_countCollected >= _countRequiredItems)
+        {
+            Wins?.Invoke(_wallet.Value);
+        }
+        else
+        {
+            Destroyed?.Invoke();
+        }
     }
 
     public void Win()
     {
-        _inputPause.DeactivateInput();
-        Wins?.Invoke(_wallet.Value);
+        if (_countCollected == _countRequiredItems)
+        {
+            BetweenWins?.Invoke(_wallet.Value);
+        }
+        
+        if (_countCollected >= _countRequiredItems && _countAllCollected == _countAllItems)
+        {
+            _inputPause.DeactivateInput();
+            Wins?.Invoke(_wallet.Value);
+        }
     }
 
     public void Continue()
@@ -47,8 +75,14 @@ public class Player : MonoBehaviour
         _inputPause.ActivateInput();
     }
     
-    public void Increase(int amount)
+    public void Increase(int amount, bool isRequiredItem)
     {
+        if (isRequiredItem)
+        {
+            _countCollected++;
+        }
+
+        _countAllCollected++;
         _wallet.Increase(amount);
     }
 }

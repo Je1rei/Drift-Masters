@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Inputs;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,12 +9,11 @@ using UnityEngine.Serialization;
 
 public class Drifter : MonoBehaviour
 {
-    [FormerlySerializedAs("_InputHandler")]
-    [Space(10)]
-    [SerializeField] private InputHandler _inputHandler;
-    
-    [Space(20)]
-    [SerializeField] private float _moveSpeed;
+    [FormerlySerializedAs("_InputHandler")] [Space(10)] [SerializeField]
+    private InputHandler _inputHandler;
+
+    [SerializeField] private float _durationToggleButtonsView = 1f;
+    [Space(20)] [SerializeField] private float _moveSpeed;
     [SerializeField] private float _speedMax;
     [SerializeField] private float _drag;
     [SerializeField] private float _steerAngle;
@@ -21,30 +21,34 @@ public class Drifter : MonoBehaviour
 
     private bool _isStarted;
     private InputPause _inputPause;
+
+    private Tween _tween;
     
     private Vector3 _moveForce;
     private Transform _transform;
     private float _horizontalInput;
-    
+
     private void OnEnable()
     {
         _isStarted = false;
-       _inputHandler.Moving += OnMoving;
+        _inputHandler.Moving += OnMoving;
     }
 
     private void OnDisable()
     {
-       _inputHandler.Moving -= OnMoving;
+        _inputHandler.Moving -= OnMoving;
     }
-    
+
     private void Update()
     {
         if (Mathf.Abs(_horizontalInput) > 0 && _isStarted == false)
         {
             _inputPause.ActivateInput();
             _isStarted = true;
+
+            _tween = DOVirtual.DelayedCall(_durationToggleButtonsView, () => { _inputHandler.ToggleButtonsView(); });
         }
-        
+
         if (_inputPause.CanInput && _isStarted == true)
         {
             Move();
@@ -63,7 +67,12 @@ public class Drifter : MonoBehaviour
              * _moveForce.magnitude;*/
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        _tween.Kill();
+    }
+
     public void Construct(InputPause inputPause)
     {
         _inputPause = inputPause;
@@ -75,7 +84,7 @@ public class Drifter : MonoBehaviour
         _horizontalInput = 0;
         _isStarted = false;
     }
-    
+
     private void OnMoving(float obj)
     {
         _horizontalInput = obj;

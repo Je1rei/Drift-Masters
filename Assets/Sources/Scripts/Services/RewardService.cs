@@ -12,44 +12,44 @@ namespace Services
 
         private int _multiplierReward = 2;
         private int _lastReward;
-        
+
         private Player _player;
         private Wallet _wallet;
         private LevelService _levelService;
-    
+
+        public event Action BetweenRewarded;
         public event Action Rewarded;
         public event Action Losed;
-        
+
         public void Construct(Player player, Wallet wallet, LevelService levelService)
         {
             _lastReward = 0;
             _player = player;
             _wallet = wallet;
             _levelService = levelService;
-            
+
             _player.Destroyed += Lost;
             _player.Wins += Reward;
+            _player.BetweenWins += BetweenReward;
         }
-    
+
         public void Dispose()
         {
             _player.Destroyed -= Lost;
             _player.Wins -= Reward;
+            _player.BetweenWins -= BetweenReward;
         }
-        
+
         public void Continue()
         {
             _player.Continue();
         }
-        
+
         public void RewardAd()
         {
-            YG2.RewardedAdvShow(RewardID, () =>
-            {
-                Reward(_lastReward * _multiplierReward);
-            });
+            YG2.RewardedAdvShow(RewardID, () => { Reward(_lastReward * _multiplierReward); });
         }
-        
+
         private void Reward(int value = 1)
         {
             _lastReward = value;
@@ -57,6 +57,15 @@ namespace Services
             _wallet.Increase(value);
 
             Rewarded?.Invoke();
+        }
+
+        private void BetweenReward(int value)
+        {
+            BetweenRewarded?.Invoke();
+            
+            _lastReward = value;
+            _levelService.Complete();
+            _wallet.Increase(value);
         }
 
         private void Lost()

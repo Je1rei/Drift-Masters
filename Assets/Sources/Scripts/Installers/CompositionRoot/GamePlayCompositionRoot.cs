@@ -3,7 +3,6 @@ using Inputs;
 using Services;
 using UIView;
 using UnityEngine;
-using UnityEngine.UI;
 using YG;
 using Zenject;
 

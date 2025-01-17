@@ -17,8 +17,9 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collider.TryGetComponent(out Item item))
         {
-            _player.Increase(item.Score);
-            item.ResetPool();
+            _player.Increase(item.Score, item.IsRequiredCompleteLevel);
+            _player.Win();
+            item.gameObject.SetActive(false);
         }
         
         if (collider.TryGetComponent(out Barrier barrier))

@@ -12,6 +12,7 @@ namespace UIView
         [SerializeField] private PausePanel _pausePanel;
         [SerializeField] private LosePanel _losePanel;
         [SerializeField] private RewardPanel _rewardPanel;
+        [SerializeField] private WinPanel _winPanel;
         
         [SerializeField] private Button _backButton;
 
@@ -34,6 +35,7 @@ namespace UIView
             _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
             _losePanel.Construct(inputPause, audioService, rewardService, sceneLoaderService);
             _pausePanel.Construct(audioService, sceneLoaderService);
+            _winPanel.Construct(audioService, rewardService);
             
             Show();
             //_tutorialPanel.Init();
