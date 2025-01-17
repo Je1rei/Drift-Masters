@@ -8,6 +8,7 @@ namespace Services
     {
         [SerializeField] private AudioSource _mainAudioSource;
         [SerializeField] private AudioSource _uiAudioSource;
+        [SerializeField] private AudioSource _coinPickupSource;
         
         public void Construct()
         {
@@ -19,6 +20,11 @@ namespace Services
         public void PlayUISound()
         {
             _uiAudioSource.Play();
+        }
+
+        public void PlayOneShot()
+        {
+            _coinPickupSource.Play();
         }
 
         public void SetMusicVolume(float value) // дубляж

@@ -20,7 +20,7 @@ namespace UIView
         private void OnDisable()
         {
             _continueButton.onClick.RemoveAllListeners();
-            _rewardService.BetweenRewarded -= OnRewarded;
+            _rewardService.PreparedRewarded -= OnRewarded;
         }
 
         public void Construct(AudioService audioService, RewardService rewardService)
@@ -28,7 +28,7 @@ namespace UIView
             _audioService = audioService;
             _rewardService = rewardService;
             
-            _rewardService.BetweenRewarded += OnRewarded;
+            _rewardService.PreparedRewarded += OnRewarded;
         }
 
         private void OnRewarded()
@@ -38,6 +38,7 @@ namespace UIView
         
         private void OnClickContinue()
         {
+            _rewardService.Reward();
             _rewardPanel.Show();
             Hide();
         }

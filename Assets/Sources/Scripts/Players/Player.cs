@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     private int _countRequiredItems;
     private int _countCollected;
     private int _countAllCollected;
-    
+
+    private AudioService _audioService;
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
     
@@ -23,10 +24,11 @@ public class Player : MonoBehaviour
     
     public event Action Destroyed;
     public event Action<int> Wins;
-    public event Action<int> BetweenWins;
+    public event Action PreparedWins;
     
-    public void Construct(int countRequiredItems, int countAllItems, WalletGamePlay wallet, InputPause inputPause, Vector3 startPosition)
+    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet, InputPause inputPause, Vector3 startPosition)
     {
+        _audioService = audioService;
         _wallet = wallet;
         _inputPause = inputPause;
         _transform = transform;
@@ -58,7 +60,7 @@ public class Player : MonoBehaviour
     {
         if (_countCollected == _countRequiredItems)
         {
-            BetweenWins?.Invoke(_wallet.Value);
+            PreparedWins?.Invoke();
         }
         
         if (_countCollected >= _countRequiredItems && _countAllCollected == _countAllItems)
@@ -77,6 +79,8 @@ public class Player : MonoBehaviour
     
     public void Increase(int amount, bool isRequiredItem)
     {
+        _audioService.PlayOneShot();
+        
         if (isRequiredItem)
         {
             _countCollected++;

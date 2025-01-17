@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 8532334994346117013, guid: 2c2fc9bfe61ee23429a1ae037ce55a7d, type: 3}
   LevelBasePrefab: {fileID: 5279334168349520847, guid: 51a62dd340a332b4db27ce2984d1fd82, type: 3}
-  LevelSidewalkPrefab: {fileID: 1899363860657543818, guid: c7ea01fa0fb3f70478d1ce481e9b38a3, type: 3}
+  LevelSidewalkPrefab: {fileID: 5125240268042192568, guid: a47d6a300c5122642a5ab0bf56ef04fb, type: 3}
   LevelFencePrefab: {fileID: 1744007955393662008, guid: ed12921297a3516448c148b7270cfd0d, type: 3}
-  LevelItemMapRequiredToWinPrefab: {fileID: 1558959339006388176, guid: 1568a6e955af2dc4497f2a70e279b461, type: 3}
-  LevelItem3PointsMapPrefab: {fileID: 2915693631081452075, guid: 72a0a29272a6d704ca010b2cebc31b71, type: 3}
-  LevelItem5PointsMapPrefab: {fileID: 5995034331405785444, guid: facff96a30c2d5148b1fbee8c5585047, type: 3}
-  LevelBarriersMap: {fileID: 8107866685916610999, guid: 150eb54827f58a340973d673e0a9a483, type: 3}
+  LevelItemMapRequiredToWinPrefab: {fileID: 9055015207360758367, guid: 0aaa41f75199a0d46ad7e98507bc9b57, type: 3}
+  LevelItem3PointsMapPrefab: {fileID: 8127686100067123122, guid: 6ccf77a375c0f4248bca7bc0d2745d44, type: 3}
+  LevelItem5PointsMapPrefab: {fileID: 6225262727007143177, guid: 9d2532c1c30f1b74197eea2e08fc01f8, type: 3}
+  LevelBarriersMap: {fileID: 5895211761836216912, guid: 2575f3bc86a38e44e9d3cb3ddc0a8a3b, type: 3}

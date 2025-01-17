@@ -1,5 +1,6 @@
 using Inputs;
 using Services;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,11 +14,11 @@ namespace UIView
         [SerializeField] private LosePanel _losePanel;
         [SerializeField] private RewardPanel _rewardPanel;
         [SerializeField] private WinPanel _winPanel;
-        
+        [SerializeField] private TMP_Text _textNumberLevels;
         [SerializeField] private Button _backButton;
 
         private AudioService _audioService;
-        
+
         private void OnEnable()
         {
             Time.timeScale = 1f;
@@ -29,14 +30,16 @@ namespace UIView
             _backButton.onClick.RemoveAllListeners();
         }
 
-        public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService, LevelService levelService, SceneLoaderService sceneLoaderService)
+        public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService,
+            LevelService levelService, SceneLoaderService sceneLoaderService)
         {
             _audioService = audioService;
             _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
             _losePanel.Construct(inputPause, audioService, rewardService, sceneLoaderService);
             _pausePanel.Construct(audioService, sceneLoaderService);
             _winPanel.Construct(audioService, rewardService);
-            
+
+            _textNumberLevels.text = levelService.Current.ID.ToString();
             Show();
             //_tutorialPanel.Init();
         }

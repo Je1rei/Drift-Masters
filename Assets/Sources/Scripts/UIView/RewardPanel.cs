@@ -1,35 +1,33 @@
 using Data;
 using Services;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YG;
-using Zenject;
 
 namespace UIView
 {
     public class RewardPanel : UIPanel
     {
         [SerializeField] private GameplayPanel _gameplayPanel;
-        [SerializeField] private Button _backToMenuButton;
         [SerializeField] private Button _claimButton;
         [SerializeField] private Button _claimADButton;
-    
+        [SerializeField] private TMP_Text _textCoinsReward;
+
         private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;
         private LevelService _levelService;
-        
+
         private void OnEnable()
         {
-            AddButtonListener(_audioService, _backToMenuButton, OnClickBackToMenu);
             AddButtonListener(_audioService, _claimButton, OnClickClaim);
             AddButtonListener(_audioService, _claimADButton, OnClickAdClaim);
         }
 
         private void OnDisable()
         {
-            _backToMenuButton.onClick.RemoveAllListeners();
             _claimButton.onClick.RemoveAllListeners();
             _claimADButton.onClick.RemoveAllListeners();
 
@@ -43,28 +41,34 @@ namespace UIView
             _sceneLoader = sceneLoader;
             _rewardService = rewardService;
             _levelService = levelService;
-
+            
             _rewardService.Rewarded += Reward;
         }
-
-        private void Reward()
+        
+        private void Reward(int value)
         {
+            _textCoinsReward.text = value.ToString();
+
             if (this != null)
             {
                 Show();
             }
         }
-
+        
         private void OnClickAdClaim()
         {
-            _rewardService.RewardAd();
+            int rewarded = _rewardService.RewardAd();
+            _textCoinsReward.text = rewarded.ToString();
+            
             Hide();
+
+            OnClickClaim();
         }
 
         private void OnClickClaim()
         {
             Hide();
-            
+
             int tempIndex = _levelService.ID;
             LevelData leveldata = _levelService.Load(tempIndex);
 
@@ -78,11 +82,6 @@ namespace UIView
             {
                 SceneManager.LoadScene(_sceneLoader.MainMenuScene);
             }
-        }
-
-        private void OnClickBackToMenu()
-        {
-            SceneManager.LoadScene(_sceneLoader.MainMenuScene);
         }
     }
 }
