@@ -1,29 +1,26 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 namespace Data
 {
     [CreateAssetMenu(fileName = "Map", menuName = "ScriptableObjects/MapData", order = 2)]
     public class MapData : ScriptableObject
     {
-        [Header("Точка спавна машины")] public StartPoint StartPoint;
-
-        [Space(10)] [Header("Настройки для конструктора")]
-        public LevelBase LevelBasePrefab;
-
-        public LevelSidewalk LevelSidewalkPrefab;
-        public LevelFence LevelFencePrefab;
-
-        [Space(10)] [Header("Карты итемов")] public LevelItemMapRequiredToWin LevelItemMapRequiredToWinPrefab;
+        [Required("Укажите точку спавна машины")] public StartPoint StartPoint;
+        [Required("Укажите базу для уровня")] public LevelBase LevelBasePrefab;
+        [Required("Укажите обязательные итемы для победы")] public LevelItemMapRequiredToWin LevelItemMapRequiredToWinPrefab;
+        [Required("Укажите ограду")]public LevelFence LevelFencePrefab;
+        [Required("Укажите тротуар")]public LevelSidewalk LevelSidewalkPrefab;
+        
         public LevelItemMap LevelItem3PointsMapPrefab;
         public LevelItemMap LevelItem5PointsMapPrefab;
-
-        [Space(10)] [Header("Карты барьеров")] public LevelBarriersMap LevelBarriersMap;
+        public LevelBarriersMap LevelBarriersMap;
 
         public int CountRequiredToWinItems =>
-            LevelItemMapRequiredToWinPrefab.GetComponentsInChildren<Transform>(true).Length - 1;
+            LevelItemMapRequiredToWinPrefab.GetComponentsInChildren<Transform>(false).Length - 1;
 
-        public int CountAllItems => LevelItem3PointsMapPrefab.GetComponentsInChildren<Transform>(true).Length +
-                                    LevelItem5PointsMapPrefab.GetComponentsInChildren<Transform>(true).Length +
-                                    LevelItemMapRequiredToWinPrefab.GetComponentsInChildren<Transform>(true).Length - 3;
+        public int CountAllItems => (LevelItem3PointsMapPrefab?.GetComponentsInChildren<Transform>(false).Length ?? 0) +
+            (LevelItem5PointsMapPrefab?.GetComponentsInChildren<Transform>(false).Length ?? 0) +
+            (LevelItemMapRequiredToWinPrefab?.GetComponentsInChildren<Transform>(false).Length ?? 0) - 3;
     }
 }

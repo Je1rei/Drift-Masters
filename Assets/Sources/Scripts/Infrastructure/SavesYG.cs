@@ -16,8 +16,6 @@ namespace YG
         {
             OpenedLevels.Add(0);
             OpenedCars.Add(0);
-            
-            Debug.Log(OpenedCars.Count);
         }
     }
 }

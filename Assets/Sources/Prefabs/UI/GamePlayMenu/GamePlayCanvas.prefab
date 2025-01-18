@@ -1231,6 +1231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePlayPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6473582575508173458, guid: 78323dd3af137c549b5f3fce8493b0ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6901163841025060844, guid: 78323dd3af137c549b5f3fce8493b0ff, type: 3}
       propertyPath: m_SortingLayer
       value: 0

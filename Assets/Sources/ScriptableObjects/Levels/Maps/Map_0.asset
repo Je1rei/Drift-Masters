@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3b2c59cf394647a0a1df481730b784, type: 3}
+  m_Name: Map_0
+  m_EditorClassIdentifier: 
+  StartPoint: {fileID: 8532334994346117013, guid: 2a2967c49533a4c4498164dadd6693f5, type: 3}
+  LevelBasePrefab: {fileID: 5279334168349520847, guid: fd951a5d01e609942aad0ba0a5c005da, type: 3}
+  LevelItemMapRequiredToWinPrefab: {fileID: 7484369916916966327, guid: b6aa3319ed0699d4a884d7de04b07de3, type: 3}
+  LevelFencePrefab: {fileID: 1744007955393662008, guid: d5c0869ba9630c049805650ddc1805d6, type: 3}
+  LevelSidewalkPrefab: {fileID: 5125240268042192568, guid: e8bec4fd314fc134fb7fe40f53aeadee, type: 3}
+  LevelItem3PointsMapPrefab: {fileID: 0}
+  LevelItem5PointsMapPrefab: {fileID: 0}
+  LevelBarriersMap: {fileID: 0}

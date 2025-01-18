@@ -9,17 +9,25 @@ namespace Services
         
         public void Create(MapData data)
         {
-            StartPoint startPoint = Instantiate(data.StartPoint, _transformParent);
+            Instantiate(data.StartPoint, _transformParent);
+            Instantiate(data.LevelBasePrefab, _transformParent);
             
-            LevelBase levelBase = Instantiate(data.LevelBasePrefab, _transformParent);
-            LevelSidewalk levelSidewalk = Instantiate(data.LevelSidewalkPrefab, _transformParent);
-            LevelFence levelFencePrefab = Instantiate(data.LevelFencePrefab, _transformParent);
-
-            LevelItemMapRequiredToWin levelItemsRequiredToWin = Instantiate(data.LevelItemMapRequiredToWinPrefab, _transformParent);
-            LevelItemMap levelItems3Points = Instantiate(data.LevelItem3PointsMapPrefab, _transformParent);
-            LevelItemMap levelItems5Points = Instantiate(data.LevelItem5PointsMapPrefab, _transformParent);
-
-            LevelBarriersMap levelBarriersMap = Instantiate(data.LevelBarriersMap, _transformParent);
+            Instantiate(data.LevelSidewalkPrefab, _transformParent);
+            Instantiate(data.LevelFencePrefab, _transformParent);
+            Instantiate(data.LevelItemMapRequiredToWinPrefab, _transformParent);
+            
+            InstantiateIfNotNull(data.LevelItem3PointsMapPrefab);
+            InstantiateIfNotNull(data.LevelItem5PointsMapPrefab);
+            InstantiateIfNotNull(data.LevelBarriersMap);
+            InstantiateIfNotNull(data.LevelBarriersMap);
+        }
+        
+        private void InstantiateIfNotNull<T>(T prefab) where T : Object
+        {
+            if (prefab != null)
+            {
+                Instantiate(prefab, _transformParent);
+            }
         }
     }
 }

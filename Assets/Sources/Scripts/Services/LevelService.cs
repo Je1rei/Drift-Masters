@@ -35,7 +35,7 @@ namespace Services
 
                 if (_id <= _levels.GetLength(0))
                 {
-                    YG2.saves.OpenedLevels.Add(_levels[_id].ID); // сохранения пройденного уровня
+                    YG2.saves.OpenedLevels.Add(_levels[_id].ID); 
                     YG2.SaveProgress();
                 }
             }

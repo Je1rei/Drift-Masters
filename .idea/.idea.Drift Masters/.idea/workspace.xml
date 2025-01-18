@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="" />
+    <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/LevelService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/LevelService.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/One/ItemTemplateOne/ItemMapRequiredToWin Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/One/ItemTemplateOne/ItemMapRequiredToWin Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/MapFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/MapFactory.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +122,7 @@
       <workItem from="1736594898658" duration="1466000" />
       <workItem from="1736665138782" duration="5251000" />
       <workItem from="1737015641973" duration="10188000" />
+      <workItem from="1737196872722" duration="9856000" />
     </task>
     <servers />
   </component>

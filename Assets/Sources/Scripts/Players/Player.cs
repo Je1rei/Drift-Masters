@@ -18,15 +18,16 @@ public class Player : MonoBehaviour
     private AudioService _audioService;
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
-    
+
     private StartPoint _startPosition;
     private Transform _transform;
-    
+
     public event Action Destroyed;
     public event Action<int> Wins;
     public event Action PreparedWins;
-    
-    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet, InputPause inputPause, StartPoint startPosition)
+
+    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
+        InputPause inputPause, StartPoint startPosition)
     {
         _audioService = audioService;
         _wallet = wallet;
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour
         _countAllItems = countAllItems;
         _countRequiredItems = countRequiredItems;
         _countCollected = 0;
-        
+
         _mover.Construct(_inputPause);
         transform.position = _startPosition.transform.position;
     }
@@ -45,9 +46,10 @@ public class Player : MonoBehaviour
     public void Lose()
     {
         _inputPause.DeactivateInput();
-        
+
         if (_countCollected >= _countRequiredItems)
         {
+            _inputPause.DeactivateInput();
             Wins?.Invoke(_wallet.Value);
         }
         else
@@ -62,7 +64,7 @@ public class Player : MonoBehaviour
         {
             PreparedWins?.Invoke();
         }
-        
+
         if (_countCollected >= _countRequiredItems && _countAllCollected == _countAllItems)
         {
             _inputPause.DeactivateInput();
@@ -74,15 +76,15 @@ public class Player : MonoBehaviour
     {
         transform.position = _startPosition.transform.position;
         transform.rotation = _startPosition.transform.rotation;
-        
+
         _mover.SetupContinue();
         _inputPause.ActivateInput();
     }
-    
+
     public void Increase(int amount, bool isRequiredItem)
     {
         _audioService.PlayOneShot();
-        
+
         if (isRequiredItem)
         {
             _countCollected++;
