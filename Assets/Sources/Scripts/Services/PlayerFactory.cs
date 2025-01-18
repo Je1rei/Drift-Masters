@@ -1,7 +1,6 @@
 using Data;
 using Infrastructure;
 using Inputs;
-using UIView;
 using UnityEngine;
 
 namespace Services
@@ -10,7 +9,7 @@ namespace Services
     {
         [SerializeField] private Player _player;
 
-        public void Create(MapData map, WalletGamePlay wallet, AudioService audioService, InputPause inputPause, CarData data, Vector3 startPosition)
+        public void Create(MapData map, WalletGamePlay wallet, AudioService audioService, InputPause inputPause, CarData data, StartPoint startPosition)
         {
             MapData mapData = map;
             

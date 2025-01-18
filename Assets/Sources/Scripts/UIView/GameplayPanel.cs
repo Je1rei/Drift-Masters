@@ -37,7 +37,7 @@ namespace UIView
             _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
             _losePanel.Construct(inputPause, audioService, rewardService, sceneLoaderService);
             _pausePanel.Construct(audioService, sceneLoaderService);
-            _winPanel.Construct(audioService, rewardService);
+            _winPanel.Construct(rewardService);
 
             _textNumberLevels.text = levelService.Current.ID.ToString();
             Show();

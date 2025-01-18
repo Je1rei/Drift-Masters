@@ -19,14 +19,14 @@ public class Player : MonoBehaviour
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
     
-    private Vector3 _startPosition;
+    private StartPoint _startPosition;
     private Transform _transform;
     
     public event Action Destroyed;
     public event Action<int> Wins;
     public event Action PreparedWins;
     
-    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet, InputPause inputPause, Vector3 startPosition)
+    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet, InputPause inputPause, StartPoint startPosition)
     {
         _audioService = audioService;
         _wallet = wallet;
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         _countCollected = 0;
         
         _mover.Construct(_inputPause);
-        transform.position = _startPosition;
+        transform.position = _startPosition.transform.position;
     }
 
     public void Lose()
@@ -72,7 +72,9 @@ public class Player : MonoBehaviour
 
     public void Continue()
     {
-        transform.position = _startPosition;
+        transform.position = _startPosition.transform.position;
+        transform.rotation = _startPosition.transform.rotation;
+        
         _mover.SetupContinue();
         _inputPause.ActivateInput();
     }

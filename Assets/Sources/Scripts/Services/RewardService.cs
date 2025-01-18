@@ -12,7 +12,7 @@ namespace Services
 
         private int _multiplierReward = 2;
         private int _lastReward;
-
+        
         private Player _player;
         private Wallet _wallet;
         private LevelService _levelService;
@@ -27,7 +27,7 @@ namespace Services
             _player = player;
             _wallet = wallet;
             _levelService = levelService;
-
+            
             _player.Destroyed += Lost;
             _player.Wins += Reward;
             _player.PreparedWins += PreparedReward;
@@ -45,16 +45,13 @@ namespace Services
             _player.Continue();
         }
 
-        public int RewardAd()
+        public void RewardAd()
         {
             YG2.RewardedAdvShow(RewardID, () => { Reward(); });
-
-            return _lastReward * _multiplierReward;
         }
         
-        public void Reward()
+        private void Reward()
         {
-            _levelService.Complete();
             _wallet.Increase(_lastReward);
             
             Rewarded?.Invoke(_lastReward);
@@ -62,8 +59,8 @@ namespace Services
         
         private void Reward(int value = 1)
         {
-            _lastReward += value;
             _levelService.Complete();
+            _lastReward = value;
             _wallet.Increase(value);
 
             Rewarded?.Invoke(_lastReward);

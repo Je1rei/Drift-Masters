@@ -57,8 +57,7 @@ namespace UIView
         
         private void OnClickAdClaim()
         {
-            int rewarded = _rewardService.RewardAd();
-            _textCoinsReward.text = rewarded.ToString();
+            _rewardService.RewardAd();
             
             Hide();
 

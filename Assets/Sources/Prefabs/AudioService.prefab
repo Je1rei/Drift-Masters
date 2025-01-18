@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2056524425316996931, guid: bedce7fb2e24aef4384d62029a36ef29, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 34c638d8d99ccfd44a261f13505ab317, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dd81fcf04bae3ea49a2b496d0c6f95e4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -298,11 +298,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7633030305078387828, guid: bedce7fb2e24aef4384d62029a36ef29, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c5a6af7adb029df4ba0967bc4de9e7ac, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -434,3 +434,10 @@ MonoBehaviour:
   _mainAudioSource: {fileID: 7697447146992038189}
   _uiAudioSource: {fileID: 2971984560555011506}
   _coinPickupSource: {fileID: 3802793364833338548}
+  _backgroundTracks:
+  - {fileID: 8300000, guid: a4a2e6e4166f24e5e8ecf04a6397138a, type: 3}
+  - {fileID: 8300000, guid: d93477918a86348d39b7249f46231e3b, type: 3}
+  - {fileID: 8300000, guid: 369629b940b3c48e4b0d6d61b998b2c8, type: 3}
+  - {fileID: 8300000, guid: 2050bfb3400db40a7870650fd8ac1e62, type: 3}
+  - {fileID: 8300000, guid: 0002f2cd169b543f0ba0bcd1fdca2dfe, type: 3}
+  - {fileID: 8300000, guid: 288805f80eb434df994fbc114a5d9733, type: 3}

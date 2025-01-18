@@ -15,7 +15,7 @@ namespace Services
         {
             _mapFactory.Create(levelData.Map);
             _playerFactory.Create(levelData.Map, wallet, audioService, inputPause, carData,
-                levelData.Map.StartPoint.transform.position);
+                levelData.Map.StartPoint);
         }
     }
 }
