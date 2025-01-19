@@ -41,7 +41,7 @@ namespace UIView
         }
 
         public void Construct(AudioService audioService, LevelService levelService, SettingsService settingsService,
-            SceneLoaderService sceneLoaderService)
+            SceneLoaderService sceneLoaderService, CarService carService)
         {
             _audioService = audioService;
 
@@ -49,7 +49,7 @@ namespace UIView
             _levels.Construct(_audioService, levelService, sceneLoaderService);
             _settings.Construct(_audioService, settingsService);
             _shop.Construct(_audioService);
-            _carPanel.Construct(_audioService);
+            _carPanel.Construct(_audioService, carService);
         }
 
         private void OnClickPlay()

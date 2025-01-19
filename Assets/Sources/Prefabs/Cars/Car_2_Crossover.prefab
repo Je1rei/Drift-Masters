@@ -733,6 +733,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6914014404701791124, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a8e32d2cd442e564aa46c99f0ae7c0c8, type: 2}
     - target: {fileID: 8155351879220708512, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_Size.z
       value: 4.965209
@@ -751,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8585370822224511736, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_Name
-      value: Car_2
+      value: Car_2_Crossover
       objectReference: {fileID: 0}
     - target: {fileID: 8585370822224511736, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_IsActive
@@ -814,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba445e7b1004aff933b8724903e5d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: d4f6c0b785be56248b504f2fc876e52d, type: 2}
 --- !u!4 &2864465816103159505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}

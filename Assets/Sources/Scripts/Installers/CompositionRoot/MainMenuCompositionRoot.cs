@@ -26,27 +26,18 @@ namespace Installers.CompositionRoot
             _sceneContainer = _sceneContext.Container;
 
             _sceneContainer.Resolve<Wallet>().Construct(YG2.saves.Coins);
-            CreateCars();
-
-            _sceneContainer.Resolve<ShopService>().Construct(_sceneContainer.Resolve<AudioService>(),
-                _sceneContainer.Resolve<Wallet>(), _shopCells);
-            _mainMenuPanel.Construct(_sceneContainer.Resolve<AudioService>(), _sceneContainer.Resolve<LevelService>(),
-                _sceneContainer.Resolve<SettingsService>(), _sceneContainer.Resolve<SceneLoaderService>());
-
-            _walletView.Construct(_sceneContainer.Resolve<Wallet>());
 
             _rotator.Construct();
-        }
+            _sceneContainer.Resolve<CarService>().Construct(_rotator.Target);
 
-        private void CreateCars()
-        {
-            CarFactory carFactory = new CarFactory();
-            List<Car> openedCars = _sceneContainer.Resolve<CarService>().LoadOpenedCars();
+            _sceneContainer.Resolve<ShopService>().Construct(_sceneContainer.Resolve<AudioService>(),
+                _sceneContainer.Resolve<CarService>(),
+                _sceneContainer.Resolve<Wallet>(), _shopCells);
+            _mainMenuPanel.Construct(_sceneContainer.Resolve<AudioService>(), _sceneContainer.Resolve<LevelService>(),
+                _sceneContainer.Resolve<SettingsService>(), _sceneContainer.Resolve<SceneLoaderService>(),
+                _sceneContainer.Resolve<CarService>());
 
-            foreach (Car car in openedCars)
-            {
-                carFactory.Create(car, _rotator.Target.transform);
-            }
+            _walletView.Construct(_sceneContainer.Resolve<Wallet>());
         }
     }
 }

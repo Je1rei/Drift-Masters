@@ -11,9 +11,11 @@ namespace Services
     {
         private ShopCell[] _shopCells;
         private Wallet _wallet;
+        private CarService _carService;
 
-        public void Construct(AudioService audioService, Wallet wallet, ShopCell[] shopCells)
+        public void Construct(AudioService audioService, CarService carService, Wallet wallet, ShopCell[] shopCells)
         {
+            _carService = carService;
             _wallet = wallet;
             _shopCells = shopCells;
 
@@ -35,15 +37,17 @@ namespace Services
         private void Spend(int price, ShopCell cell)
         {
             bool isPurchased = _wallet.TrySpend(price);
-
+            
             if (isPurchased)
             {
-                Debug.Log("Purchased");
-                
-                YG2.saves.OpenedCars.Add(cell.ItemData.ID);
+                int carId = cell.ItemData.ID;
+
+                YG2.saves.OpenedCars.Add(carId);
                 YG2.SaveProgress();
 
                 cell.SetPurchasedState();
+                
+                _carService.AddCar(carId);
             }
         }
     }

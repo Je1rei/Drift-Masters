@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace YG
 {
@@ -7,15 +6,9 @@ namespace YG
     {
         public float MusicVolume = 0.3f;
         public float SoundFxVolume = 0.3f;
-        public int Coins = 0;
+        public int Coins = 30000;
         public int ChoisedCarID = 0;
-        public HashSet<int> OpenedLevels = new();
-        public HashSet<int> OpenedCars = new();
-        
-        public void Init()
-        {
-            OpenedLevels.Add(0);
-            OpenedCars.Add(0);
-        }
+        public List<int> OpenedLevels = new() { 0};
+        public List<int> OpenedCars = new() { 0 };
     }
 }

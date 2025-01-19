@@ -21,8 +21,7 @@ public class PlayerCollision : MonoBehaviour
             _player.Win();
             item.gameObject.SetActive(false);
         }
-        
-        if (collider.TryGetComponent(out Barrier barrier))
+        else if (collider.TryGetComponent(out Barrier barrier))
         {
             _player.Lose();
         }

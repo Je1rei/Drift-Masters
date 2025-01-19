@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   Name: CAR2
-  Price: 600
-  Model: {fileID: 21300000, guid: b76446236559e4a7ebfbdc6519fa9d07, type: 3}
+  Price: 8000
+  Model: {fileID: 21300000, guid: 1329629be28f7b74998d932b0441528b, type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3b2c59cf394647a0a1df481730b784, type: 3}
+  m_Name: Map_1_5
+  m_EditorClassIdentifier: 
+  StartPoint: {fileID: 8532334994346117013, guid: 2c2fc9bfe61ee23429a1ae037ce55a7d, type: 3}
+  LevelBasePrefab: {fileID: 5279334168349520847, guid: 51a62dd340a332b4db27ce2984d1fd82, type: 3}
+  LevelItemMapRequiredToWinPrefab: {fileID: 9055015207360758367, guid: 0aaa41f75199a0d46ad7e98507bc9b57, type: 3}
+  LevelFencePrefab: {fileID: 1744007955393662008, guid: ed12921297a3516448c148b7270cfd0d, type: 3}
+  LevelSidewalkPrefab: {fileID: 1899363860657543818, guid: c7ea01fa0fb3f70478d1ce481e9b38a3, type: 3}
+  LevelItem3PointsMapPrefab: {fileID: 8127686100067123122, guid: 6ccf77a375c0f4248bca7bc0d2745d44, type: 3}
+  LevelItem5PointsMapPrefab: {fileID: 2299094131408444229, guid: edfcdafdf3bf85643bbe371a455ca820, type: 3}
+  LevelBarriersMap: {fileID: 5895211761836216912, guid: 2575f3bc86a38e44e9d3cb3ddc0a8a3b, type: 3}

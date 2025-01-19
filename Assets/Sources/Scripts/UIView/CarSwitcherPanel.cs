@@ -13,6 +13,7 @@ namespace UIView
         [SerializeField] private Button _previousPageButton;
         [SerializeField] private Button _nextPageButton;
 
+        private CarService _carService;
         private AudioService _audioService;
 
         private List<Car> _carsView;
@@ -29,15 +30,22 @@ namespace UIView
         {
             _previousPageButton.onClick.RemoveAllListeners();
             _nextPageButton.onClick.RemoveAllListeners();
+            _carService.Added -= AddNewCar;
         }
 
-        public void Construct(AudioService audioService)
+        public void Construct(AudioService audioService, CarService carService)
         {
+            _carService = carService;
             _audioService = audioService;
             InitializeCarsView();
 
-            _currentPageIndex = Mathf.Clamp(YG2.saves.ChoisedCarID, 0, _carsView.Count - 1);
+            _currentPageIndex = _carsView.FindIndex(car => car.ID == YG2.saves.ChoisedCarID);
+            if (_currentPageIndex == -1) _currentPageIndex = 0;
+            
             UpdateCarVisibility();
+            UpdateButtonInteractive();
+            
+            _carService.Added += AddNewCar;
         }
 
         public void ToggleView()
@@ -50,13 +58,12 @@ namespace UIView
             if (_currentPageIndex < _carsView.Count - 1)
             {
                 _currentPageIndex++;
-                YG2.saves.ChoisedCarID = _currentPageIndex;
+                YG2.saves.ChoisedCarID = _carsView[_currentPageIndex].ID;
                 UpdateCarVisibility();
                 YG2.SaveProgress();
             }
-            
-            _nextPageButton.interactable = _currentPageIndex < _carsView.Count - 1;
-            _previousPageButton.interactable = _currentPageIndex > 0;
+
+            UpdateButtonInteractive();
         }
 
         private void OnClickBackCar()
@@ -64,13 +71,12 @@ namespace UIView
             if (_currentPageIndex > 0)
             {
                 _currentPageIndex--;
-                YG2.saves.ChoisedCarID = _currentPageIndex;
+                YG2.saves.ChoisedCarID = _carsView[_currentPageIndex].ID;
                 UpdateCarVisibility();
                 YG2.SaveProgress();
             }
-            
-            _previousPageButton.interactable = _currentPageIndex > 0;
-            _nextPageButton.interactable = _currentPageIndex < _carsView.Count - 1;
+
+            UpdateButtonInteractive();
         }
         
         private void UpdateCarVisibility()
@@ -80,7 +86,25 @@ namespace UIView
                 _carsView[i].gameObject.SetActive(i == _currentPageIndex);
             }
         }
+        
+        private void UpdateButtonInteractive()
+        {
+            _previousPageButton.interactable = _currentPageIndex > 0;
+            _nextPageButton.interactable = _currentPageIndex < _carsView.Count - 1;
+        }
 
+        private void AddNewCar(Car car)
+        {
+            if (_carsView.Contains(car) == false)
+            {
+                _carsView.Add(car);
+                car.gameObject.SetActive(false);
+            }
+
+            UpdateButtonInteractive();
+            UpdateCarVisibility();
+        }
+        
         private void InitializeCarsView()
         {
             _carsView = new();

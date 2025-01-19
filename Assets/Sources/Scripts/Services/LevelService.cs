@@ -29,12 +29,17 @@ namespace Services
 
         public void Complete()
         {
+            Debug.Log($"Complete 0 - {_id}");
+            
             if (_id < _levels.GetLength(0) - 1)
             {
+                Debug.Log($"Complete before ++ - {_id}");
                 _id++;
-
+                Debug.Log($"Complete after ++ - {_id}");
+                
                 if (_id <= _levels.GetLength(0))
                 {
+                    Debug.Log($"открылся уровень - {_levels[_id].ID}");
                     YG2.saves.OpenedLevels.Add(_levels[_id].ID); 
                     YG2.SaveProgress();
                 }

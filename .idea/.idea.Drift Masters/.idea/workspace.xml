@@ -5,23 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Resources/SettingsYG2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Resources/SettingsYG2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_0_Van.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_0_Van.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_1_Sedan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_1_Sedan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_2_Crossover.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_2_Crossover.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_3_Hatchback.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_3_Hatchback.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_4_Muscle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_4_Muscle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_5_Police.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_5_Police.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_7_SportCar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_7_SportCar.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/LevelService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/LevelService.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/One/ItemTemplateOne/ItemMapRequiredToWin Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/One/ItemTemplateOne/ItemMapRequiredToWin Variant 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CoinsPackTest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/MapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/Two/StartPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Levels/LevelTemplate/Two/StartPoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_CoinBag_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_CoinBag_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_Coin_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_Coin_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_Gem_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Spawn/Item_Gem_05.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/UI/GamePlayMenu/GamePlayPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/MainMenu 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/MainMenu 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Cars/Car_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Cars/Car_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Shop/CarShopItem_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/CarData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/ShopItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Data/ShopItemData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Infrastructure/SavesYG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/BootstrapCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/BootstrapCompositionRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/MainMenuCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/MainMenuCompositionRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Car.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/PlayerCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/PlayerCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/CarService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/LevelService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/MapFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/MapFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/ShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/ShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/CarSwitcherPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/CarSwitcherPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/MainMenuPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/MainMenuPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/RewardPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/RewardPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +159,7 @@
       <workItem from="1736665138782" duration="5251000" />
       <workItem from="1737015641973" duration="10188000" />
       <workItem from="1737196872722" duration="9856000" />
+      <workItem from="1737274227890" duration="13865000" />
     </task>
     <servers />
   </component>
@@ -133,5 +170,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/StencilMaterial.cs</url>
+          <line>39</line>
+          <properties documentPath="D:\Projects\unity\Drift Masters\Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\StencilMaterial.cs" initialLine="39" containingFunctionPresentation="Method 'Add'">
+            <startOffsets>
+              <option value="1524" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1525" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

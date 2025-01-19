@@ -9,7 +9,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Drifter _mover;
-
+    
     private int _countAllItems;
     private int _countRequiredItems;
     private int _countCollected;
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     private StartPoint _startPosition;
     private Transform _transform;
-
+    
     public event Action Destroyed;
     public event Action<int> Wins;
     public event Action PreparedWins;

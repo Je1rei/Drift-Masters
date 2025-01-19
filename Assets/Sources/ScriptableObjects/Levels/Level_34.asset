@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3130272a8626469db5f5a9787a50ebe1, type: 3}
-  m_Name: Car_7
+  m_Script: {fileID: 11500000, guid: 8269f9aa392607c49ae4d3d646555cd4, type: 3}
+  m_Name: Level_34
   m_EditorClassIdentifier: 
-  ID: 7
-  CarViewPrefab: {fileID: 8713631390026666352, guid: c767f012fd7f9ba43805cbe65970e153, type: 3}
+  ID: 34
+  Map: {fileID: 11400000, guid: 8f455a8036540c14fb6fce0a62633959, type: 2}

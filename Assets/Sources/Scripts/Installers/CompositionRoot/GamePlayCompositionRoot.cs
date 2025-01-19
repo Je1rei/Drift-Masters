@@ -23,7 +23,7 @@ namespace Installers.CompositionRoot
         public override void Compose(DiContainer diContainer)
         {
             _sceneContainer = _sceneContext.Container;
-
+            
             _sceneContainer.Resolve<CarService>().Load(YG2.saves.ChoisedCarID);
             _sceneContainer.Resolve<WalletGamePlay>().Construct(0);
             _walletView.Construct(_sceneContainer.Resolve<WalletGamePlay>());

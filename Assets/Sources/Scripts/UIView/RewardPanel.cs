@@ -60,7 +60,6 @@ namespace UIView
             _rewardService.RewardAd();
             
             Hide();
-
             OnClickClaim();
         }
 

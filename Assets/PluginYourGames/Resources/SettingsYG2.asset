@@ -82,11 +82,11 @@ MonoBehaviour:
     fontsTMP:
       defaultFont: []
       ru:
-      - {fileID: 11400000, guid: 95284940d7b834e4ca672af85641aaf5, type: 2}
+      - {fileID: 11400000, guid: 60d39f3898a1ed742bf8975af7c24829, type: 2}
       en:
-      - {fileID: 11400000, guid: 95284940d7b834e4ca672af85641aaf5, type: 2}
+      - {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
       tr:
-      - {fileID: 11400000, guid: 95284940d7b834e4ca672af85641aaf5, type: 2}
+      - {fileID: 11400000, guid: 523c3577e2cceb74698300e722f079a7, type: 2}
       az: []
       be: []
       he: []
@@ -103,7 +103,8 @@ MonoBehaviour:
       tk: []
       uk: []
       uz: []
-      es: []
+      es:
+      - {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
       pt: []
       ar: []
       id: []

@@ -18,10 +18,10 @@ namespace Installers.CompositionRoot
         public override void Compose(DiContainer diContainer)
         {
             _sceneContainer = _sceneContext.Container;
-
+            
             _sceneContainer.Resolve<AudioService>().Construct();
             _sceneLoader = diContainer.Resolve<SceneLoaderService>();
-
+        
             SceneManager.LoadScene(_sceneLoader.MainMenuScene);
         }
     }

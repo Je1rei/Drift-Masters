@@ -8,6 +8,6 @@ namespace Data
         public int ID;
         public string Name;
         public int Price;
-        public Sprite Model; // -> model
+        public Sprite Model; 
     }
 }

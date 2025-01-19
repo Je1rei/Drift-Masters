@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Services
 {
-    public class RewardService : IDisposable
+    public class RewardService : MonoBehaviour
     {
         private const string RewardID = "1";
 
@@ -33,7 +33,7 @@ namespace Services
             _player.PreparedWins += PreparedReward;
         }
 
-        public void Dispose()
+        private void OnDisable()
         {
             _player.Destroyed -= Lost;
             _player.Wins -= Reward;
@@ -57,7 +57,7 @@ namespace Services
             Rewarded?.Invoke(_lastReward);
         }
         
-        private void Reward(int value = 1)
+        private void Reward(int value)
         {
             _levelService.Complete();
             _lastReward = value;

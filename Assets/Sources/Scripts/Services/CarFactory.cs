@@ -4,9 +4,9 @@ namespace Services
 {
     public class CarFactory
     {
-        public void Create(Car carViewPrefab, Transform parent)
+        public Car Create(Car carViewPrefab, Transform parent)
         {
-            Object.Instantiate(carViewPrefab, parent);
+            return Object.Instantiate(carViewPrefab, parent);
         }
     }
 }
