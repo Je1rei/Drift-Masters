@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     private int _countRequiredItems;
     private int _countCollected;
     private int _countAllCollected;
-
+    private bool _isGameOver = false; 
+    
     private AudioService _audioService;
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
@@ -38,13 +39,17 @@ public class Player : MonoBehaviour
         _countAllItems = countAllItems;
         _countRequiredItems = countRequiredItems;
         _countCollected = 0;
-
+        _isGameOver = false; 
+        
         _mover.Construct(_inputPause);
         transform.position = _startPosition.transform.position;
     }
 
     public void Lose()
     {
+        if (_isGameOver) return; 
+        _isGameOver = true;
+        
         _inputPause.DeactivateInput();
 
         if (_countCollected >= _countRequiredItems)
