@@ -1,14 +1,13 @@
 using System;
-using Data;
-using DG.Tweening;
 using Infrastructure;
 using Inputs;
 using Services;
 using UnityEngine;
+using Players;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Drifter _mover;
+    [SerializeField] private Drifter _drifter;
 
     private int _countAllItems;
     private int _countRequiredItems;
@@ -39,7 +38,7 @@ public class Player : MonoBehaviour
         _countRequiredItems = countRequiredItems;
         _countCollected = 0;
 
-        _mover.Construct(_inputPause);
+        _drifter.Construct(_inputPause);
         transform.position = _startPosition.transform.position;
     }
 
@@ -77,7 +76,7 @@ public class Player : MonoBehaviour
         transform.position = _startPosition.transform.position;
         transform.rotation = _startPosition.transform.rotation;
 
-        _mover.SetupContinue();
+        _drifter.SetupContinue();
         _inputPause.ActivateInput();
     }
 
