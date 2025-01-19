@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream:Assets/Sources/Scripts/Player/PlayerCollision.cs
+<<<<<<< Updated upstream:Assets/Sources/Scripts/Player/PlayerCollision.cs
 using System;
+=======
+using ObjectInGame;
+>>>>>>> Stashed changes:Assets/Sources/Scripts/Players/PlayerCollision.cs
 =======
 using ObjectInGame;
 >>>>>>> Stashed changes:Assets/Sources/Scripts/Players/PlayerCollision.cs
