@@ -7,29 +7,8 @@
     <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonCity/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonPrototype/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_0_Van.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Prefabs/Cars/Car_0_Van.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/Levels/Level_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/BootInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/BootInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/CompositionRoot/GamePlayCompositionRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GamePlayInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Installers/GlobalInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelBarriersMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelBarriersMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelFence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelFence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelItemMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelItemMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelSidewalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/LevelConstructor/LevelSidewalk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/AnimateWheels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/AnimateWheels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Wheel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/Wheel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/PlayerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/PlayerFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Services/RewardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/TutorialStepPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/TutorialStepPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +112,7 @@
       <workItem from="1737196872722" duration="9856000" />
       <workItem from="1737274227890" duration="14038000" />
       <workItem from="1737293312728" duration="745000" />
-      <workItem from="1737354882483" duration="6458000" />
+      <workItem from="1737354882483" duration="7476000" />
     </task>
     <servers />
   </component>
