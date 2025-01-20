@@ -1,12 +1,10 @@
 ﻿using System;
 using Infrastructure;
-using UnityEngine;
 using YG;
-using Zenject;
 
 namespace Services
 {
-    public class RewardService : MonoBehaviour
+    public class RewardService : IDisposable
     {
         private const string RewardID = "1";
 
@@ -33,7 +31,7 @@ namespace Services
             _player.PreparedWins += PreparedReward;
         }
 
-        private void OnDisable()
+        public void Dispose()
         {
             _player.Destroyed -= Lost;
             _player.Wins -= Reward;

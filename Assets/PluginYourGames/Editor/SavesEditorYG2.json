@@ -7,10 +7,10 @@
         false,
         false
     ],
-    "idSave": 73,
+    "idSave": 77,
     "MusicVolume": 0.30000001192092898,
     "SoundFxVolume": 0.30000001192092898,
-    "Coins": 89400,
+    "Coins": 92900,
     "ChoisedCarID": 0,
     "OpenedLevels": [
         0,
@@ -49,7 +49,8 @@
         1,
         2,
         2,
-        2
+        2,
+        6
     ],
     "OpenedCars": [
         0

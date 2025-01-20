@@ -31,17 +31,17 @@ namespace UIView
         }
 
         public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService,
-            LevelService levelService, SceneLoaderService sceneLoaderService)
+            LevelService levelService, SceneLoaderService sceneLoaderService, TutorialService tutorialService)
         {
             _audioService = audioService;
             _rewardPanel.Construct(audioService, rewardService, levelService, sceneLoaderService);
             _losePanel.Construct(inputPause, audioService, rewardService, sceneLoaderService);
             _pausePanel.Construct(audioService, sceneLoaderService);
             _winPanel.Construct(rewardService);
-
+            _tutorialPanel.Construct(audioService, tutorialService);
+            
             _textNumberLevels.text = levelService.Current.ID.ToString();
             Show();
-            //_tutorialPanel.Init();
         }
 
         public void Pause()

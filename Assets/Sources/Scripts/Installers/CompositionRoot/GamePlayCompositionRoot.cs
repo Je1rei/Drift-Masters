@@ -23,18 +23,24 @@ namespace Installers.CompositionRoot
         public override void Compose(DiContainer diContainer)
         {
             _sceneContainer = _sceneContext.Container;
-            
+
             _sceneContainer.Resolve<CarService>().Load(YG2.saves.ChoisedCarID);
             _sceneContainer.Resolve<WalletGamePlay>().Construct(0);
+            _sceneContainer.Resolve<RewardService>().Construct(_player, _sceneContainer.Resolve<Wallet>(),
+                _sceneContainer.Resolve<LevelService>());
+
             _walletView.Construct(_sceneContainer.Resolve<WalletGamePlay>());
 
             _gamePlayPanel.Construct(_sceneContainer.Resolve<InputPause>(),
                 _sceneContainer.Resolve<AudioService>(),
                 _sceneContainer.Resolve<RewardService>(),
                 _sceneContainer.Resolve<LevelService>(),
-                _sceneContainer.Resolve<SceneLoaderService>());
+                _sceneContainer.Resolve<SceneLoaderService>(),
+                _sceneContainer.Resolve<TutorialService>());
 
-            _levelFactory.Create(_sceneContainer.Resolve<WalletGamePlay>(), _sceneContainer.Resolve<AudioService>(), _sceneContainer.Resolve<InputPause>(),
+            _levelFactory.Create(_sceneContainer.Resolve<WalletGamePlay>(), 
+                _sceneContainer.Resolve<AudioService>(),
+                _sceneContainer.Resolve<InputPause>(),
                 _sceneContainer.Resolve<LevelService>().Current,
                 _sceneContainer.Resolve<CarService>().Current);
 

@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            _inputPause.DeactivateInput();
             Destroyed?.Invoke();
         }
     }
@@ -81,7 +82,7 @@ public class Player : MonoBehaviour
     {
         transform.position = _startPosition.transform.position;
         transform.rotation = _startPosition.transform.rotation;
-
+        _isGameOver = false;
         _mover.SetupContinue();
         _inputPause.ActivateInput();
     }

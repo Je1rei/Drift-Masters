@@ -5,47 +5,53 @@ namespace UIView
 {
     public class TutorialPanel : UIPanel
     {
-        [SerializeField] private TutorialStepPanel[] _tutorialPanels;
+        [SerializeField] private TutorialStepPanel[] _tutorialStepPanels;
 
         private TutorialService _tutorialService;
 
-        private int _currentIndex;
+        private int _index;
 
-        public void Construct()
+        public void Construct(AudioService audioService, TutorialService tutorialService)
         {
+            _tutorialService = tutorialService;
+            
+            foreach (TutorialStepPanel step in _tutorialStepPanels)
+            {
+                step.Construct(audioService);
+                step.Clicked += ShowNextTutorial;
+            }
+            
             if (_tutorialService.IsActive)
             {
                 Show();
                 SetupSequenceTutorials();
-                
-                //inputHandler.Clicked += ShowNextTutorial;
             }
         }
         
         private void SetupSequenceTutorials()
         {
-            foreach (var panel in _tutorialPanels)
+            foreach (var panel in _tutorialStepPanels)
             {
                 panel.gameObject.SetActive(false);
             }
 
-            if (_tutorialPanels.Length > 0)
+            if (_tutorialStepPanels.Length > 0)
             {
-                _currentIndex = 0;
-                _tutorialPanels[_currentIndex].gameObject.SetActive(true);
+                _index = 0;
+                _tutorialStepPanels[_index].gameObject.SetActive(true);
             }
         }
 
         private void ShowNextTutorial()
         {
-            if (_currentIndex < _tutorialPanels.Length)
+            if (_index < _tutorialStepPanels.Length)
             {
-                _tutorialPanels[_currentIndex].gameObject.SetActive(false);
-                _currentIndex++;
+                _tutorialStepPanels[_index].gameObject.SetActive(false);
+                _index++;
 
-                if (_currentIndex < _tutorialPanels.Length)
+                if (_index < _tutorialStepPanels.Length)
                 {
-                    _tutorialPanels[_currentIndex].gameObject.SetActive(true);
+                    _tutorialStepPanels[_index].gameObject.SetActive(true);
                 }
                 else
                 {
@@ -56,8 +62,8 @@ namespace UIView
 
         private void CompleteTutorial()
         {
-            // _swipeInputHandler.Clicked -= ShowNextTutorial;
-            // _service.Deactivate();
+            Debug.Log("Tutorial Complete");
+            _tutorialService.Deactivate();
         }
     }
 }

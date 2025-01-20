@@ -4,6 +4,7 @@ namespace Services
     {
         private bool _isActive;
         private LevelService _levelService;
+        
         public bool IsActive => _isActive;
 
         public TutorialService(LevelService levelService)

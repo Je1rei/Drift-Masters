@@ -8,13 +8,7 @@ namespace Services
         [SerializeField] private Sprite[] _languageFlags;
 
         private readonly string[] _languages = { "ru", "en", "tr", "es" };
-        private AudioService _audioService;
-
-        public void Construct(AudioService audioService)
-        {
-            _audioService = audioService;
-        }
-
+        
         public Sprite GetFlagForLanguage(string language)
         {
             int index = Array.IndexOf(_languages, language);
@@ -23,8 +17,6 @@ namespace Services
             {
                 return _languageFlags[index];
             }
-
-            Debug.LogError($"Флаг для языка {language} не найден!");
             
             return null;
         }
