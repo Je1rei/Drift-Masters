@@ -92,7 +92,23 @@ PrefabInstance:
       value: LevelBariersMap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2367961822394003042, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 8318430937644981634, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 6770203827271286069, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 2814918604684062487, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 7956296104448728451, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 2107929572286339623, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 6193639504392828228, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 5226152192885374031, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 2381880639000914878, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 7744997369542961246, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 2820614155097708546, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 6358136671755713702, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 4706068859913402714, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 3963255670004185079, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 3387066509017956548, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
+    - {fileID: 246640506460029675, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf8b846b409f3649930a0a0dbf9d417, type: 3}
@@ -178,10 +194,6 @@ PrefabInstance:
     - target: {fileID: 3866006688201573110, guid: e0efdb1b215156d4bbf5be8cb407f1ff, type: 3}
       propertyPath: m_Name
       value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 3866006688201573110, guid: e0efdb1b215156d4bbf5be8cb407f1ff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4608473488614778685, guid: e0efdb1b215156d4bbf5be8cb407f1ff, type: 3}
       propertyPath: m_LocalPosition.x
