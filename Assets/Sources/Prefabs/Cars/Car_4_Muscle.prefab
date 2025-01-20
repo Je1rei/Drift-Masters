@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: _inputHandler
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -81,13 +85,60 @@ PrefabInstance:
     - {fileID: 5857883144867165599, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 2254591254856054496, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 6937619391398500009, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+    - {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8585370822224511736, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8713631390026666352}
+    - targetCorrespondingSourceObject: {fileID: 1747041699255640714, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5293762117446071584}
+    - targetCorrespondingSourceObject: {fileID: 7763744577888792629, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7552245848441364654}
+    - targetCorrespondingSourceObject: {fileID: 434412446547501617, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2055750703226612506}
+    - targetCorrespondingSourceObject: {fileID: 7270781230560659667, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8320905271919854803}
   m_SourcePrefab: {fileID: 100100000, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+--- !u!1 &431101056200423786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7763744577888792629, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7552245848441364654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431101056200423786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &766396638348919180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7270781230560659667, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8320905271919854803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766396638348919180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828626280250084263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8585370822224511736, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
@@ -106,3 +157,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: df8186f1911eab041be74e3ad4e5f01a, type: 2}
+  _rearWheels:
+  - {fileID: 2055750703226612506}
+  - {fileID: 8320905271919854803}
+  _frontWheels:
+  - {fileID: 5293762117446071584}
+  - {fileID: 7552245848441364654}
+  _trailsRearWheel:
+  - {fileID: 5704547288160186455}
+  - {fileID: 5834149028912478049}
+  _smokeRearWheel:
+  - {fileID: 2807334677973573947}
+  - {fileID: 7475431803484431485}
+--- !u!198 &2807334677973573947 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5237792655675631716, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5704547288160186455 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 2409240152926238984, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5834149028912478049 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4517892242604998206, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7475431803484431485 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 719407370973408546, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7512742495487978350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 434412446547501617, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055750703226612506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7512742495487978350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8537546728627203029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1747041699255640714, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5293762117446071584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537546728627203029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

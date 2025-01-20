@@ -29,6 +29,7 @@ namespace Players
 
         private void Awake()
         {
+            _transform = transform;
             _rigidbody = GetComponent<Rigidbody>();
         }
 

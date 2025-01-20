@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7191042108857513178}
   - component: {fileID: 2265840553823881976}
   - component: {fileID: 3357574702314640458}
-  - component: {fileID: 2171608343078640766}
+  - component: {fileID: 269333641271843296}
   m_Layer: 0
   m_Name: SM_Veh_Car_Small_Wheel_fr
   m_TagString: Untagged
@@ -84,27 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2171608343078640766
-SphereCollider:
+--- !u!114 &269333641271843296
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181358715718438642}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.332806
-  m_Center: {x: 0.06698951, y: 0, z: -0.00000032782555}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1099925714102471377
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +190,7 @@ GameObject:
   - component: {fileID: 4645316107760441343}
   - component: {fileID: 2536621812830108703}
   - component: {fileID: 1792774024028230517}
-  - component: {fileID: 5543705021342151134}
+  - component: {fileID: 8237562432816275480}
   m_Layer: 0
   m_Name: SM_Veh_Car_Small_Wheel_rl
   m_TagString: Untagged
@@ -272,27 +263,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5543705021342151134
-SphereCollider:
+--- !u!114 &8237562432816275480
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453114546315905441}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.33280572
-  m_Center: {x: -0.06698951, y: 0, z: -0.00000013411045}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2490304348577069711
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +369,7 @@ GameObject:
   - component: {fileID: 5112945914073898413}
   - component: {fileID: 6411349376942849728}
   - component: {fileID: 9161717053818903266}
-  - component: {fileID: 607162384797188747}
+  - component: {fileID: 1251363347014960285}
   m_Layer: 0
   m_Name: SM_Veh_Car_Small_Wheel_fl
   m_TagString: Untagged
@@ -460,27 +442,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &607162384797188747
-SphereCollider:
+--- !u!114 &1251363347014960285
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4253918845409073847}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.332806
-  m_Center: {x: -0.06698947, y: 0, z: -0.00000032782555}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4411023769119465893
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +548,7 @@ GameObject:
   - component: {fileID: 902170441086995571}
   - component: {fileID: 69358824839093917}
   - component: {fileID: 8145885775574257458}
-  - component: {fileID: 8146109820113175922}
+  - component: {fileID: 4190685814934179127}
   m_Layer: 0
   m_Name: SM_Veh_Car_Small_Wheel_rr
   m_TagString: Untagged
@@ -648,27 +621,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8146109820113175922
-SphereCollider:
+--- !u!114 &4190685814934179127
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5325038501233541055}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.33280572
-  m_Center: {x: 0.06698947, y: 0, z: -0.00000013411045}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7945977773102860639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -685,6 +649,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 5f72e1579cd001244802c30b332dae70, type: 3}
+    - target: {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: _inputHandler
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409240152926238984, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_Time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517892242604998206, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_Time
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -774,6 +750,7 @@ PrefabInstance:
     - {fileID: 5857883144867165599, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 2254591254856054496, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 6937619391398500009, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+    - {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 168479940993423072, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 8965842347603365742, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
@@ -827,6 +804,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 0b2a79da5abb89c429b46403f48181a4, type: 2}
+  _rearWheels:
+  - {fileID: 8237562432816275480}
+  - {fileID: 4190685814934179127}
+  _frontWheels:
+  - {fileID: 1251363347014960285}
+  - {fileID: 269333641271843296}
+  _trailsRearWheel:
+  - {fileID: 5704547288160186455}
+  - {fileID: 5834149028912478049}
+  _smokeRearWheel:
+  - {fileID: 2807334677973573947}
+  - {fileID: 7475431803484431485}
+--- !u!198 &2807334677973573947 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5237792655675631716, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2864465816103159505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
@@ -835,5 +829,20 @@ Transform:
 --- !u!4 &4041072494892618264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6219768680853478215, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5704547288160186455 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 2409240152926238984, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5834149028912478049 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4517892242604998206, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7475431803484431485 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 719407370973408546, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
   m_PrefabInstance: {fileID: 7945977773102860639}
   m_PrefabAsset: {fileID: 0}

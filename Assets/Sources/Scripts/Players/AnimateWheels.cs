@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Inputs;
 
@@ -7,11 +8,18 @@ namespace Players
     {
         [SerializeField] private InputHandler _inputHandler;
         [Space(10)] [SerializeField] private float _speedMoveWheel = 1.5f;
-        [SerializeField] private float _maxSteeringAngle = 40f;
-
+        [SerializeField] private float _maxSteeringAngle = 50f;
+        [Space(10)][Range(0,1)][SerializeField] private float _timeTrailDrift = 1f;
+        [Range(0,1)][SerializeField] private float _timeTrailMove = 0.15f;
+        [Range(1,5)][SerializeField] private float _sizeStepChangeTrails = 1.5f;
+        
+        private TrailRenderer[] _trailsRearWheel;
+        private ParticleSystem[] _smokeRearWheel;
         private Wheel[] _frontWheels;
         private Wheel[] _rearWheels;
         private float _horizontalInput;
+        private float _minimumInputValue = 0.05f;
+        
 
         private void OnEnable()
         {
@@ -23,15 +31,20 @@ namespace Players
             _inputHandler.Moving -= OnMoving;
         }
 
-        public void Construct(Wheel[] frontWheels, Wheel[] rearWheels)
+        public void Construct(Wheel[] frontWheels, Wheel[] rearWheels, TrailRenderer[] trailsRearWheel, ParticleSystem[] smokeRearWheel)
         {
             _frontWheels = frontWheels;
             _rearWheels = rearWheels;
+            _trailsRearWheel = trailsRearWheel;
+            _smokeRearWheel = smokeRearWheel;
         }
         
         private void Update()
         {
-            Animate();
+            Animate(); 
+            
+            TrailAnimate();
+            SmokeAnimate();
         }
 
         private void Animate()
@@ -63,6 +76,51 @@ namespace Players
         private void OnMoving(float obj)
         {
             _horizontalInput = obj;
+        }
+
+        private void TrailAnimate()
+        {
+            if (TryRotationValue())
+            {                    
+                SetTreilsTime(_timeTrailDrift);
+            }
+            else
+            {
+                SetTreilsTime( _timeTrailMove);
+            }
+        }
+
+        private void SmokeAnimate()
+        {
+            foreach (var smoke in _smokeRearWheel)
+            {
+                if (TryRotationValue() && smoke.isPlaying == false)
+                {
+                        smoke.Play();
+                }
+                else
+                {
+                    smoke.Pause();
+                }
+            }
+        }
+
+        private bool TryRotationValue()
+        {
+            if (_horizontalInput > _minimumInputValue || _horizontalInput < -_minimumInputValue)
+            {
+                return true;
+            }
+            
+            return false;
+        }
+
+        private void SetTreilsTime(float time)
+        {
+            foreach (var trail in _trailsRearWheel)
+            {
+                trail.time = Mathf.Lerp(trail.time, time, _sizeStepChangeTrails * Time.deltaTime );
+            }
         }
     }
 }

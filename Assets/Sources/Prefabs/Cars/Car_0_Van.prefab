@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 9140887273639384716}
   - component: {fileID: 7673904547857123788}
   - component: {fileID: 2166404057842021947}
-  - component: {fileID: 2320309144872505404}
   - component: {fileID: 6949201039550139223}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_fl
@@ -251,27 +250,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2320309144872505404
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631208459931049482}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.3975829
-  m_Center: {x: -0.09900798, y: 0, z: 0}
 --- !u!114 &6949201039550139223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +273,6 @@ GameObject:
   - component: {fileID: 2612378936283237065}
   - component: {fileID: 3308810308293014069}
   - component: {fileID: 7124637740055536790}
-  - component: {fileID: 2759887458186521827}
   - component: {fileID: 6990504688319986671}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_rl
@@ -369,27 +346,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2759887458186521827
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3987154738544083555}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.3975829
-  m_Center: {x: -0.09900798, y: 0, z: 0}
 --- !u!114 &6990504688319986671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +369,6 @@ GameObject:
   - component: {fileID: 2244768188947847093}
   - component: {fileID: 707126451062517899}
   - component: {fileID: 1872110559159129815}
-  - component: {fileID: 8220846597367955405}
   - component: {fileID: 7510618092815884031}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_rr
@@ -487,27 +442,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8220846597367955405
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900319080683717839}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.3975829
-  m_Center: {x: 0.09900779, y: 0, z: 0}
 --- !u!114 &7510618092815884031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,7 +882,6 @@ GameObject:
   - component: {fileID: 2951156777916576818}
   - component: {fileID: 2173559863107440481}
   - component: {fileID: 9080368983300361516}
-  - component: {fileID: 3547376916587997699}
   - component: {fileID: 3640599181137627286}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_fr
@@ -1022,27 +955,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3547376916587997699
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9144586533822415642}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.39758295
-  m_Center: {x: 0.09900788, y: 0, z: -0.000000044703484}
 --- !u!114 &3640599181137627286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,6 +983,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 97982d8a36ff16f4a88f291ef2443e49, type: 3}
+    - target: {fileID: 719407370954034598, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 719407370954034598, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: _inputHandler
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409240152926238984, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_Time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517892242604998206, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_Time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237792655690926304, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237792655690926304, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1156,6 +1096,7 @@ PrefabInstance:
     - {fileID: 5857883144867165599, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 2254591254856054496, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 6937619391398500009, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+    - {fileID: 1773044238291469227, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7270781230560659667, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
     - {fileID: 434412446547501617, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
@@ -1221,6 +1162,17 @@ MonoBehaviour:
   _frontWheels:
   - {fileID: 6949201039550139223}
   - {fileID: 3640599181137627286}
+  _trailsRearWheel:
+  - {fileID: 5704547288160186455}
+  - {fileID: 5834149028912478049}
+  _smokeRearWheel:
+  - {fileID: 2807334677973573947}
+  - {fileID: 7475431803484431485}
+--- !u!198 &2807334677973573947 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5237792655675631716, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2864465816103159505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
@@ -1229,5 +1181,20 @@ Transform:
 --- !u!4 &4041072494892618264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6219768680853478215, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5704547288160186455 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 2409240152926238984, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5834149028912478049 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 4517892242604998206, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
+  m_PrefabInstance: {fileID: 7945977773102860639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7475431803484431485 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 719407370973408546, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}
   m_PrefabInstance: {fileID: 7945977773102860639}
   m_PrefabAsset: {fileID: 0}
