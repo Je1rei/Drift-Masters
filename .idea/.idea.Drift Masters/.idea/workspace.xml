@@ -7,8 +7,11 @@
     <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Drift Masters/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Fonts/Vitaliy Tsygankov - TS Remarker Regular 2 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Fonts/Vitaliy Tsygankov - TS Remarker Regular 2 SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/GamePlay 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/TutorialStepPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/UIView/TutorialStepPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/MainMenu 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scenes/TestScenes/MainMenu 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/ObjectsInGame/ItemMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/ObjectsInGame/ItemMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/PlayerCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Scripts/Players/PlayerCollision.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +115,7 @@
       <workItem from="1737196872722" duration="9856000" />
       <workItem from="1737274227890" duration="14038000" />
       <workItem from="1737293312728" duration="745000" />
-      <workItem from="1737354882483" duration="7476000" />
+      <workItem from="1737354882483" duration="8349000" />
     </task>
     <servers />
   </component>

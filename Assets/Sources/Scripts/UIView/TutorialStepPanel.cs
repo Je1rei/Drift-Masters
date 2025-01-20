@@ -13,6 +13,11 @@ namespace UIView
 
         public event Action Clicked;
 
+        private void OnEnable()
+        {
+            AddButtonListener(_audioService, _button, Click);
+        }
+
         private void OnDisable()
         {
             _button.onClick.RemoveAllListeners();
@@ -21,7 +26,6 @@ namespace UIView
         public void Construct(AudioService audioService)
         {
             _audioService = audioService;
-            AddButtonListener(_audioService, _button, Click);
         }
 
         private void Click()

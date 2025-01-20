@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     private Player _player;
-    
+
     private void Awake()
     {
         _player = GetComponent<Player>();
@@ -19,7 +19,7 @@ public class PlayerCollision : MonoBehaviour
         {
             _player.Increase(item.Score, item.IsRequiredCompleteLevel);
             _player.Win();
-            item.gameObject.SetActive(false);
+            item.Collect();
         }
         else if (collider.TryGetComponent(out Barrier barrier))
         {
