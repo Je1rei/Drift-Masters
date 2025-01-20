@@ -3,93 +3,96 @@ using Infrastructure;
 using Inputs;
 using Services;
 using UnityEngine;
-using Players;
 
-public class Player : MonoBehaviour
+namespace Players
 {
-    [SerializeField] private Drifter _drifter;
-
-    private int _countAllItems;
-    private int _countRequiredItems;
-    private int _countCollected;
-    private int _countAllCollected;
-
-    private AudioService _audioService;
-    private InputPause _inputPause;
-    private WalletGamePlay _wallet;
-
-    private StartPoint _startPosition;
-    private Transform _transform;
-
-    public event Action Destroyed;
-    public event Action<int> Wins;
-    public event Action PreparedWins;
-
-    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
-        InputPause inputPause, StartPoint startPosition)
+    public class Player : MonoBehaviour
     {
-        _audioService = audioService;
-        _wallet = wallet;
-        _inputPause = inputPause;
-        _transform = transform;
-        _startPosition = startPosition;
+        [SerializeField] private Drifter _drifter;
 
-        _countAllItems = countAllItems;
-        _countRequiredItems = countRequiredItems;
-        _countCollected = 0;
+        private int _countAllItems;
+        private int _countRequiredItems;
+        private int _countCollected;
+        private int _countAllCollected;
 
-        _drifter.Construct(_inputPause);
-        transform.position = _startPosition.transform.position;
-    }
+        private AudioService _audioService;
+        private InputPause _inputPause;
+        private WalletGamePlay _wallet;
 
-    public void Lose()
-    {
-        _inputPause.DeactivateInput();
+        private StartPoint _startPosition;
+        private Transform _transform;
 
-        if (_countCollected >= _countRequiredItems)
+        public event Action Destroyed;
+        public event Action<int> Wins;
+        public event Action PreparedWins;
+
+        public void Construct(int countRequiredItems, int countAllItems, AudioService audioService,
+            WalletGamePlay wallet,
+            InputPause inputPause, StartPoint startPosition)
+        {
+            _audioService = audioService;
+            _wallet = wallet;
+            _inputPause = inputPause;
+            _transform = transform;
+            _startPosition = startPosition;
+
+            _countAllItems = countAllItems;
+            _countRequiredItems = countRequiredItems;
+            _countCollected = 0;
+
+            _drifter.Construct(_inputPause);
+            transform.position = _startPosition.transform.position;
+        }
+
+        public void Lose()
         {
             _inputPause.DeactivateInput();
-            Wins?.Invoke(_wallet.Value);
+
+            if (_countCollected >= _countRequiredItems)
+            {
+                _inputPause.DeactivateInput();
+                Wins?.Invoke(_wallet.Value);
+            }
+            else
+            {
+                Destroyed?.Invoke();
+            }
         }
-        else
+
+        public void Win()
         {
-            Destroyed?.Invoke();
-        }
-    }
+            if (_countCollected == _countRequiredItems)
+            {
+                PreparedWins?.Invoke();
+            }
 
-    public void Win()
-    {
-        if (_countCollected == _countRequiredItems)
+            if (_countCollected >= _countRequiredItems && _countAllCollected == _countAllItems)
+            {
+                _inputPause.DeactivateInput();
+                Wins?.Invoke(_wallet.Value);
+            }
+        }
+
+        public void Continue()
         {
-            PreparedWins?.Invoke();
+            transform.position = _startPosition.transform.position;
+            transform.rotation = _startPosition.transform.rotation;
+
+            _drifter.SetupContinue();
+            _inputPause.ActivateInput();
         }
 
-        if (_countCollected >= _countRequiredItems && _countAllCollected == _countAllItems)
+        public void Increase(int amount, bool isRequiredItem)
         {
-            _inputPause.DeactivateInput();
-            Wins?.Invoke(_wallet.Value);
+            _audioService.PlayOneShot();
+
+            if (isRequiredItem)
+            {
+                _countCollected++;
+            }
+
+            _countAllCollected++;
+            _wallet.Increase(amount);
         }
-    }
-
-    public void Continue()
-    {
-        transform.position = _startPosition.transform.position;
-        transform.rotation = _startPosition.transform.rotation;
-
-        _drifter.SetupContinue();
-        _inputPause.ActivateInput();
-    }
-
-    public void Increase(int amount, bool isRequiredItem)
-    {
-        _audioService.PlayOneShot();
-
-        if (isRequiredItem)
-        {
-            _countCollected++;
-        }
-
-        _countAllCollected++;
-        _wallet.Increase(amount);
     }
 }
