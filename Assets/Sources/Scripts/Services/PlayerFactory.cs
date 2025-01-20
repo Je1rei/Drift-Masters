@@ -9,13 +9,16 @@ namespace Services
     {
         [SerializeField] private Player _player;
 
-        public void Create(MapData map, WalletGamePlay wallet, AudioService audioService, InputPause inputPause, CarData data, StartPoint startPosition)
+        public void Create(MapData map, WalletGamePlay wallet, AudioService audioService, InputPause inputPause,
+            CarData data, StartPoint startPosition)
         {
             MapData mapData = map;
-            
-            _player.Construct(mapData.CountRequiredToWinItems, mapData.CountAllItems, audioService, wallet, inputPause, startPosition);
+
             CarFactory factory = new CarFactory();
-            factory.Create(data.CarViewPrefab, _player.transform);
+            Car car = factory.Create(data.CarViewPrefab, _player.transform);
+
+            _player.Construct(car.RearWheels, car.FrontWheels, mapData.CountRequiredToWinItems, mapData.CountAllItems,
+                audioService, wallet, inputPause, startPosition);
             data.CarViewPrefab.gameObject.SetActive(true);
         }
     }

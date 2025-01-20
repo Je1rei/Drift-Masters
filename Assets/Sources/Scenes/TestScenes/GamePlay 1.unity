@@ -2181,6 +2181,7 @@ GameObject:
   - component: {fileID: 320280792}
   - component: {fileID: 320280795}
   - component: {fileID: 320280797}
+  - component: {fileID: 320280798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2239,11 +2240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputHandler: {fileID: 320280793}
   _durationToggleButtonsView: 2
-  _moveSpeed: 30
-  _speedMax: 7.5
-  _drag: 5
-  _steerAngle: 9
-  _traction: 0.9
 --- !u!114 &320280793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2272,7 +2268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9e6e175e209324886f677335bc152f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mover: {fileID: 320280792}
+  _drifter: {fileID: 320280792}
+  _animateWheels: {fileID: 320280798}
 --- !u!114 &320280795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2325,6 +2322,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 620608501}
+--- !u!114 &320280798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320280786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca79f8674c93fc4289f8f2c7baf7328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputHandler: {fileID: 320280793}
+  _speedMoveWheel: 1.5
+  _maxSteeringAngle: 40
 --- !u!114 &427192832
 MonoBehaviour:
   m_ObjectHideFlags: 0

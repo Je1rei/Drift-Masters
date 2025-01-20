@@ -43,9 +43,6 @@ namespace Installers.CompositionRoot
                 _sceneContainer.Resolve<InputPause>(),
                 _sceneContainer.Resolve<LevelService>().Current,
                 _sceneContainer.Resolve<CarService>().Current);
-
-            _sceneContainer.Resolve<RewardService>().Construct(_player, _sceneContainer.Resolve<Wallet>(),
-                _sceneContainer.Resolve<LevelService>());
         }
     }
 }

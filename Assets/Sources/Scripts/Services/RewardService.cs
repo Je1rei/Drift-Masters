@@ -1,10 +1,11 @@
 ﻿using System;
 using Infrastructure;
+using UnityEngine;
 using YG;
 
 namespace Services
 {
-    public class RewardService : IDisposable
+    public class RewardService : MonoBehaviour
     {
         private const string RewardID = "1";
 
@@ -31,7 +32,7 @@ namespace Services
             _player.PreparedWins += PreparedReward;
         }
 
-        public void Dispose()
+        public void OnDisable() //
         {
             _player.Destroyed -= Lost;
             _player.Wins -= Reward;

@@ -6,11 +6,11 @@ namespace Players
     public class AnimateWheels : MonoBehaviour
     {
         [SerializeField] private InputHandler _inputHandler;
-        [Space(10)] [SerializeField] private Wheel[] _frontWheels;
-        [SerializeField] private Wheel[] _rearWheels;
         [Space(10)] [SerializeField] private float _speedMoveWheel = 1.5f;
-        [SerializeField] private float _maxSteeringAngle = 30f;
+        [SerializeField] private float _maxSteeringAngle = 40f;
 
+        private Wheel[] _frontWheels;
+        private Wheel[] _rearWheels;
         private float _horizontalInput;
 
         private void OnEnable()
@@ -23,6 +23,12 @@ namespace Players
             _inputHandler.Moving -= OnMoving;
         }
 
+        public void Construct(Wheel[] frontWheels, Wheel[] rearWheels)
+        {
+            _frontWheels = frontWheels;
+            _rearWheels = rearWheels;
+        }
+        
         private void Update()
         {
             Animate();

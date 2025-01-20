@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 7673904547857123788}
   - component: {fileID: 2166404057842021947}
   - component: {fileID: 2320309144872505404}
+  - component: {fileID: 6949201039550139223}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_fl
   m_TagString: Untagged
@@ -271,6 +272,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3975829
   m_Center: {x: -0.09900798, y: 0, z: 0}
+--- !u!114 &6949201039550139223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631208459931049482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3987154738544083555
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +296,7 @@ GameObject:
   - component: {fileID: 3308810308293014069}
   - component: {fileID: 7124637740055536790}
   - component: {fileID: 2759887458186521827}
+  - component: {fileID: 6990504688319986671}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_rl
   m_TagString: Untagged
@@ -376,6 +390,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3975829
   m_Center: {x: -0.09900798, y: 0, z: 0}
+--- !u!114 &6990504688319986671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3987154738544083555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5900319080683717839
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +414,7 @@ GameObject:
   - component: {fileID: 707126451062517899}
   - component: {fileID: 1872110559159129815}
   - component: {fileID: 8220846597367955405}
+  - component: {fileID: 7510618092815884031}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_rr
   m_TagString: Untagged
@@ -481,6 +508,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3975829
   m_Center: {x: 0.09900779, y: 0, z: 0}
+--- !u!114 &7510618092815884031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900319080683717839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6130374906830643281
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +949,7 @@ GameObject:
   - component: {fileID: 2173559863107440481}
   - component: {fileID: 9080368983300361516}
   - component: {fileID: 3547376916587997699}
+  - component: {fileID: 3640599181137627286}
   m_Layer: 0
   m_Name: SM_Veh_Car_Van_Wheel_fr
   m_TagString: Untagged
@@ -1003,6 +1043,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.39758295
   m_Center: {x: 0.09900788, y: 0, z: -0.000000044703484}
+--- !u!114 &3640599181137627286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144586533822415642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601c57fc7fa9c4a498c023626913daa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7945977773102860639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,6 +1215,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 76d4a10c479624c4882d2070ce0a0d90, type: 2}
+  _rearWheels:
+  - {fileID: 6990504688319986671}
+  - {fileID: 7510618092815884031}
+  _frontWheels:
+  - {fileID: 6949201039550139223}
+  - {fileID: 3640599181137627286}
 --- !u!4 &2864465816103159505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5297755800421666702, guid: aaccdc62fb1e4d84eb2ef877e242878d, type: 3}

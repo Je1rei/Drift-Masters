@@ -17,11 +17,13 @@ namespace Installers
         [SerializeField] private AudioService _audioServicePrefab;
         [SerializeField] private SettingsService _settingsServicePrefab;
         [SerializeField] private CarService _carServicePrefab;
+        [SerializeField] private RewardService _rewardService;
         
         public override void InstallBindings()
         {
             Container.Bind<SceneLoaderService>().FromComponentInNewPrefab(_sceneLoaderPrefab).AsSingle().NonLazy();
             Container.Bind<ShopService>().FromComponentInNewPrefab(_shopServicePrefab).AsSingle().NonLazy();
+            Container.Bind<RewardService>().FromComponentInNewPrefab(_rewardService).AsSingle().NonLazy();
             Container.Bind<LevelService>().FromComponentInNewPrefab(_levelServicePrefab).AsSingle().NonLazy();
             Container.Bind<AudioService>().FromComponentInNewPrefab(_audioServicePrefab).AsSingle().NonLazy();
             Container.Bind<SettingsService>().FromComponentInNewPrefab(_settingsServicePrefab).AsSingle().NonLazy();

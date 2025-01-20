@@ -1,33 +1,33 @@
 using System;
-using Data;
-using DG.Tweening;
 using Infrastructure;
 using Inputs;
+using Players;
 using Services;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Drifter _mover;
+    [SerializeField] private Drifter _drifter;
+    [SerializeField] private AnimateWheels _animateWheels;
     
     private int _countAllItems;
     private int _countRequiredItems;
     private int _countCollected;
     private int _countAllCollected;
-    private bool _isGameOver = false; 
-    
+    private bool _isGameOver = false;
+
     private AudioService _audioService;
     private InputPause _inputPause;
     private WalletGamePlay _wallet;
 
     private StartPoint _startPosition;
     private Transform _transform;
-    
+
     public event Action Destroyed;
     public event Action<int> Wins;
     public event Action PreparedWins;
 
-    public void Construct(int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
+    public void Construct(Wheel[] rearWheels, Wheel[] frontWheels, int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
         InputPause inputPause, StartPoint startPosition)
     {
         _audioService = audioService;
@@ -39,17 +39,19 @@ public class Player : MonoBehaviour
         _countAllItems = countAllItems;
         _countRequiredItems = countRequiredItems;
         _countCollected = 0;
-        _isGameOver = false; 
+        _isGameOver = false;
+
+        _drifter.Construct(_inputPause);
+        _animateWheels.Construct(frontWheels, rearWheels);
         
-        _mover.Construct(_inputPause);
         transform.position = _startPosition.transform.position;
     }
 
     public void Lose()
     {
-        if (_isGameOver) return; 
+        if (_isGameOver) return;
         _isGameOver = true;
-        
+
         _inputPause.DeactivateInput();
 
         if (_countCollected >= _countRequiredItems)
@@ -82,8 +84,9 @@ public class Player : MonoBehaviour
     {
         transform.position = _startPosition.transform.position;
         transform.rotation = _startPosition.transform.rotation;
+        
         _isGameOver = false;
-        _mover.SetupContinue();
+        _drifter.SetupContinue();
         _inputPause.ActivateInput();
     }
 
