@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     public event Action<int> Wins;
     public event Action PreparedWins;
 
-    public void Construct(Wheel[] rearWheels, Wheel[] frontWheels, int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
+    public void Construct(Wheel[] rearWheels, Wheel[] frontWheels,TrailRenderer[] trailsRearWheel, ParticleSystem[] smokeRearWheel, int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
         InputPause inputPause, StartPoint startPosition)
     {
         _audioService = audioService;
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         _isGameOver = false;
 
         _drifter.Construct(_inputPause);
-        _animateWheels.Construct(frontWheels, rearWheels);
+        _animateWheels.Construct(frontWheels, rearWheels,trailsRearWheel,smokeRearWheel);
         
         transform.position = _startPosition.transform.position;
     }

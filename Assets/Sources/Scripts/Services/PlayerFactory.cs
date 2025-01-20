@@ -17,7 +17,7 @@ namespace Services
             CarFactory factory = new CarFactory();
             Car car = factory.Create(data.CarViewPrefab, _player.transform);
 
-            _player.Construct(car.RearWheels, car.FrontWheels, mapData.CountRequiredToWinItems, mapData.CountAllItems,
+            _player.Construct(car.RearWheels, car.FrontWheels,car.TrailsRearWheel, car.SmokeRearWheel,mapData.CountRequiredToWinItems, mapData.CountAllItems,
                 audioService, wallet, inputPause, startPosition);
             data.CarViewPrefab.gameObject.SetActive(true);
         }
