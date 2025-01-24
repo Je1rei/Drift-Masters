@@ -1,4 +1,5 @@
 using Data;
+using DG.Tweening;
 using Services;
 using TMPro;
 using UnityEngine;
@@ -15,11 +16,13 @@ namespace UIView
         [SerializeField] private Button _claimADButton;
         [SerializeField] private TMP_Text _textCoinsReward;
 
+        private int _lastReward;
         private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;
         private LevelService _levelService;
-
+        private Sequence _sequence;
+        
         private void OnEnable()
         {
             AddButtonListener(_audioService, _claimButton, OnClickClaim);
@@ -41,25 +44,26 @@ namespace UIView
             _sceneLoader = sceneLoader;
             _rewardService = rewardService;
             _levelService = levelService;
-            
+
             _rewardService.Rewarded += Reward;
         }
-        
-        private void Reward(int value)
+
+        private void Reward(int value, bool showed)
         {
+            _lastReward = value;
             _textCoinsReward.text = value.ToString();
 
-            if (this != null)
+            if (this != null && showed == false)
             {
                 Show();
             }
         }
-        
+
         private void OnClickAdClaim()
         {
-            _rewardService.RewardAd();
-            
+            _rewardService.RewardAd(_lastReward);
             Hide();
+            
             OnClickClaim();
         }
 
@@ -75,6 +79,7 @@ namespace UIView
                 YG2.InterstitialAdvShow();
 
                 SceneManager.LoadScene(_sceneLoader.GamePlayScene);
+                Hide();
             }
             else
             {

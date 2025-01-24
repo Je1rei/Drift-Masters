@@ -1,4 +1,5 @@
 using System;
+using Data;
 using Infrastructure;
 using Inputs;
 using Players;
@@ -9,7 +10,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Drifter _drifter;
     [SerializeField] private AnimateWheels _animateWheels;
-    
+
     private int _countAllItems;
     private int _countRequiredItems;
     private int _countCollected;
@@ -27,7 +28,8 @@ public class Player : MonoBehaviour
     public event Action<int> Wins;
     public event Action PreparedWins;
 
-    public void Construct(Wheel[] rearWheels, Wheel[] frontWheels,TrailRenderer[] trailsRearWheel, ParticleSystem[] smokeRearWheel, int countRequiredItems, int countAllItems, AudioService audioService, WalletGamePlay wallet,
+    public void Construct(TutorialService tutorialService, Car car, int countRequiredItems, int countAllItems, AudioService audioService,
+        WalletGamePlay wallet,
         InputPause inputPause, StartPoint startPosition)
     {
         _audioService = audioService;
@@ -41,9 +43,9 @@ public class Player : MonoBehaviour
         _countCollected = 0;
         _isGameOver = false;
 
-        _drifter.Construct(_inputPause);
-        _animateWheels.Construct(frontWheels, rearWheels,trailsRearWheel,smokeRearWheel);
-        
+        _drifter.Construct(tutorialService, _inputPause, car.DriftConfig);
+        _animateWheels.Construct(car);
+
         transform.position = _startPosition.transform.position;
     }
 
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
         _isGameOver = true;
 
         _inputPause.DeactivateInput();
+        _audioService.PlayDestroyedSound();
 
         if (_countCollected >= _countRequiredItems)
         {
@@ -83,8 +86,8 @@ public class Player : MonoBehaviour
     public void Continue()
     {
         transform.position = _startPosition.transform.position;
-        transform.rotation = _startPosition.transform.rotation;
-        
+        transform.rotation = Quaternion.identity;
+
         _isGameOver = false;
         _drifter.SetupContinue();
         _inputPause.ActivateInput();

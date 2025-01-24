@@ -43,6 +43,7 @@ namespace Services
                 int carId = cell.ItemData.ID;
 
                 YG2.saves.OpenedCars.Add(carId);
+                YG2.saves.Coins -= price;
                 YG2.SaveProgress();
 
                 cell.SetPurchasedState();

@@ -53,14 +53,14 @@ namespace Inputs
             if (_leftButton.TryGetComponent(out ToggleViewer targetLeftButtonView))
             {
                 targetLeftButtonView.Deactivate();
-            }            
-            
+            }
+
             if (_rightButton.TryGetComponent(out ToggleViewer targetRightButtonView))
             {
                 targetRightButtonView.Deactivate();
             }
         }
-        
+
         private void ResetValue()
         {
             if (_isLeftPressed == false && _isRightPressed == false && Mathf.Abs(_steeringValue) < _deadZone)
@@ -69,7 +69,7 @@ namespace Inputs
                 _steeringVelocity = 0f;
             }
         }
-        
+
         private void SetupButtonTriggers(Button button, Action onPointerDown, Action onPointerUp)
         {
             var trigger = button.gameObject.AddComponent<EventTrigger>();

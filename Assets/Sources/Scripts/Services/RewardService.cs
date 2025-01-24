@@ -11,13 +11,13 @@ namespace Services
 
         private int _multiplierReward = 2;
         private int _lastReward;
-        
+
         private Player _player;
         private Wallet _wallet;
         private LevelService _levelService;
 
         public event Action PreparedRewarded;
-        public event Action<int> Rewarded;
+        public event Action<int, bool> Rewarded;
         public event Action Losed;
 
         public void Construct(Player player, Wallet wallet, LevelService levelService)
@@ -26,17 +26,20 @@ namespace Services
             _player = player;
             _wallet = wallet;
             _levelService = levelService;
-            
+
             _player.Destroyed += Lost;
             _player.Wins += Reward;
             _player.PreparedWins += PreparedReward;
         }
 
-        public void OnDisable() //
+        public void OnDisable()
         {
-            _player.Destroyed -= Lost;
-            _player.Wins -= Reward;
-            _player.PreparedWins -= PreparedReward;
+            if (_player != null)
+            {
+                _player.Destroyed -= Lost;
+                _player.Wins -= Reward;
+                _player.PreparedWins -= PreparedReward;
+            }
         }
 
         public void Continue()
@@ -44,27 +47,32 @@ namespace Services
             _player.Continue();
         }
 
-        public void RewardAd()
+        public void RewardAd(int value)
         {
-            YG2.RewardedAdvShow(RewardID, () => { Reward(); });
+            YG2.RewardedAdvShow(RewardID, () =>
+            {
+                _wallet.Increase(value);
+                Debug.Log(value);
+            });
         }
-        
-        private void Reward()
-        {
-            _wallet.Increase(_lastReward);
-            
-            Rewarded?.Invoke(_lastReward);
-        }
-        
+
+        // private void Reward(int value)
+        // {
+        //     _wallet.Increase(_lastReward);
+        //
+        //     Rewarded?.Invoke(_lastReward, true);
+        // }
+
         private void Reward(int value)
         {
-            _levelService.Complete();
             _lastReward = value;
             _wallet.Increase(value);
 
-            Rewarded?.Invoke(_lastReward);
+            _levelService.Complete();
+
+            Rewarded?.Invoke(_lastReward, false);
         }
-        
+
         private void PreparedReward()
         {
             PreparedRewarded?.Invoke();

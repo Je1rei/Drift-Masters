@@ -9,7 +9,7 @@ namespace Services
         
         public void Create(MapData data)
         {
-            Instantiate(data.StartPoint, _transformParent);
+            Instantiate(data.StartPoint);
             Instantiate(data.LevelBasePrefab, _transformParent);
             
             Instantiate(data.LevelSidewalkPrefab, _transformParent);

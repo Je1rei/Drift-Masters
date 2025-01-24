@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   CarViewPrefab: {fileID: 8713631390026666352, guid: 0a3c63ba057ba38498282628d6deb099, type: 3}
+  DriftConfig: {fileID: 11400000, guid: e8e84f68ea399b24e8555486a9c6cb65, type: 2}

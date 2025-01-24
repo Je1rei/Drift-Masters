@@ -12,7 +12,7 @@ namespace Infrastructure
             base.Increase(amount);
             YG2.saves.Coins = Value;
             
-            //YG2.SetLeaderboard(nameLB: "Score", score: YG2.saves.Coins);
+            YG2.SetLeaderboard(nameLB: "Score", score: YG2.saves.Coins);
             YG2.SaveProgress();
         }
     }

@@ -38,7 +38,8 @@ namespace Installers.CompositionRoot
                 _sceneContainer.Resolve<SceneLoaderService>(),
                 _sceneContainer.Resolve<TutorialService>());
 
-            _levelFactory.Create(_sceneContainer.Resolve<WalletGamePlay>(), 
+            _levelFactory.Create(_sceneContainer.Resolve<TutorialService>(),
+                _sceneContainer.Resolve<WalletGamePlay>(),
                 _sceneContainer.Resolve<AudioService>(),
                 _sceneContainer.Resolve<InputPause>(),
                 _sceneContainer.Resolve<LevelService>().Current,

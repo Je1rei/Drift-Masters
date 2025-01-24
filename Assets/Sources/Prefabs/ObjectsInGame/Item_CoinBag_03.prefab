@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfd9ada662965d4696435bc1c4a9cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
+  rotationAxis: {x: 0, y: 1, z: 0}
 --- !u!114 &2155360697278122316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c135956ab1cb92488481873d22c3fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _score: 300
+  _score: 500
   _isRequiredCompleteLevel: 0
 --- !u!65 &-5668818759836555854
 BoxCollider:

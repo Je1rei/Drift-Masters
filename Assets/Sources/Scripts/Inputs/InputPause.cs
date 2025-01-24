@@ -1,12 +1,13 @@
 using DG.Tweening;
+using Services;
 
 namespace Inputs
 {
     public class InputPause
     {
         private Sequence _sequence;
-
-        public bool CanInput { get; private set; }
+        
+        public bool CanInput { get; private set; } 
 
         public InputPause()
         {

@@ -10,6 +10,8 @@ public class Car : MonoBehaviour
     [SerializeField] private ParticleSystem[] _smokeRearWheel;
     
     public int ID => _data.ID;
+    public DriftConfig DriftConfig => _data.DriftConfig;
+    
     public Wheel[] RearWheels => _rearWheels;
     public Wheel[] FrontWheels => _frontWheels;
     public TrailRenderer[] TrailsRearWheel => _trailsRearWheel;

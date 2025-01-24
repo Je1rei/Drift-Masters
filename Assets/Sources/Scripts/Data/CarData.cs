@@ -8,5 +8,6 @@ namespace Data
     {
         public int ID;
         public Car CarViewPrefab;
+        public DriftConfig DriftConfig;
     }
 }

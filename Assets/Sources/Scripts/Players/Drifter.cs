@@ -1,31 +1,33 @@
+using Data;
 using DG.Tweening;
 using Inputs;
-using UnityEngine;
-using UnityEngine.Serialization;
+using Services;
+using UnityEngine; 
 
 namespace Players
 {
     public class Drifter : MonoBehaviour
     {
-        [FormerlySerializedAs("_InputHandler")] [Space(10)] [SerializeField]
-        private InputHandler _inputHandler;
-
+        [SerializeField] private InputHandler _inputHandler;
         [SerializeField] private float _durationToggleButtonsView = 1f;
-        [Space(20)] private float _moveSpeed = 35;
-        private float _speedMax = 25;
-        private float _steerAngle = 8;
-        private float _drag = 1;
-        private float _traction = 5;
+        
+        private float _horizontalInput;
+        
+        private float _moveSpeed;
+        private float _speedMax;
+        private float _steerAngle;
+        private float _drag;
+        private float _traction;
 
         private bool _isStarted;
-        private InputPause _inputPause;
 
         private Tween _tween;
-
+        private InputPause _inputPause;
+        private TutorialService _tutorialService;
+        
         private Vector3 _moveForce;
         private Rigidbody _rigidbody;
         private Transform _transform;
-        private float _horizontalInput;
 
         private void Awake()
         {
@@ -46,21 +48,24 @@ namespace Players
 
         private void Update()
         {
-            DrawDirections();
-
-            if (Mathf.Abs(_horizontalInput) > 0 && _isStarted == false)
+            if (_tutorialService.IsActive == false)
             {
-                _inputPause.ActivateInput();
-                _isStarted = true;
+                DrawDirections();
 
-                _tween = DOVirtual.DelayedCall(_durationToggleButtonsView,
-                    () => { _inputHandler.ToggleButtonsView(); });
-            }
+                if (Mathf.Abs(_horizontalInput) > 0 && _isStarted == false)
+                {
+                    _inputPause.ActivateInput();
+                    _isStarted = true;
 
-            if (_inputPause.CanInput && _isStarted == true)
-            {
-                Move();
-                Steering();
+                    _tween = DOVirtual.DelayedCall(_durationToggleButtonsView,
+                        () => { _inputHandler.ToggleButtonsView(); });
+                }
+
+                if (_inputPause.CanInput && _isStarted == true)
+                {
+                    Move();
+                    Steering();
+                }
             }
         }
 
@@ -69,14 +74,22 @@ namespace Players
             _tween.Kill();
         }
 
-        public void Construct(InputPause inputPause)
+        public void Construct(TutorialService tutorialService, InputPause inputPause, DriftConfig config)
         {
+            _tutorialService = tutorialService;
             _inputPause = inputPause;
             _transform = transform;
+
+            _moveSpeed = config.MoveSpeed;
+            _speedMax = config.MaxSpeed;
+            _steerAngle = config.SteerAngle;
+            _drag = config.Drag;
+            _traction = config.Traction;
         }
 
         public void SetupContinue()
         {
+            _moveForce = Vector3.zero;
             _horizontalInput = 0;
             _isStarted = false;
         }

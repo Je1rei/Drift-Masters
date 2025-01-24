@@ -16,7 +16,7 @@ MonoBehaviour:
     scopes: 1
     playerPhotoSize: 0
     authorized: 1
-    playerName: "\u0424\u0430\u043C\u0438\u043B\u0438\u044F \u0418\u043C\u044F"
+    playerName: "\u041C\u0430\u0440\u0447\u0435\u043D\u043A\u043E \u041D\u0438\u043A\u0438\u0442\u0430"
     uniqueID: 000
     playerPhoto: demo image
     payingStatus: 0
@@ -80,7 +80,8 @@ MonoBehaviour:
       de: []
       hi: []
     fontsTMP:
-      defaultFont: []
+      defaultFont:
+      - {fileID: 11400000, guid: 60d39f3898a1ed742bf8975af7c24829, type: 2}
       ru:
       - {fileID: 11400000, guid: 60d39f3898a1ed742bf8975af7c24829, type: 2}
       en:
@@ -310,8 +311,8 @@ MonoBehaviour:
   Localization:
     setLanguageMod: 1
   Metrica:
-    enable: 0
-    metricaCounterID: 0
+    enable: 1
+    metricaCounterID: 99631332
     log: 1
   Payments:
     testBuyFail: 0
@@ -372,8 +373,8 @@ MonoBehaviour:
     loadAdv: 0
     testFailAds: 0
   Templates:
-    logoImageFormat: 0
-    backgroundImgFormat: 2
+    logoImageFormat: 1
+    backgroundImgFormat: 3
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140

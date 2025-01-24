@@ -8,13 +8,17 @@ namespace Services
         [SerializeField] private AudioSource _mainAudioSource;
         [SerializeField] private AudioSource _uiAudioSource;
         [SerializeField] private AudioSource _coinPickupSource;
+        [SerializeField] private AudioSource _otherAudioSource;
+        
         [SerializeField] private AudioClip[] _backgroundTracks;
+        [SerializeField] private AudioClip _destroyedClip;
         
         private int _trackIndex = 0;
 
         private void Update()
         {
-            if (_mainAudioSource.isPlaying == false && _backgroundTracks.Length > 0 && Time.timeScale != 0)
+            if (_mainAudioSource.isPlaying == false && _backgroundTracks.Length > 0 && Time.timeScale != 0 &&
+                YG2.isPauseGame == false)
             {
                 PlayNextTrack();
             }
@@ -36,7 +40,12 @@ namespace Services
 
         public void PlayOneShot()
         {
-            _coinPickupSource.Play();
+            _coinPickupSource.PlayOneShot(_coinPickupSource.clip);
+        }
+
+        public void PlayDestroyedSound()
+        {
+            _otherAudioSource.PlayOneShot(_destroyedClip);
         }
         
         public void SetMusicVolume(float value) // дубляж
@@ -48,6 +57,8 @@ namespace Services
         public void SetSFXVolume(float value) // дубляж
         {
             _uiAudioSource.volume = value;
+            _coinPickupSource.volume = value;
+            _otherAudioSource.volume = value;
             YG2.saves.SoundFxVolume = value;
         }
         
