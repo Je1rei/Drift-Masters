@@ -1,17 +1,8 @@
 {
-    "intExample": 5,
-    "strExample": "Hello!",
-    "boolExample": [
-        false,
-        false,
-        false,
-        false
-    ],
-    "idSave": 28,
     "MusicVolume": 0.30000001192092898,
     "SoundFxVolume": 0.30000001192092898,
-    "Coins": 427000,
-    "ChoisedCarID": 0,
+    "Coins": 460600,
+    "ChoisedCarID": 6,
     "OpenedLevels": [
         0,
         1,
@@ -21,10 +12,28 @@
         1,
         1,
         1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
         1
     ],
     "OpenedCars": [
         0,
-        6
-    ]
+        6,
+        1
+    ],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 59
 }
