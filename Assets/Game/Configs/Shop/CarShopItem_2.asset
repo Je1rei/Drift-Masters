@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4643afde677a40c792fe10bd16181cc0, type: 3}
   m_Name: CarShopItem_2
   m_EditorClassIdentifier: 
-  ID: 2
-  Name: CAR2
-  Price: 8000
-  Model: {fileID: 21300000, guid: 1329629be28f7b74998d932b0441528b, type: 3}
+  <ID>k__BackingField: 2
+  <Name>k__BackingField: 
+  <Price>k__BackingField: 8000
+  <Model>k__BackingField: {fileID: 21300000, guid: 1329629be28f7b74998d932b0441528b, type: 3}

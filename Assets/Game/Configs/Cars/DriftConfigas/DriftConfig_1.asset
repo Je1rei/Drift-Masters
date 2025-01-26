@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fde9c7be1b04c4bbcf85dadd65b285c, type: 3}
   m_Name: DriftConfig_1
   m_EditorClassIdentifier: 
-  MoveSpeed: 30
-  MaxSpeed: 20
-  SteerAngle: 10
-  Drag: 1
-  Traction: 5
+  <MoveSpeed>k__BackingField: 30
+  <SteerAngle>k__BackingField: 10
+  <Drag>k__BackingField: 1
+  <Traction>k__BackingField: 5

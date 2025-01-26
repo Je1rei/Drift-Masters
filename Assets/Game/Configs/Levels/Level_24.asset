@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8269f9aa392607c49ae4d3d646555cd4, type: 3}
   m_Name: Level_24
   m_EditorClassIdentifier: 
-  ID: 24
-  Map: {fileID: 11400000, guid: 7691c1f9a08995a4a94160bba67a8360, type: 2}
+  <ID>k__BackingField: 24
+  <Map>k__BackingField: {fileID: 11400000, guid: 51ae350c53eef204caefc0670dd6ec9d, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8269f9aa392607c49ae4d3d646555cd4, type: 3}
   m_Name: Level_0
   m_EditorClassIdentifier: 
-  ID: 0
-  Map: {fileID: 11400000, guid: 2f6f57a0d37937d4687e442b94255f31, type: 2}
+  <ID>k__BackingField: 0
+  <Map>k__BackingField: {fileID: 11400000, guid: 2f6f57a0d37937d4687e442b94255f31, type: 2}
