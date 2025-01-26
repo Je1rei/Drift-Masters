@@ -37,7 +37,9 @@ namespace UIView
             _rewardService.Losed -= Lose;
         }
 
-        public void Construct(InputPause inputPause, AudioService audioService, RewardService rewardService,
+        public void Construct(InputPause inputPause, 
+            AudioService audioService, 
+            RewardService rewardService,
             SceneLoaderService sceneLoader)
         {
             _inputPause = inputPause;

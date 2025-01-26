@@ -39,8 +39,11 @@ namespace UIView
             _leaderboardButton.onClick.RemoveAllListeners();
         }
 
-        public void Construct(AudioService audioService, LevelService levelService, SettingsService settingsService,
-            SceneLoaderService sceneLoaderService, CarService carService)
+        public void Construct(AudioService audioService, 
+            LevelService levelService,
+            SettingsService settingsService,
+            SceneLoaderService sceneLoaderService, 
+            CarService carService)
         {
             _audioService = audioService;
 

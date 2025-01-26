@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Players
 {
-    public class Rotator<T> : MonoBehaviour where T : MonoBehaviour
+    public abstract class Rotator<T> : MonoBehaviour where T : MonoBehaviour
     {
         [SerializeField] private T _target;
         [SerializeField] private float _angle;

@@ -32,8 +32,10 @@ namespace Installers.CompositionRoot
             _sceneContainer.Resolve<ShopService>().Construct(_sceneContainer.Resolve<AudioService>(),
                 _sceneContainer.Resolve<CarService>(),
                 _sceneContainer.Resolve<Wallet>(), _shopCells);
-            _mainMenuPanel.Construct(_sceneContainer.Resolve<AudioService>(), _sceneContainer.Resolve<LevelService>(),
-                _sceneContainer.Resolve<SettingsService>(), _sceneContainer.Resolve<SceneLoaderService>(),
+            _mainMenuPanel.Construct(_sceneContainer.Resolve<AudioService>(), 
+                _sceneContainer.Resolve<LevelService>(),
+                _sceneContainer.Resolve<SettingsService>(), 
+                _sceneContainer.Resolve<SceneLoaderService>(),
                 _sceneContainer.Resolve<CarService>());
 
             _walletView.Construct(_sceneContainer.Resolve<Wallet>());

@@ -13,7 +13,10 @@ namespace Services
         
         private void OnDisable()
         {
-            if (_shopCells == null) return;
+            if (_shopCells == null)
+            {
+                return;
+            }
             
             foreach (ShopCell cell in _shopCells)
             {

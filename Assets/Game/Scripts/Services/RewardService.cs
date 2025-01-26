@@ -28,17 +28,20 @@ namespace Services
             _levelService = levelService;
 
             _player.Destroyed += Lost;
-            _player.Wins += Reward;
-            _player.PreparedWins += PreparedReward;
+            _player.Winned += Reward;
+            _player.PreparedWinned += PreparedReward;
         }
 
         public void OnDisable()
         {
-            if (_player == null) return;
+            if (_player == null)
+            {
+                return;
+            }
 
             _player.Destroyed -= Lost;
-            _player.Wins -= Reward;
-            _player.PreparedWins -= PreparedReward;
+            _player.Winned -= Reward;
+            _player.PreparedWinned -= PreparedReward;
         }
 
         public void Continue()

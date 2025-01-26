@@ -19,8 +19,7 @@ namespace Services
         private int _id;
 
         public event Action<Car> Added;
-
-        public int ID => _id;
+        
         public CarData Current => _current;
 
         public void Construct(Target target)

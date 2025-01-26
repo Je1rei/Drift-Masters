@@ -11,9 +11,13 @@ namespace Infrastructure.Factories
     {
         [SerializeField] private Player _player;
 
-        public void Create(TutorialService tutorialService, MapData map, WalletGamePlay wallet,
-            AudioService audioService, InputPause inputPause,
-            CarData data, StartPoint startPosition)
+        public void Create(TutorialService tutorialService, 
+            MapData map, 
+            WalletGamePlay wallet,
+            AudioService audioService, 
+            InputPause inputPause,
+            CarData data, 
+            StartPoint startPosition)
         {
             MapData mapData = map;
 

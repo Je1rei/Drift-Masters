@@ -26,10 +26,13 @@ namespace Players
         private StartPoint _startPosition;
 
         public event Action Destroyed;
-        public event Action<int> Wins;
-        public event Action PreparedWins;
+        public event Action<int> Winned; 
+        public event Action PreparedWinned;
 
-        public void Construct(TutorialService tutorialService, Car car, int countRequiredItems, int countAllItems,
+        public void Construct(TutorialService tutorialService, 
+            Car car, 
+            int countRequiredItems, 
+            int countAllItems,
             AudioService audioService,
             WalletGamePlay wallet,
             InputPause inputPause, StartPoint startPosition)
@@ -65,7 +68,7 @@ namespace Players
             if (_collectedRequiredItems >= _requiredItems)
             {
                 _inputPause.DeactivateInput();
-                Wins?.Invoke(_wallet.Value);
+                Winned?.Invoke(_wallet.Value);
             }
             else
             {
@@ -78,13 +81,13 @@ namespace Players
         {
             if (_collectedRequiredItems == _requiredItems)
             {
-                PreparedWins?.Invoke();
+                PreparedWinned?.Invoke();
             }
 
             if (_collectedRequiredItems >= _requiredItems && _collectedAllItems == _totalItems)
             {
                 _inputPause.DeactivateInput();
-                Wins?.Invoke(_wallet.Value);
+                Winned?.Invoke(_wallet.Value);
             }
         }
 

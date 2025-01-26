@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace Data
 {
-    [CreateAssetMenu(fileName = "ShopItem", menuName = "ScriptableObjects/Shop/Item",  order = 1)]
+    [CreateAssetMenu(fileName = "ShopItem", menuName = "ScriptableObjects/Shop/Item", order = 1)]
     public class ShopItemData : ScriptableObject
     {
-        public int ID;
-        public string Name;
-        public int Price;
-        public Sprite Model; 
+        [field: SerializeField] public int ID { get; private set; }
+        [field: SerializeField] public string Name { get; private set; }
+        [field: SerializeField] public int Price { get; private set; }
+        [field: SerializeField] public Sprite Model { get; private set; }
     }
 }

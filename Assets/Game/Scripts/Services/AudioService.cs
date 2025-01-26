@@ -48,13 +48,13 @@ namespace Services
             PlaySound(_otherAudioSource, _destroyedClip);
         }
 
-        public void SetMusicVolume(float value) // дубляж
+        public void SetMusicVolume(float value)
         {
             _mainAudioSource.volume = value;
             YG2.saves.MusicVolume = value;
         }
 
-        public void SetSFXVolume(float value) // дубляж
+        public void SetSFXVolume(float value)
         {
             _uiAudioSource.volume = value;
             _coinPickupSource.volume = value;

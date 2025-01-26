@@ -35,7 +35,8 @@ namespace UIView
             _backButton.onClick.RemoveAllListeners();
         }
 
-        public void Construct(AudioService audioService, LevelService levelService,
+        public void Construct(AudioService audioService, 
+            LevelService levelService,
             SceneLoaderService sceneLoaderService)
         {
             _audioService = audioService;

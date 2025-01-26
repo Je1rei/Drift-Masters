@@ -4,8 +4,6 @@ namespace Inputs
 {
     public class InputPause
     {
-        private Sequence _sequence;
-        
         public bool CanInput { get; private set; } 
 
         public InputPause()

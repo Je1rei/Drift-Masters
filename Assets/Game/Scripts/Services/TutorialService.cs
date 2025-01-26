@@ -3,7 +3,7 @@ namespace Services
     public class TutorialService
     {
         private bool _isActive;
-        private LevelService _levelService;
+        private readonly LevelService _levelService;
         
         public bool IsActive => _isActive;
 

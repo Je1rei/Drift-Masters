@@ -28,7 +28,8 @@ namespace Installers.CompositionRoot
 
             _sceneContainer.Resolve<CarService>().Load(YG2.saves.ChoisedCarID);
             _sceneContainer.Resolve<WalletGamePlay>().Construct(0);
-            _sceneContainer.Resolve<RewardService>().Construct(_player, _sceneContainer.Resolve<Wallet>(),
+            _sceneContainer.Resolve<RewardService>().Construct(_player, 
+                _sceneContainer.Resolve<Wallet>(),
                 _sceneContainer.Resolve<LevelService>());
 
             _walletView.Construct(_sceneContainer.Resolve<WalletGamePlay>());

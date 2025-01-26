@@ -6,8 +6,8 @@ namespace Data
     [CreateAssetMenu(fileName = "Car", menuName = "ScriptableObjects/CarData", order = 3)]
     public class CarData : ScriptableObject
     {
-        public int ID;
-        public Car CarViewPrefab;
-        public DriftConfig DriftConfig;
+        [field: SerializeField] public int ID { get; private set; }
+        [field: SerializeField] public Car CarViewPrefab { get; private set; }
+        [field: SerializeField] public DriftConfig DriftConfig { get; private set; }
     }
 }

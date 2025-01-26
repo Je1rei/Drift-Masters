@@ -5,7 +5,6 @@ namespace Infrastructure
 {
     public abstract class BaseWallet
     {
-        private readonly int _decreaseValue = 1;
         private int _value;
 
         public event Action<int> Changed;

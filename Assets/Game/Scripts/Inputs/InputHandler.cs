@@ -18,6 +18,8 @@ namespace Inputs
         [SerializeField] private float _deadZone = 0.01f;
         [SerializeField] private float _smoothTime = 0.1f;
 
+        private ToggleViewer[] _toggleViewers = new ToggleViewer[2];
+        
         private bool _isLeftPressed;
         private bool _isRightPressed;
 
@@ -35,8 +37,18 @@ namespace Inputs
             SetupButtonTriggers(_rightButton,
                 onPointerDown: () => _isRightPressed = true,
                 onPointerUp: () => _isRightPressed = false);
-        }
+            
+            if (_leftButton.TryGetComponent(out ToggleViewer leftViewer))
+            {
+                _toggleViewers[0] = leftViewer;
+            }
 
+            if (_rightButton.TryGetComponent(out ToggleViewer rightViewer))
+            {
+                _toggleViewers[1] = rightViewer;
+            }
+        }
+        
         private void Update()
         {
             UpdateSteeringValue();
@@ -50,14 +62,9 @@ namespace Inputs
 
         public void ToggleButtonsView()
         {
-            if (_leftButton.TryGetComponent(out ToggleViewer targetLeftButtonView))
+            foreach (ToggleViewer view in _toggleViewers)
             {
-                targetLeftButtonView.Deactivate();
-            }
-
-            if (_rightButton.TryGetComponent(out ToggleViewer targetRightButtonView))
-            {
-                targetRightButtonView.Deactivate();
+                view.Deactivate();
             }
         }
 

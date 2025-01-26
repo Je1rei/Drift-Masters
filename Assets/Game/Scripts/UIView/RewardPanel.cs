@@ -15,14 +15,16 @@ namespace UIView
         [SerializeField] private Button _claimButton;
         [SerializeField] private Button _claimADButton;
         [SerializeField] private TMP_Text _textCoinsReward;
-
+        
         private int _lastReward;
+        
+        private readonly Sequence _sequence;
+        
+        private LevelService _levelService;
         private AudioService _audioService;
         private SceneLoaderService _sceneLoader;
         private RewardService _rewardService;
-        private LevelService _levelService;
-        private Sequence _sequence;
-        
+
         private void OnEnable()
         {
             AddButtonListener(_audioService, _claimButton, OnClickClaim);
@@ -37,7 +39,9 @@ namespace UIView
             _rewardService.Rewarded -= Reward;
         }
 
-        public void Construct(AudioService audioService, RewardService rewardService, LevelService levelService,
+        public void Construct(AudioService audioService, 
+            RewardService rewardService,
+            LevelService levelService,
             SceneLoaderService sceneLoader)
         {
             _audioService = audioService;

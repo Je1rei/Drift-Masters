@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace Environment
 {
-    public class ItemMover : MonoBehaviour
+    public class Rotator : MonoBehaviour
     {
         [SerializeField, Range(0f, 1f)] private float rotationSpeed = 0.5f;
         [SerializeField] private Vector3 rotationAxis = Vector3.up;
 
         private Transform _transform;
-        private float _steerAngle = 360f;
+        private readonly float _steerAngle = 360f;
 
         private void Awake()
         {
