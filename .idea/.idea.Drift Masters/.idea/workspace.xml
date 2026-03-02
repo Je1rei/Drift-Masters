@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/Car_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/Default.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/Default.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_00.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_00.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Cars/DriftConfigas/DriftConfig_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_11.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_11.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_12.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_13.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_13.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_14.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_14.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_15.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_15.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_16.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_16.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_17.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_17.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_18.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_18.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_19.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_19.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_20.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_20.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_21.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_21.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_22.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_22.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_23.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_23.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_24.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_24.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_25.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_25.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_26.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_26.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_27.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_27.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_28.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_28.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_29.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_29.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_30.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_30.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_31.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_31.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_32.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_32.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_33.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_33.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_34.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_34.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_35.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_35.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_36.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_36.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_37.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_37.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_38.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_38.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_39.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_39.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_40.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_40.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_41.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_41.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Level_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/1/Map_1_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/2/Map_2_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/3/Map_3_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Levels/Maps/4/Map_4_9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Shop/CarShopItem_7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8e5509fdd5784e7e931313cdeac8ad64574bc0/80/4e9974b2/Single.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95f432784b304c859373ab0805d8dfa57c00/6e/b509468d/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/95f432784b304c859373ab0805d8dfa57c00/88/1f5984c0/InputUnsafeUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/e1/57e97011/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/Cli.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/StencilMaterial.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2rQVXhHlOk1Bv4Ni3BLxZGwhzuS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "finishingTouches",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.splitter.proportion": "0.26476577",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\jeire\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\jeire\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Projects\unity\Drift Masters&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Projects\unity\Drift Masters" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Projects\unity\Drift Masters&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Projects\unity\Drift Masters" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9346abf0-65be-421a-a463-47aea394ac56" name="Changes" comment="" />
+      <created>1736491327506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736491327506</updated>
+      <workItem from="1736491331282" duration="3742000" />
+      <workItem from="1736503707596" duration="20574000" />
+      <workItem from="1736575771193" duration="11769000" />
+      <workItem from="1736594898658" duration="1466000" />
+      <workItem from="1736665138782" duration="5251000" />
+      <workItem from="1737015641973" duration="10188000" />
+      <workItem from="1737196872722" duration="9856000" />
+      <workItem from="1737274227890" duration="14038000" />
+      <workItem from="1737293312728" duration="745000" />
+      <workItem from="1737354882483" duration="8349000" />
+      <workItem from="1737370827496" duration="248000" />
+      <workItem from="1737386408521" duration="1731000" />
+      <workItem from="1737614333640" duration="6664000" />
+      <workItem from="1737631159264" duration="3531000" />
+      <workItem from="1737666630985" duration="1369000" />
+      <workItem from="1737697950731" duration="12690000" />
+      <workItem from="1737790601053" duration="1213000" />
+      <workItem from="1737874137432" duration="1700000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/StencilMaterial.cs</url>
+          <line>39</line>
+          <properties documentPath="D:\Projects\unity\Drift Masters\Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\StencilMaterial.cs" initialLine="39" containingFunctionPresentation="Method 'Add'">
+            <startOffsets>
+              <option value="1524" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1525" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

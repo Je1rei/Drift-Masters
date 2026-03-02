@@ -1,0 +1,44 @@
+{
+    "MusicVolume": 0.30000001192092898,
+    "SoundFxVolume": 0.30000001192092898,
+    "Coins": 441100,
+    "ChoisedCarID": 5,
+    "OpenedLevels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+    ],
+    "OpenedCars": [
+        0,
+        6,
+        1,
+        5
+    ],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 71
+}

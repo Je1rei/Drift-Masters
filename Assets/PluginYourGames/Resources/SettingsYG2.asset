@@ -16,7 +16,7 @@ MonoBehaviour:
     scopes: 1
     playerPhotoSize: 0
     authorized: 1
-    playerName: "\u0424\u0430\u043C\u0438\u043B\u0438\u044F \u0418\u043C\u044F"
+    playerName: "\u041C\u0430\u0440\u0447\u0435\u043D\u043A\u043E \u041D\u0438\u043A\u0438\u0442\u0430"
     uniqueID: 000
     playerPhoto: demo image
     payingStatus: 0
@@ -80,10 +80,14 @@ MonoBehaviour:
       de: []
       hi: []
     fontsTMP:
-      defaultFont: []
-      ru: []
-      en: []
-      tr: []
+      defaultFont:
+      - {fileID: 11400000, guid: 60d39f3898a1ed742bf8975af7c24829, type: 2}
+      ru:
+      - {fileID: 11400000, guid: 60d39f3898a1ed742bf8975af7c24829, type: 2}
+      en:
+      - {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
+      tr:
+      - {fileID: 11400000, guid: 523c3577e2cceb74698300e722f079a7, type: 2}
       az: []
       be: []
       he: []
@@ -100,7 +104,8 @@ MonoBehaviour:
       tk: []
       uk: []
       uz: []
-      es: []
+      es:
+      - {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
       pt: []
       ar: []
       id: []
@@ -234,6 +239,12 @@ MonoBehaviour:
         photo: demo image
         uniqueID: 330
         extraData: 
+      - rank: 10
+        name: Player 10
+        score: 10
+        photo: demo image
+        uniqueID: 330
+        extraData: 
       currentPlayer:
         rank: 5
         score: 60
@@ -300,8 +311,8 @@ MonoBehaviour:
   Localization:
     setLanguageMod: 1
   Metrica:
-    enable: 0
-    metricaCounterID: 0
+    enable: 1
+    metricaCounterID: 99631332
     log: 1
   Payments:
     testBuyFail: 0
@@ -362,8 +373,8 @@ MonoBehaviour:
     loadAdv: 0
     testFailAds: 0
   Templates:
-    logoImageFormat: 0
-    backgroundImgFormat: 2
+    logoImageFormat: 1
+    backgroundImgFormat: 3
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140

@@ -1,0 +1,15 @@
+﻿using Infrastructure;
+using Services;
+using Zenject;
+
+namespace Installers
+{
+    public class GamePlayInstaller : MonoInstaller
+    {
+        public override void InstallBindings()
+        {
+            Container.Bind<TutorialService>().AsSingle().NonLazy();
+            Container.Bind<WalletGamePlay>().AsSingle().NonLazy();
+        }
+    }
+}
